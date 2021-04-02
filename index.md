@@ -8,7 +8,7 @@ title: home
 ## Some things you should know
 
 * My name is Mohamed
-* I work on inverse design an optimization of photonic devices.
+* I work on optimization/inverse design of photonic devices
 * I love applied math, physics, computer science and music
 
 ## Some things I've worked on
