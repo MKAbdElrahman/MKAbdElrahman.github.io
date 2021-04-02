@@ -2,7 +2,7 @@ kramdown:
   input: GFM
 plugins:
   - jekyll-feed
-title: Mike Innes's Blog
+title: Mohamed Kamal Abdelrahman's Blog
 author: Mohamed Kamal AbdElrahman
 feed:
   excerpt_only: true
