@@ -3,6 +3,6 @@ kramdown:
 plugins:
   - jekyll-feed
 title: Mike Innes's Blog
-author: Mike Innes
+author: Mohamed Kamal AbdElrahman
 feed:
   excerpt_only: true
