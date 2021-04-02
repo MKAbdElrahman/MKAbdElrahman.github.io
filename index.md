@@ -3,7 +3,7 @@ layout: page
 title: home
 ---
 
-# Mike J Innes
+# Mohamed Kamal AbdElrahman
 
 ## Some things you should know
 
@@ -11,7 +11,7 @@ title: home
 
 ## Some things I've worked on
 
-* [Julia](https://github.com/MKAbdElrahman/LazyFDFD), a Finite Difference Frequency Domain Solver
+* [LazyFDFD](https://github.com/MKAbdElrahman/LazyFDFD), A MatrixFree Finite Difference Frequency Domain Electromagnetic Solver
 
 ## Some things you can click on
 
