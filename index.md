@@ -22,7 +22,7 @@ title: home
 
 ## Talks
 <ul>
-{% for post in site.posts %}
+{% for post in site.talks %}
 <li>
   <a href="{{post.url}}">{{post.title}}</a> ({{post.date | date: '%B %Y' }})
 </li>
