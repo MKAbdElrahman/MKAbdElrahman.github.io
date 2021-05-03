@@ -22,12 +22,13 @@ title: home
 
 ## Talks
 <ul>
-{% for talk in site.talks %}
+{% for post in site.posts %}
 <li>
-  <a href="{{talk.url}}">{{talk.title}}</a> ({{talk.date | date: '%B %Y' }})
+  <a href="{{post.url}}">{{post.title}}</a> ({{post.date | date: '%B %Y' }})
 </li>
 {% endfor %}
 </ul>
+
 ## Some things you can read
 
 <ul>
