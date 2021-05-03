@@ -8,8 +8,9 @@ title: home
 ## Some things you should know
 
 * My name is Mohamed
-* I work on optimization/inverse design of photonic devices
-* I love applied math, physics, computer science and music
+* I currently work for Wolfram Research
+* I'm doing research on design automation of photonic devices
+* I love history, applied math and physics!
 
 ## Some things I've worked on
 
@@ -18,6 +19,15 @@ title: home
 ## Some things you can click on
 
 [GitHub](https://github.com/MKAbdElrahman), [Twitter](https://twitter.com/Mohamed81834855)
+
+## Talks
+<ul>
+{% for talks in site.talks %}
+<li>
+  <a href="{{talk.url}}">{{talk.title}}</a> ({{talk.date | date: '%B %Y' }})
+</li>
+{% endfor %}
+</ul>
 ## Some things you can read
 
 <ul>
