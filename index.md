@@ -14,7 +14,7 @@ title: home
 
 ## Some things I've worked on
 
-* [LazyFDFD](https://github.com/MKAbdElrahman/Venus.jl), A Photonic Device Design and Optimization Package.
+* [Photon](https://github.com/MKAbdElrahman/Photon.jl), A Photonic Device Design and Optimization Package.
 
 ## Some things you can click on
 
