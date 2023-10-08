@@ -3,7 +3,7 @@ title: "Getting Started with Docker for Go"
 date: "2023-09-21"
 description: "my first post"
 tags: [docker, go]
-categories: [general]
+categories: [technology]
 ---
 
 ## What Is a Container?
