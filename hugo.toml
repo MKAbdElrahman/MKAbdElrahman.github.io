@@ -182,33 +182,3 @@ url = "projects/"
 name = "Contact me"
 weight = 5
 url = "contact/"
-
-[languages.pt-br]
-languageName = ":egypt:"
-title = "محد كمال"
-
-[languages.pt-br.params]
-author = "محمد كمال"
-info = "مهندس برمجيات"
-description = "الموقع الشخصى لمحمد كمال"
-keywords = "مدونة,مطور برامج,شخصي"
-
-[[languages.pt-br.menu.main]]
-name = "نبذة عنا"
-weight = 1
-url = "about/"
-
-[[languages.pt-br.menu.main]]
-name = "المدونة"
-weight = 2
-url = "posts/"
-
-[[languages.pt-br.menu.main]]
-name = "المشاريع"
-weight = 3
-url = "projects/"
-
-[[languages.pt-br.menu.main]]
-name = "التواصل"
-weight = 5
-url = "contact/"
