@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Getting Started with Docker for Go - Mohamed Kamal AbdElrahman</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="Getting Started with Docker for Go">
+<meta itemprop="description" content="my first post"><meta itemprop="datePublished" content="2023-09-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-09-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1336">
+<meta itemprop="keywords" content="docker,go," /><meta property="og:title" content="Getting Started with Docker for Go" />
+<meta property="og:description" content="my first post" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mkabdelrahman.github.io/2023/09/getting-started-with-docker-for-go/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Getting Started with Docker for Go"/>
+<meta name="twitter:description" content="my first post"/>
+<link rel="stylesheet" type="text/css" media="screen" href="https://mkabdelrahman.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://mkabdelrahman.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://mkabdelrahman.github.io/css/dark.css" />
+
+	<script src="https://mkabdelrahman.github.io/js/feather.min.js"></script>
+	
+		<script src="https://mkabdelrahman.github.io/js/main.js"></script>
+</head>
+
+
+<body>
+
+
+	
+	<div class="container-wide wrapper">
+		<div class="header">
+	
+	<h1 class="site-title"><a href="https://mkabdelrahman.github.io/">Mohamed Kamal AbdElrahman</a></h1>
+	<div class="site-description"><p>Programmer</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/MKAbdElrahman" title="Github"><i data-feather="github"></i></a></li><li><a href="https://twitter.com/MKStrongHolD" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags &amp; Stats</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		
+<div class="article-nav" id="article-nav-id">
+    <div class="post">
+        <div class="post-header">
+    
+    <div class="meta">
+        <div class="date">
+            <span class="day">21</span>
+            <span class="rest">Sep 2023</span>
+        </div>
+    </div>
+    
+    <div class="matter">
+        <h1 class="title">Getting Started with Docker for Go</h1>
+    </div>
+</div>
+
+
+        
+        
+        <aside class="toc" id="static-toc">
+            <header>
+                <h3>Contents</h3>
+            </header>
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-is-a-container">What Is a Container?</a></li>
+    <li><a href="#bundling-go-code-into-a-container-image">Bundling Go Code into a Container Image</a></li>
+    <li><a href="#creating-a-dockerfile">Creating a Dockerfile</a></li>
+    <li><a href="#building-the-container-image">Building the Container Image</a></li>
+  </ol>
+</nav>
+        </aside>
+        
+
+        <h2 id="what-is-a-container">What Is a Container?</h2>
+<p>Containers are like isolating an application so it thinks it&rsquo;s running all by itself. It&rsquo;s similar to a virtual machine (VM) but uses the host&rsquo;s operating system instead of its own. To start a container, you begin with a container image that bundles up everything the application needs to run, making it easy to share and distribute.</p>
+<p>The isolation that tricks a container into believing it has control over a whole Linux machine is achieved through the use of namespaces and control groups.</p>
+<ol>
+<li>
+<p><strong>Namespaces</strong>: These are a way to create separate, isolated environments for various aspects of a container, such as its file system, network, and process space. Each namespace hides certain resources from the container, making it appear as if it has its own dedicated instance. For example, the PID (Process ID) namespace ensures that processes inside a container see only their own processes, unaware of others running on the host.</p>
+</li>
+<li>
+<p><strong>Control Groups (cgroups)</strong>: Control groups, often referred to as cgroups, are a mechanism for limiting and monitoring the resource usage of processes within a container. They allow you to control how much CPU, memory, disk I/O, and other resources a container can consume. This ensures that one container doesn&rsquo;t overwhelm the host system and allows for fair resource allocation among multiple containers.</p>
+</li>
+</ol>
+<p>Together, namespaces and control groups provide the foundation for the strong isolation and resource control that containers offer, making them an effective and efficient way to run applications in isolated environments on a shared host.</p>
+<p>To truly understand containers and container images, hands-on experience is key. In this lesson, we&rsquo;ll guide you through practical examples to help you:</p>
+<ol>
+<li>
+<p><strong>Create a Container Image</strong>: Learn how to build a container image that packages your Go code along with its static file dependencies. This process involves encapsulating your application and its required files into a self-contained image.</p>
+</li>
+<li>
+<p><strong>Manage Environment Variables</strong>: Discover how to pass environment variables into containers. These variables allow you to configure and customize your containerized application, adapting it to different runtime environments.</p>
+</li>
+<li>
+<p><strong>Expose Ports</strong>: Understand how to open ports within containers to enable external communication. This is essential for receiving requests or traffic from external sources into your containerized applications.</p>
+</li>
+</ol>
+<h2 id="bundling-go-code-into-a-container-image">Bundling Go Code into a Container Image</h2>
+<ul>
+<li>In your terminal or command prompt, create a new directory for your project (if it doesn&rsquo;t already exist) and navigate to it.</li>
+<li>Initialize a Go module for your project using the command: <code>go mod init demo</code></li>
+<li>Create a <code>main.go</code> file in the project directory.</li>
+<li>Open the <code>main.go</code> file with a text editor of your choice.</li>
+<li>Add the following sample code to the <code>main.go</code> file:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#d14">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d14">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">// Define a simple HTTP handler that responds with &#34;Hello, Go!&#34;.
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    http.<span style="color:#900;font-weight:bold">HandleFunc</span>(<span style="color:#d14">&#34;/&#34;</span>, <span style="color:#000;font-weight:bold">func</span>(w http.ResponseWriter, r <span style="color:#000;font-weight:bold">*</span>http.Request) {
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Fprintf</span>(w, <span style="color:#d14">&#34;Hello, Go!&#34;</span>)
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">// Start the web server on port 8080.
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    fmt.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;Server is running on :8080...&#34;</span>)
+</span></span><span style="display:flex;"><span>    err <span style="color:#000;font-weight:bold">:=</span> http.<span style="color:#900;font-weight:bold">ListenAndServe</span>(<span style="color:#d14">&#34;:8080&#34;</span>, <span style="color:#000;font-weight:bold">nil</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">if</span> err <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>        fmt.<span style="color:#900;font-weight:bold">Println</span>(err)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Save the <code>main.go</code> file.</li>
+</ul>
+<p>To view the web page served by your Go application, open your web browser and navigate to either of the following URLs:</p>
+<ul>
+<li><code>http://0.0.0.0:8080</code></li>
+<li><code>http://localhost:8080</code></li>
+</ul>
+<p>After you enter one of these URLs in your browser&rsquo;s address bar and hit Enter, you should see the web page served by your Go application, which in this case will display &ldquo;Hello, Go!&rdquo;</p>
+<p>To build your Go application into a standalone executable named &ldquo;hello,&rdquo; you can use the <code>go build</code> command as you&rsquo;ve mentioned. Open your terminal or command prompt, navigate to the directory where your <code>main.go</code> file is located (the &ldquo;demo&rdquo; directory in this case), and run the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go build -o hello .
+</span></span></code></pre></div><p>This command will compile your Go application and create an executable file named &ldquo;hello&rdquo; in the same directory. You can then run this executable to start your web server:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./hello
+</span></span></code></pre></div><p>Once the server is running, you can access it in your web browser by navigating to <code>http://localhost:8080</code> or <code>http://0.0.0.0:8080</code>, as mentioned earlier.</p>
+<h2 id="creating-a-dockerfile">Creating a Dockerfile</h2>
+<p>Create a Dockerfile named &ldquo;Dockerfile&rdquo; in the same directory as your main.go file. Add the following content to the Dockerfile:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-docker" data-lang="docker"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">FROM</span><span style="color:#d14"> scratch</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#000;font-weight:bold">EXPOSE</span><span style="color:#d14"> 8080</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#000;font-weight:bold">COPY</span> hello /<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#000;font-weight:bold">CMD</span> [<span style="color:#d14">&#34;/hello&#34;</span>]<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span></code></pre></div><p>Here are explanations for the lines in the Dockerfile:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">FROM</span><span style="color:#d14"> scratch</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span></code></pre></div><p>This line sets the base image for your Docker container. In this example, it starts with an empty base image called &ldquo;scratch.&rdquo; &ldquo;FROM scratch&rdquo; means you&rsquo;re building the container from the ground up, and it doesn&rsquo;t include any pre-installed operating system or libraries. You&rsquo;ll need to add all the necessary files and dependencies explicitly.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">EXPOSE</span><span style="color:#d14"> 8080</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span></code></pre></div><p>The EXPOSE directive specifies that your container will listen on port 8080. It doesn&rsquo;t actually open the port; it serves as metadata to inform anyone running the container that port 8080 should be made available. You would still need to use the <code>-p</code> option when running the container to publish the port to the host: <code>docker run -p 8080:8080 my-hello-app</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">COPY</span> hello /<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span></code></pre></div><p>This line copies the &ldquo;hello&rdquo; executable file from your host machine (the build context) into the root directory (&quot;/&quot;) of the container. It ensures that the executable is available inside the container.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">CMD</span> [<span style="color:#d14">&#34;/hello&#34;</span>]<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span></code></pre></div><p>The CMD directive specifies the default command to run when the container starts. In this case, it tells the container to execute the &ldquo;/hello&rdquo; binary. The use of square brackets is the JSON form of CMD, which doesn&rsquo;t invoke a shell. Since the base image is &ldquo;scratch&rdquo; and doesn&rsquo;t include a shell, this form is necessary to run the command directly without a shell.</p>
+<p>To ensure compatibility with a Linux-based Docker container, use the following command to build your Go application as a Linux binary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#008080">GOOS</span><span style="color:#000;font-weight:bold">=</span>linux go build -o hello .
+</span></span></code></pre></div><p>This command sets the <code>GOOS</code> environment variable to &ldquo;linux,&rdquo; instructing the Go compiler to target the Linux operating system when building the binary. It ensures that the resulting binary is suitable for running inside a Linux-based Docker container.</p>
+<h2 id="building-the-container-image">Building the Container Image</h2>
+<p>Let&rsquo;s continue with building the Docker container image using the <code>docker image build</code> command with the <code>-t</code> flag to specify the image name and tag. This assumes that you&rsquo;re in the directory containing the necessary Dockerfile and application files. Here&rsquo;s the command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image build -t hello:1 .
+</span></span></code></pre></div><p>Here&rsquo;s a breakdown of the command:</p>
+<ul>
+<li><code>docker image build</code>: This is the Docker command to build an image.</li>
+<li><code>-t hello:1</code>: The <code>-t</code> flag is used to tag the image with a name and version. In this case, we&rsquo;re tagging the image as <code>hello</code> with version <code>1</code>.</li>
+<li><code>.</code>: The period (<code>.</code>) at the end specifies the build context. It tells Docker to look in the current directory for the necessary files to build the image. Make sure you&rsquo;re in the directory containing your Dockerfile and any other files required for your application.</li>
+</ul>
+<p>Running this command will start the image build process. Docker will read the instructions from the Dockerfile and create a new image tagged as <code>hello:1</code>. Once the build process is complete, you&rsquo;ll have your Docker image ready for use.</p>
+<p>After running the <code>docker image build</code> command to create your Docker image, you can use the <code>docker image ls</code> command to list all the locally available Docker images. This will allow you to verify that your newly built image is listed among them.</p>
+<p>Here&rsquo;s how you can use the <code>docker image ls</code> command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image ls
+</span></span></code></pre></div><p>When you run this command, you&rsquo;ll see a list of all Docker images available on your system. It will include information such as the repository, tag, image ID, creation date, and size.</p>
+<p>Look for your <code>hello:1</code> image in the list. If the image was successfully built, it should be displayed along with its details.</p>
+<p>Here&rsquo;s an example of what the output might look like:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>REPOSITORY                          TAG       IMAGE ID       CREATED          SIZE
+</span></span><span style="display:flex;"><span>hello                               1         6195aa4aad82   35 seconds ago   6.78MB
+</span></span></code></pre></div><p>In this example, you can see that the <code>hello:1</code> image has been successfully built and is listed with its image ID, creation date, and size. You can now use this image to run containers.</p>
+
+
+    </div>
+    <nav class="hide-on-mobile section-nav">
+        <nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-is-a-container">What Is a Container?</a></li>
+    <li><a href="#bundling-go-code-into-a-container-image">Bundling Go Code into a Container Image</a></li>
+    <li><a href="#creating-a-dockerfile">Creating a Dockerfile</a></li>
+    <li><a href="#building-the-container-image">Building the Container Image</a></li>
+  </ol>
+</nav>
+    </nav>
+</div>
+<div class="post">
+    <hr class="footer-separator" />
+<div class="tags">
+    
+    
+    <ul class="flat">
+        
+        
+        <li class="tag-li"><a href="/tags/docker">docker</a>
+        </li>
+        
+        
+        <li class="tag-li"><a href="/tags/go">go</a>
+        </li>
+        
+    </ul>
+    
+    
+</div>
+
+
+<div class="back">
+    <a href="https://github.com/MKAbdElrahman/mkabdelrahman.github.io/blob/master/content/posts/post-10.md" title="github"><i
+            data-feather="github"></i> Edit this on GitHub</a>
+</div>
+
+
+<div class="back">
+    <a href="https://mkabdelrahman.github.io/"><span aria-hidden="true">← Back</span></a>
+</div>
+
+
+<div class="back">
+    
+    
+    Next time, we'll talk about <i>"What Tiger King can teach us about x86 Assembly"</i>
+    
+    
+</div>
+
+</div>
+
+	</div>
+	
+
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2023  © Copyright notice </div>
+		
+	</nav>
+</div><script>feather.replace()</script>
+	
+	<script>
+    var enableTruncate =  true 
+    var filterDepth = false;
+    const MAX_DEPTH = 9; 
+
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+            entries.reverse().forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    var selected = document.querySelectorAll(`nav li a[href="#${id}"]`)
+                    if (selected != null) {
+                        selected.forEach(s => {
+                            if (s != null) {
+                                var depth = getDepth(s.parentElement);
+                                if (filterDepth && depth <= MAX_DEPTH) {
+                                    clearActiveStatesInTableOfContents();
+                                    s.parentElement.classList.add('active')
+                                }
+                            } else if (!filterDepth) {
+                                clearActiveStatesInTableOfContents();
+                                s.parentElement.classList.add('active');
+                            }
+                        }
+                        )
+                    }
+
+                }
+            });
+        });
+        document.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach((section) => {
+            observerForTableOfContentActiveState.observe(section);
+        });
+
+    });
+
+    
+    function isVisible(elem) {
+        if (!(elem instanceof Element)) return false; 
+        const style = getComputedStyle(elem);
+        if (style.display === 'none') return false;
+        if (style.visibility !== 'visible') return false;
+        if (style.opacity < 0.1) return false;
+        if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
+            elem.getBoundingClientRect().width === 0) {
+            return false;
+        }
+        const elemCenter = {
+            x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+            y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+        };
+        if (elemCenter.x < 0) return false;
+        if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
+        if (elemCenter.y < 0) return false;
+        if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
+        let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+        do {
+            if (pointContainer === elem) return true;
+        } while (pointContainer = pointContainer.parentNode);
+        return false;
+    }
+
+
+    function clearActiveStatesInTableOfContents() {
+        document.querySelectorAll('nav li').forEach((section) => {
+            section.classList.remove('active');
+        });
+    }
+
+    function getDepth(parentElement) {
+        var depth = 0;
+        while (parentElement !== null && parentElement.tagName.toLowerCase() !== 'ul') {
+            depth++;
+            parentElement = parentElement.parentElement;
+        }
+        return depth;
+    }
+
+    function navItems() {
+        
+        var nestedListItems = document.querySelectorAll('nav nav li a');
+        return Array.from(nestedListItems).filter(listItem =>
+            listItem.href != null && listItem.hash.startsWith("#")
+        )
+    }
+
+    function lasItemInNavBarVisible() {
+        var lastItem = navItems().slice(-1)[0]
+        return isVisible(lastItem)
+    }
+
+
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!enableTruncate) return;
+        var navBar = navItems()
+        console.log(navBar)
+        if (!lasItemInNavBarVisible()) {
+            filterDepth = true;
+            
+            navBar.forEach(function (listItem) {
+                var depth = getDepth(listItem.parentElement);
+
+                if (depth > MAX_DEPTH) {
+                    listItem.parentElement.classList.add('depth-nested');
+                }
+            });
+        }
+
+    });
+
+</script>
+
+	
+</body>
+
+</html>
