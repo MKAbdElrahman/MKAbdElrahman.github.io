@@ -21,7 +21,7 @@
     <loc>https://mkabdelrahman.github.io/categories/general/</loc>
     <lastmod>2023-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/post-10/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/docker-go/</loc>
     <lastmod>2023-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/tags/go/</loc>
@@ -56,62 +56,7 @@
                 href="https://mkabdelrahman.github.io/tags/"
                 />
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/css/</loc>
-    <lastmod>2023-06-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/html/</loc>
-    <lastmod>2023-06-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/markdown/</loc>
-    <lastmod>2023-06-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/post-8/</loc>
-    <lastmod>2023-06-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/syntax/</loc>
-    <lastmod>2023-06-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/themes/</loc>
-    <lastmod>2023-06-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/themes/</loc>
-    <lastmod>2023-06-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/post-9/</loc>
-    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/post-6/</loc>
-    <lastmod>2021-07-04T12:13:36+05:30</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/post-5/</loc>
-    <lastmod>2021-05-15T12:13:38+05:30</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/post-4/</loc>
-    <lastmod>2020-12-31T12:13:35+05:30</lastmod>
-  </url><url>
     <loc>https://mkabdelrahman.github.io/about/</loc>
-    <lastmod>2019-04-19T21:37:58+05:30</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/post-3/</loc>
-    <lastmod>2018-03-18T12:13:32+05:30</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/procrastinating/</loc>
-    <lastmod>2018-03-18T12:13:32+05:30</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/post-2/</loc>
-    <lastmod>2018-03-18T12:13:30+05:30</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/space/</loc>
-    <lastmod>2018-03-18T12:13:30+05:30</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/primer/</loc>
-    <lastmod>2018-03-18T02:01:58+05:30</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/post-1/</loc>
-    <lastmod>2018-03-18T02:01:58+05:30</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/todo/</loc>
-    <lastmod>2018-03-18T02:01:58+05:30</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/authors/</loc>
     <xhtml:link
@@ -124,6 +69,10 @@
                 hreflang="en"
                 href="https://mkabdelrahman.github.io/authors/"
                 />
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/contact/</loc>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/projects/</loc>
   </url><url>
     <loc>https://mkabdelrahman.github.io/series/</loc>
     <xhtml:link

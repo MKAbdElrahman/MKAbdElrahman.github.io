@@ -26,18 +26,6 @@
                 href="https://mkabdelrahman.github.io/pt-br/categories/"
                 />
   </url><url>
-    <loc>https://mkabdelrahman.github.io/pt-br/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mkabdelrahman.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://mkabdelrahman.github.io/pt-br/"
-                />
-  </url><url>
     <loc>https://mkabdelrahman.github.io/pt-br/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -60,6 +48,18 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="https://mkabdelrahman.github.io/pt-br/tags/"
+                />
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/pt-br/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mkabdelrahman.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://mkabdelrahman.github.io/pt-br/"
                 />
   </url>
 </urlset>

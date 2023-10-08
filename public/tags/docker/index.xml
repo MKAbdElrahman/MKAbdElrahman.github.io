@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>docker on M. Kamal AbdElrahman</title>
+    <title>docker on Mohamed Kamal</title>
     <link>https://mkabdelrahman.github.io/tags/docker/</link>
-    <description>Recent content in docker on M. Kamal AbdElrahman</description>
+    <description>Recent content in docker on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mkabdelrahman.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting Started with Docker for Go</title>
-      <link>https://mkabdelrahman.github.io/posts/post-10/</link>
+      <link>https://mkabdelrahman.github.io/posts/docker-go/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mkabdelrahman.github.io/posts/post-10/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/docker-go/</guid>
       <description>What Is a Container? Link to heading Containers are like isolating an application so it thinks it&amp;rsquo;s running all by itself. It&amp;rsquo;s similar to a virtual machine (VM) but uses the host&amp;rsquo;s operating system instead of its own. To start a container, you begin with a container image that bundles up everything the application needs to run, making it easy to share and distribute.
 The isolation that tricks a container into believing it has control over a whole Linux machine is achieved through the use of namespaces and control groups.</description>
     </item>
