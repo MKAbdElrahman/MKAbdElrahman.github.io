@@ -6,7 +6,17 @@
     <description>Recent content in technology on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mkabdelrahman.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mkabdelrahman.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
+      <link>https://mkabdelrahman.github.io/posts/go-init-functions/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkabdelrahman.github.io/posts/go-init-functions/</guid>
+      <description>In Go, init functions play a crucial role in package initialization. They are used to set up the initial state of your application, and their behavior can be both powerful and tricky to manage. In this blog post, we&amp;rsquo;ll delve into the concept of init functions, their use cases, execution order, and common pitfalls.
+What Are init Functions? Link to heading In Go, an init function is a special type of function used for package-level initialization.</description>
+    </item>
+    
     <item>
       <title>Essential Docker Commands</title>
       <link>https://mkabdelrahman.github.io/posts/docker-commands/</link>
