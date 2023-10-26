@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Simplify Configuration Management in Go with the &#39;conf&#39; Package · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="Learn how to manage configuration in your Go applications with the &#39;conf&#39; package and customize it using flags.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Simplify Configuration Management in Go with the &#39;conf&#39; Package"/>
+<meta name="twitter:description" content="Learn how to manage configuration in your Go applications with the &#39;conf&#39; package and customize it using flags."/>
+
+<meta property="og:title" content="Simplify Configuration Management in Go with the &#39;conf&#39; Package" />
+<meta property="og:description" content="Learn how to manage configuration in your Go applications with the &#39;conf&#39; package and customize it using flags." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/go-conf-pkg/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-10-25T00:00:00+00:00" />
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/go-conf-pkg/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/go-conf-pkg/">
+              Simplify Configuration Management in Go with the &#39;conf&#39; Package
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-10-25T00:00:00Z">
+                October 25, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              6-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/technology/">technology</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/go/">go</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/conf/">conf</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>The &ldquo;conf&rdquo; package is designed to make configuration management in Go straightforward and flexible. It allows you to define your application&rsquo;s configuration as a struct and then parse it for both environment variables and command-line arguments. This approach makes it easy to handle different configuration sources, and the package provides a variety of customization options through struct tags.</p>
+<p>First, you need to install the &ldquo;conf&rdquo; package:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go get github.com/ardanlabs/conf/v3
+</span></span></code></pre></div><p>Define a struct that represents your application&rsquo;s configuration. You can use struct tags to specify default values, environment variable names, and other options.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">appConfig</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Port</span>       <span class="kt">int</span>    <span class="s">`conf:&#34;default:8080,env:APP_PORT&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Host</span>       <span class="kt">string</span> <span class="s">`conf:&#34;default:localhost,env:APP_HOST&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">DebugMode</span>  <span class="kt">bool</span>   <span class="s">`conf:&#34;default:false&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">LogFile</span>    <span class="kt">string</span> <span class="s">`conf:&#34;default:/var/log/myapp.log&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Timeout</span>    <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span> <span class="s">`conf:&#34;default:30s&#34;`</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Now, you can use the <code>conf.Parse</code> function to parse the configuration from environment variables and command line arguments.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">cfg</span> <span class="nx">appConfig</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">help</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">conf</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="s">&#34;APP&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">cfg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">errors</span><span class="p">.</span><span class="nf">Is</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">conf</span><span class="p">.</span><span class="nx">ErrHelpWanted</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">help</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Error parsing configuration: %v\n&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Your application logic using the cfg object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Port: %d\n&#34;</span><span class="p">,</span> <span class="nx">cfg</span><span class="p">.</span><span class="nx">Port</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Host: %s\n&#34;</span><span class="p">,</span> <span class="nx">cfg</span><span class="p">.</span><span class="nx">Host</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Debug Mode: %v\n&#34;</span><span class="p">,</span> <span class="nx">cfg</span><span class="p">.</span><span class="nx">DebugMode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Log File: %s\n&#34;</span><span class="p">,</span> <span class="nx">cfg</span><span class="p">.</span><span class="nx">LogFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Timeout: %s\n&#34;</span><span class="p">,</span> <span class="nx">cfg</span><span class="p">.</span><span class="nx">Timeout</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Running this program would print this output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜ go run main.go 
+</span></span><span class="line"><span class="cl">Port: <span class="m">8080</span>
+</span></span><span class="line"><span class="cl">Host: localhost
+</span></span><span class="line"><span class="cl">Debug Mode: <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">Log File: /var/log/myapp.log
+</span></span><span class="line"><span class="cl">Timeout: 30s
+</span></span></code></pre></div><p>If you want to support command line arguments in addition to environment variables, you can simply add the command line arguments after the flags. For example, if you run your application as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜ go run main.go --port<span class="o">=</span><span class="m">8081</span> --debug-mode
+</span></span><span class="line"><span class="cl">Port: <span class="m">8081</span>
+</span></span><span class="line"><span class="cl">Host: localhost
+</span></span><span class="line"><span class="cl">Debug Mode: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">Log File: /var/log/myapp.log
+</span></span><span class="line"><span class="cl">Timeout: 30s
+</span></span></code></pre></div><p>You can also display the usage of your application&rsquo;s configuration for users. This is helpful for users to understand the available configuration options.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜ go run main.go -h
+</span></span><span class="line"><span class="cl">Usage: main <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>arguments<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">OPTIONS
+</span></span><span class="line"><span class="cl">  --port/<span class="nv">$APP_APP_PORT</span>          &lt;int&gt;       <span class="o">(</span>default: 8080<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  --host/<span class="nv">$APP_APP_HOST</span>          &lt;string&gt;    <span class="o">(</span>default: localhost<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  --debug-mode/<span class="nv">$APP_DEBUG_MODE</span>  &lt;bool&gt;      <span class="o">(</span>default: <span class="nb">false</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  --log-file/<span class="nv">$APP_LOG_FILE</span>      &lt;string&gt;    <span class="o">(</span>default: /var/log/myapp.log<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  --timeout/<span class="nv">$APP_TIMEOUT</span>        &lt;duration&gt;  <span class="o">(</span>default: 30s<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  --help/-h                     
+</span></span><span class="line"><span class="cl">  display this <span class="nb">help</span> message
+</span></span></code></pre></div><p>If you want to include version information for your application, you can use the <code>Version</code> type. First, modify your <code>appConfig</code> struct to include the <code>Version</code> type.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">AppConfig</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Existing fields...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">Version</span> <span class="nx">conf</span><span class="p">.</span><span class="nx">Version</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Then, set the version and description:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">cfg</span> <span class="o">:=</span> <span class="nx">AppConfig</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Existing configuration...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">Version</span><span class="p">:</span> <span class="nx">conf</span><span class="p">.</span><span class="nx">Version</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Build</span><span class="p">:</span> <span class="s">&#34;v1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Desc</span><span class="p">:</span>  <span class="s">&#34;Your Application Description&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="customization-options">
+  Customization Options
+  <a class="heading-link" href="#customization-options">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The &ldquo;conf&rdquo; package offers a range of customization options through struct tags, allowing you to fine-tune how configuration fields are handled. Here&rsquo;s a closer look at these customization flags:</p>
+<h3 id="1-default">
+  1. <code>default</code>
+  <a class="heading-link" href="#1-default">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The <code>default</code> flag allows you to specify a default value for a configuration field. This default value is used when no value is provided in environment variables or command-line arguments. For example, you can set a default port value as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">Port</span> <span class="kt">int</span> <span class="s">`conf:&#34;default:8080&#34;`</span>
+</span></span></code></pre></div><h3 id="2-env">
+  2. <code>env</code>
+  <a class="heading-link" href="#2-env">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The <code>env</code> flag gives you the ability to override the default environment variable name associated with a configuration field. This is particularly useful when you want to use specific environment variable names that align with your application&rsquo;s naming conventions. For instance, you can specify a custom environment variable name for the host:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">Host</span> <span class="kt">string</span> <span class="s">`conf:&#34;env:APP_HOST&#34;`</span>
+</span></span></code></pre></div><h3 id="3-flag">
+  3. <code>flag</code>
+  <a class="heading-link" href="#3-flag">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The <code>flag</code> flag allows you to override the default flag name for a field. This is handy when you want to provide a custom command-line flag name for a configuration option. For example, you can change the flag name for enabling debug mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">DebugMode</span> <span class="kt">bool</span> <span class="s">`conf:&#34;flag:debug&#34;`</span>
+</span></span></code></pre></div><h3 id="4-short">
+  4. <code>short</code>
+  <a class="heading-link" href="#4-short">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The <code>short</code> flag is used to denote a shorthand option for the flag. You can specify a single character as a shorthand flag for a configuration field, making it quicker to set from the command line. For instance, you can define a shorthand flag &rsquo;l&rsquo; for the log file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">LogFile</span> <span class="kt">string</span> <span class="s">`conf:&#34;short:l&#34;`</span>
+</span></span></code></pre></div><h3 id="5-noprint">
+  5. <code>noprint</code>
+  <a class="heading-link" href="#5-noprint">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The <code>noprint</code> flag is particularly helpful when you have fields that are for internal use and don&rsquo;t need to be displayed to end-users in the usage information. By tagging a field with <code>noprint</code>, you indicate that it should not be included in the display string. Here&rsquo;s an example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">SecretToken</span> <span class="kt">string</span> <span class="s">`conf:&#34;noprint&#34;`</span>
+</span></span></code></pre></div><h3 id="6-mask">
+  6. <code>mask</code>
+  <a class="heading-link" href="#6-mask">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Sometimes, you might have fields containing sensitive data like passwords. The <code>mask</code> flag comes to the rescue by including the field in the display string but masking out the actual value. This provides security for sensitive data. You can tag a password field as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">Password</span> <span class="kt">string</span> <span class="s">`conf:&#34;mask&#34;`</span>
+</span></span></code></pre></div><h3 id="7-required">
+  7. <code>required</code>
+  <a class="heading-link" href="#7-required">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The <code>required</code> flag is used to denote that a value must be provided for a field. If a value is not provided through environment variables or command-line arguments, an error will be raised, indicating that the field is mandatory. For instance, marking the API key as required:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">APIKey</span> <span class="kt">string</span> <span class="s">`conf:&#34;required&#34;`</span>
+</span></span></code></pre></div><h3 id="8-help">
+  8. <code>help</code>
+  <a class="heading-link" href="#8-help">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The <code>help</code> flag allows you to provide a description for the field. This description is invaluable for generating informative usage information for your application&rsquo;s configuration. Users can refer to this description to understand the purpose of each configuration option. Here&rsquo;s an example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">Timeout</span> <span class="kt">int</span> <span class="s">`conf:&#34;help:Connection timeout in seconds&#34;`</span>
+</span></span></code></pre></div><p>By using these customization options, you can create a highly adaptable configuration system tailored to your application&rsquo;s specific needs. The flags allow you to provide context, security, and usability for your configuration fields.</p>
+<h3 id="example-applying-flags-to-configuration">
+  Example: Applying Flags to Configuration
+  <a class="heading-link" href="#example-applying-flags-to-configuration">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>To illustrate how these flags work in practice, let&rsquo;s consider an example. We have an <code>AppConfig</code> struct that includes various fields with different flags applied:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">AppConfig</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Port</span> <span class="kt">int</span> <span class="s">`conf:&#34;default:8080&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Host</span> <span class="kt">string</span> <span class="s">`conf:&#34;env:APP_HOST&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">DebugMode</span> <span class="kt">bool</span> <span class="s">`conf:&#34;flag:debug&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">LogFile</span> <span class="kt">string</span> <span class="s">`conf:&#34;short:l&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">SecretToken</span> <span class="kt">string</span> <span class="s">`conf:&#34;noprint&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Password</span> <span class="kt">string</span> <span class="s">`conf:&#34;mask&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">APIKey</span> <span class="kt">string</span> <span class="s">`conf:&#34;required&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Timeout</span> <span class="kt">int</span> <span class="s">`conf:&#34;help:Connection timeout in seconds&#34;`</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In this example, the <code>Port</code> field has a default value, the <code>Host</code> field overrides the environment variable name, the <code>DebugMode</code> field overrides the flag name, and so on.</p>
+<p>With this configuration in place, you can use the <code>conf.Parse</code> function to parse the configuration values. The configured flags and their customizations will be applied during the parsing process.</p>
+<h2 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The &ldquo;conf&rdquo; package simplifies configuration management in Go by providing support for environment variables and command-line arguments. With the flexibility of customization flags, you can fine-tune your application&rsquo;s configuration to suit your specific needs, ensuring that your application runs smoothly in different environments.</p>
+<p>To learn more about the &ldquo;conf&rdquo; package and its advanced features, you can refer to the official documentation on <a href="https://pkg.go.dev/github.com/ardanlabs/conf/v3"  class="external-link" target="_blank" rel="noopener">go.dev</a>.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2023
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
