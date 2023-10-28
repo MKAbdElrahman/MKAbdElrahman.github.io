@@ -20,6 +20,15 @@ go get github.com/ardanlabs/conf/v3 Define a struct that represents your applica
     
     <item>
       <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
+      <link>https://mkabdelrahman.github.io/posts/go-context/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkabdelrahman.github.io/posts/go-context/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
       <link>https://mkabdelrahman.github.io/posts/go-init-functions/</link>
       <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
       

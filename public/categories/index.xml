@@ -6,7 +6,25 @@
     <description>Recent content in Categories on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mkabdelrahman.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mkabdelrahman.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Application Deployment</title>
+      <link>https://mkabdelrahman.github.io/categories/application-deployment/</link>
+      <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkabdelrahman.github.io/categories/application-deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Workflow</title>
+      <link>https://mkabdelrahman.github.io/categories/kubernetes-workflow/</link>
+      <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkabdelrahman.github.io/categories/kubernetes-workflow/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>technology</title>
       <link>https://mkabdelrahman.github.io/categories/technology/</link>

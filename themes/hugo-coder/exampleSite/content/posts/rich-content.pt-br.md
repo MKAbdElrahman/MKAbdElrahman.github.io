@@ -1,20 +1,19 @@
-+++
 authors = ["Programador Solitário"]
-title = "Conteúdo Rico"
+title = "Deploying Node.js Apps with Kubernetes"
 date = "2023-07-12"
-description = "Uma breve descrição sobre Shortcodes do Hugo"
+description = "Explore the seamless deployment workflow for Node.js applications within Kubernetes clusters."
 tags = [
-    "hugo",
-    "markdown",
-    "css",
-    "html",
-    "shortcodes",
+    "Kubernetes",
+    "Node.js",
+    "Docker",
+    "Deployment",
+    "Containers",
 ]
 categories = [
-    "sintaxe",
-    "demonstração do tema",
+    "Application Deployment",
+    "Kubernetes Workflow",
 ]
-series = ["Demonstração do Tema"]
+series = ["Kubernetes Deployment Workflow"]
 +++
 
 O Hugo vem com vários [Shortcodes Internos](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) para conteúdo rico, assim como uma [Configuração de Privacidade](https://gohugo.io/about/hugo-and-gdpr/) e uma gama de Shortcodes simples que permitem embutir versões estáticas e sem JS de várias de redes sociais.
