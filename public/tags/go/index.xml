@@ -1,51 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>go on Mohamed Kamal</title>
+    <title>Go on Mohamed Kamal</title>
     <link>https://mkabdelrahman.github.io/tags/go/</link>
-    <description>Recent content in go on Mohamed Kamal</description>
+    <description>Recent content in Go on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mkabdelrahman.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Context Package: Cause-aware Context Cancellation</title>
+      <link>https://mkabdelrahman.github.io/posts/cause/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/cause/</guid>
+      <description>The context package in Go has recently introduced cause-aware context cancellation functions. This update includes the WithCancelCause, WithDeadlineCause, and WithTimeoutCause functions, as well as the Cause function for retrieving the cause of context cancellation.
+func WithCancelCause(parent Context) (ctx Context, cancel CancelCauseFunc) This function is analogous to WithCancel, but it returns a CancelCauseFunc that allows setting an error as the cause of cancellation.
+func WithDeadlineCause(parent Context, d time.Time, cause error) (Context, CancelFunc) Combining features of WithDeadline with the ability to provide a cause for context cancellation.</description>
+    </item>
+    <item>
+      <title>Go Context Package: AfterFunc</title>
+      <link>https://mkabdelrahman.github.io/posts/afterfunc/</link>
+      <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/afterfunc/</guid>
+      <description>The AfterFunc function in Go&amp;rsquo;s context package provides a robust tool for scheduling the execution of a specified function after a given context concludes, be it due to cancellation or a timeout. This blog post delves into the practical application of AfterFunc through an illustrative example, shedding light on its functionality and potential use cases.
+The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (stop func() bool) ctx: The context that determines when the function f should be executed.</description>
+    </item>
     <item>
       <title>Simplify Configuration Management in Go with the &#39;conf&#39; Package</title>
       <link>https://mkabdelrahman.github.io/posts/go-conf-pkg/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mkabdelrahman.github.io/posts/go-conf-pkg/</guid>
       <description>The &amp;ldquo;conf&amp;rdquo; package is designed to make configuration management in Go straightforward and flexible. It allows you to define your application&amp;rsquo;s configuration as a struct and then parse it for both environment variables and command-line arguments. This approach makes it easy to handle different configuration sources, and the package provides a variety of customization options through struct tags.
 First, you need to install the &amp;ldquo;conf&amp;rdquo; package:
 go get github.com/ardanlabs/conf/v3 Define a struct that represents your application&amp;rsquo;s configuration.</description>
     </item>
-    
-    <item>
-      <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
-      <link>https://mkabdelrahman.github.io/posts/go-context/</link>
-      <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mkabdelrahman.github.io/posts/go-context/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
       <link>https://mkabdelrahman.github.io/posts/go-init-functions/</link>
       <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mkabdelrahman.github.io/posts/go-init-functions/</guid>
       <description>In Go, init functions play a crucial role in package initialization. They are used to set up the initial state of your application, and their behavior can be both powerful and tricky to manage. In this blog post, we&amp;rsquo;ll delve into the concept of init functions, their use cases, execution order, and common pitfalls.
 What Are init Functions? Link to heading In Go, an init function is a special type of function used for package-level initialization.</description>
     </item>
-    
     <item>
       <title>Getting Started with Docker for Go</title>
       <link>https://mkabdelrahman.github.io/posts/docker-go/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mkabdelrahman.github.io/posts/docker-go/</guid>
       <description>What Is a Container? Link to heading Containers are like isolating an application so it thinks it&amp;rsquo;s running all by itself. It&amp;rsquo;s similar to a virtual machine (VM) but uses the host&amp;rsquo;s operating system instead of its own. To start a container, you begin with a container image that bundles up everything the application needs to run, making it easy to share and distribute.
 The isolation that tricks a container into believing it has control over a whole Linux machine is achieved through the use of namespaces and control groups.</description>
     </item>
-    
   </channel>
 </rss>

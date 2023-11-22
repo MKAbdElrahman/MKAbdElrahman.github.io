@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go Context Package on Mohamed Kamal</title>
+    <link>https://mkabdelrahman.github.io/series/go-context-package/</link>
+    <description>Recent content in Go Context Package on Mohamed Kamal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/series/go-context-package/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Context Package: Cause-aware Context Cancellation</title>
+      <link>https://mkabdelrahman.github.io/posts/cause/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/cause/</guid>
+      <description>The context package in Go has recently introduced cause-aware context cancellation functions. This update includes the WithCancelCause, WithDeadlineCause, and WithTimeoutCause functions, as well as the Cause function for retrieving the cause of context cancellation.
+func WithCancelCause(parent Context) (ctx Context, cancel CancelCauseFunc) This function is analogous to WithCancel, but it returns a CancelCauseFunc that allows setting an error as the cause of cancellation.
+func WithDeadlineCause(parent Context, d time.Time, cause error) (Context, CancelFunc) Combining features of WithDeadline with the ability to provide a cause for context cancellation.</description>
+    </item>
+    <item>
+      <title>Go Context Package: AfterFunc</title>
+      <link>https://mkabdelrahman.github.io/posts/afterfunc/</link>
+      <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/afterfunc/</guid>
+      <description>The AfterFunc function in Go&amp;rsquo;s context package provides a robust tool for scheduling the execution of a specified function after a given context concludes, be it due to cancellation or a timeout. This blog post delves into the practical application of AfterFunc through an illustrative example, shedding light on its functionality and potential use cases.
+The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (stop func() bool) ctx: The context that determines when the function f should be executed.</description>
+    </item>
+  </channel>
+</rss>

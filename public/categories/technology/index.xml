@@ -6,58 +6,42 @@
     <description>Recent content in technology on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mkabdelrahman.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simplify Configuration Management in Go with the &#39;conf&#39; Package</title>
       <link>https://mkabdelrahman.github.io/posts/go-conf-pkg/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mkabdelrahman.github.io/posts/go-conf-pkg/</guid>
       <description>The &amp;ldquo;conf&amp;rdquo; package is designed to make configuration management in Go straightforward and flexible. It allows you to define your application&amp;rsquo;s configuration as a struct and then parse it for both environment variables and command-line arguments. This approach makes it easy to handle different configuration sources, and the package provides a variety of customization options through struct tags.
 First, you need to install the &amp;ldquo;conf&amp;rdquo; package:
 go get github.com/ardanlabs/conf/v3 Define a struct that represents your application&amp;rsquo;s configuration.</description>
     </item>
-    
-    <item>
-      <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
-      <link>https://mkabdelrahman.github.io/posts/go-context/</link>
-      <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mkabdelrahman.github.io/posts/go-context/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
       <link>https://mkabdelrahman.github.io/posts/go-init-functions/</link>
       <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mkabdelrahman.github.io/posts/go-init-functions/</guid>
       <description>In Go, init functions play a crucial role in package initialization. They are used to set up the initial state of your application, and their behavior can be both powerful and tricky to manage. In this blog post, we&amp;rsquo;ll delve into the concept of init functions, their use cases, execution order, and common pitfalls.
 What Are init Functions? Link to heading In Go, an init function is a special type of function used for package-level initialization.</description>
     </item>
-    
     <item>
       <title>Essential Docker Commands</title>
       <link>https://mkabdelrahman.github.io/posts/docker-commands/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mkabdelrahman.github.io/posts/docker-commands/</guid>
       <description>Display Docker Version Information Link to heading docker version This command provides information about the Docker Engine version.
 List All Docker Images Link to heading docker images This command lists all the Docker images available on your system.
 Pull an Image from the Registry Link to heading docker pull &amp;lt;image_name&amp;gt; You can use this command to download a Docker image from a container registry, like Docker Hub.
 Create and Run a New Ubuntu Container with Interactive Shell Link to heading docker run -it &amp;lt;image&amp;gt; /bin/bash This command starts a new Docker container based on the specified image and opens an interactive shell (in this case, /bin/bash) inside the container.</description>
     </item>
-    
     <item>
       <title>Getting Started with Docker for Go</title>
       <link>https://mkabdelrahman.github.io/posts/docker-go/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mkabdelrahman.github.io/posts/docker-go/</guid>
       <description>What Is a Container? Link to heading Containers are like isolating an application so it thinks it&amp;rsquo;s running all by itself. It&amp;rsquo;s similar to a virtual machine (VM) but uses the host&amp;rsquo;s operating system instead of its own. To start a container, you begin with a container image that bundles up everything the application needs to run, making it easy to share and distribute.
 The isolation that tricks a container into believing it has control over a whole Linux machine is achieved through the use of namespaces and control groups.</description>
     </item>
-    
   </channel>
 </rss>
