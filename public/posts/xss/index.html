@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Understanding XSS Attacks and Contextual Encoding in Go · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Understanding XSS Attacks and Contextual Encoding in Go"/>
+<meta name="twitter:description" content="XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code."/>
+
+<meta property="og:title" content="Understanding XSS Attacks and Contextual Encoding in Go" />
+<meta property="og:description" content="XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/xss/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-12-03T00:00:00+00:00" />
+
+
+
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/xss/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/xss/">
+              Understanding XSS Attacks and Contextual Encoding in Go
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-12-03T00:00:00Z">
+                December 3, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa fa-user" aria-hidden="true"></i>
+    <a href="/authors/mohamed-kamal/">Mohamed Kamal</a></div>
+
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/security/">security</a>
+      <span class="separator">•</span>
+    <a href="/categories/go/">Go</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/security/">security</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/go/">Go</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/xss-attacks/">xss attacks</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/http/template/">http/template</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/contextual-encoding/">contextual encoding</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="xss-cross-site-scripting">
+  XSS (Cross-Site Scripting)
+  <a class="heading-link" href="#xss-cross-site-scripting">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code. This proactive measure helps thwart XSS attacks by guaranteeing that even if malicious code is injected, it will be displayed as plain text rather than executed by the browser.</p>
+<h2 id="contextual-encoding">
+  Contextual Encoding
+  <a class="heading-link" href="#contextual-encoding">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The term &ldquo;context&rdquo; refers to the specific environment or situation in which a piece of code is executed or data is utilized. It involves understanding the circumstances surrounding a particular occurrence. In web development, particularly when handling user input, context is vital to determining where and how that input will be utilized—whether within an HTML attribute, a JavaScript function, as part of a SQL query, and so on.</p>
+<p>Encoding is the process of transforming data from one form to another. In the context of web security, encoding typically involves converting special characters into a format safe for inclusion in a specific context. For example, encoding may replace certain characters with their HTML equivalents. For instance, converting <code>&lt;</code> to <code>&amp;lt;</code> and <code>&gt;</code> to <code>&amp;gt;</code> ensures that the browser interprets these characters as plain text and not as HTML tags.</p>
+<h3 id="example">
+  Example
+  <a class="heading-link" href="#example">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Consider a scenario where a user submits a review and enters their name as <code>&lt;script&gt;alert('XSS attack!')&lt;/script&gt;</code>. Without contextual encoding, any user attempting to view a page that displays this username would inadvertently trigger the execution of the embedded JavaScript code. However, with contextual encoding, this input would be encoded to <code>&amp;lt;script&amp;gt;alert(&amp;#39;XSS attack!&amp;#39;)&amp;lt;/script&amp;gt;</code>. Notably, the malicious username still appears as intended, but internally it is converted to regular text. The Go template package, by default, incorporates this contextual encoding, thereby safeguarding against potential XSS vulnerabilities. This approach allows the user&rsquo;s input to be displayed as intended, while ensuring that it is internally treated as plain text rather than executable code.</p>
+<h2 id="trusting-users-with-templatehtml">
+  Trusting Users with <code>template.HTML</code>
+  <a class="heading-link" href="#trusting-users-with-templatehtml">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>In situations where complete trust is established with the user, and the content is known to be safe, Go provides the <code>template.HTML</code> type. This type explicitly signals to the template system that the content should be treated as raw HTML. While this can be a useful tool, it should be used with caution, as it bypasses the contextual encoding protections and relies on the assumption that the content is entirely trustworthy. Careful consideration should be given to the potential risks before employing this</p>
+<h2 id="full-go-example">
+  Full Go Example
+  <a class="heading-link" href="#full-go-example">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The provided Go code illustrates a simple web application using the Echo framework that allows users to submit reviews through a form. The example showcases how contextual encoding is applied by default through the Go template package to mitigate potential XSS vulnerabilities.</p>
+<p><strong>main.go</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;html/template&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;io&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;net/http&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;strconv&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;github.com/labstack/echo/v4&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Template</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">templates</span> <span class="o">*</span><span class="nx">template</span><span class="p">.</span><span class="nx">Template</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">Template</span><span class="p">)</span> <span class="nf">Render</span><span class="p">(</span><span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">data</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">c</span> <span class="nx">echo</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">t</span><span class="p">.</span><span class="nx">templates</span><span class="p">.</span><span class="nf">ExecuteTemplate</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">ReviewData</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Username</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Rating</span>   <span class="kt">int</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Comment</span>  <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">e</span> <span class="o">:=</span> <span class="nx">echo</span><span class="p">.</span><span class="nf">New</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">e</span><span class="p">.</span><span class="nf">GET</span><span class="p">(</span><span class="s">&#34;/review&#34;</span><span class="p">,</span> <span class="nx">GetReviewForm</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">e</span><span class="p">.</span><span class="nf">POST</span><span class="p">(</span><span class="s">&#34;/review&#34;</span><span class="p">,</span> <span class="nx">SubmitReview</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">t</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">Template</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">templates</span><span class="p">:</span> <span class="nx">template</span><span class="p">.</span><span class="nf">Must</span><span class="p">(</span><span class="nx">template</span><span class="p">.</span><span class="nf">ParseGlob</span><span class="p">(</span><span class="s">&#34;public/views/*.html&#34;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">e</span><span class="p">.</span><span class="nx">Renderer</span> <span class="p">=</span> <span class="nx">t</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">e</span><span class="p">.</span><span class="nx">Logger</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nf">Start</span><span class="p">(</span><span class="s">&#34;:1323&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">GetReviewForm</span><span class="p">(</span><span class="nx">c</span> <span class="nx">echo</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nf">Render</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="p">,</span> <span class="s">&#34;review_form.html&#34;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">SubmitReview</span><span class="p">(</span><span class="nx">c</span> <span class="nx">echo</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Retrieve form values
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">username</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">FormValue</span><span class="p">(</span><span class="s">&#34;username&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ratingStr</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">FormValue</span><span class="p">(</span><span class="s">&#34;rating&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">comment</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">FormValue</span><span class="p">(</span><span class="s">&#34;comment&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// Convert rating to int
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">rating</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">strconv</span><span class="p">.</span><span class="nf">Atoi</span><span class="p">(</span><span class="nx">ratingStr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nf">String</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusBadRequest</span><span class="p">,</span> <span class="s">&#34;Invalid rating&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// Create a struct to hold the review data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">reviewData</span> <span class="o">:=</span> <span class="nx">ReviewData</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">Username</span><span class="p">:</span> <span class="nx">username</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">Rating</span><span class="p">:</span>   <span class="nx">rating</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">Comment</span><span class="p">:</span>  <span class="nx">comment</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// Render a confirmation page with the submitted review data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nf">Render</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="p">,</span> <span class="s">&#34;review_confirmation.html&#34;</span><span class="p">,</span> <span class="nx">reviewData</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>review_form.html</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Review Form<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Review Form<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/review&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;username&#34;</span><span class="p">&gt;</span>Username:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;username&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;username&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;rating&#34;</span><span class="p">&gt;</span>Rating:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;number&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">min</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">max</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;comment&#34;</span><span class="p">&gt;</span>Comment:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;comment&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;comment&#34;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&#34;4&#34;</span> <span class="na">required</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>Submit Review<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><strong>review_confirmation.html</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Review Confirmation<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Review Submitted<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Thank you for your review!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Review Details:<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Username: {{.Username}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Rating: {{.Rating}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Comment: {{.Comment}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="try-it-yourself-contextual-encoding-in-action">
+  Try It Yourself: Contextual Encoding in Action
+  <a class="heading-link" href="#try-it-yourself-contextual-encoding-in-action">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>
+<p><strong>Go and View the Page Source</strong></p>
+<p>After running the provided Go example, navigate to the review form at <code>http://localhost:1323/review</code> in your web browser. Submit a review with the name <code>&lt;script&gt;alert('XSS attack!')&lt;/script&gt;</code>. Once submitted, right-click on the page and select &ldquo;View Page Source&rdquo; to inspect the HTML. Observe how the entered script is encoded as <code>&amp;lt;script&amp;gt;alert(&amp;#39;XSS attack!&amp;#39;)&amp;lt;/script&amp;gt;</code>, preventing it from being executed.</p>
+</li>
+</ol>
+<hr>
+<h3 id="try-it-yourself-using-templatehtml">
+  Try It Yourself: Using <code>template.HTML</code>
+  <a class="heading-link" href="#try-it-yourself-using-templatehtml">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol start="2">
+<li>
+<p><strong>Using <code>template.HTML</code> to Trigger Alert Script</strong></p>
+<p>To observe the potential risk when using <code>template.HTML</code>, modify the <code>ReviewData</code> struct in <code>main.go</code> to use <code>template.HTML</code> for the comment field:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">ReviewData</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Username</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Rating</span>   <span class="kt">int</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Comment</span>  <span class="nx">template</span><span class="p">.</span><span class="nx">HTML</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Then, in the <code>SubmitReview</code> function, construct the <code>ReviewData</code> using <code>template.HTML</code> for the comment:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Create a struct to hold the review data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">reviewData</span> <span class="o">:=</span> <span class="nx">ReviewData</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Username</span><span class="p">:</span> <span class="nx">username</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Rating</span><span class="p">:</span>   <span class="nx">rating</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Comment</span><span class="p">:</span>  <span class="nx">template</span><span class="p">.</span><span class="nf">HTML</span><span class="p">(</span><span class="nx">comment</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Submit a new review with the name <code>&lt;script&gt;alert('XSS attack!')&lt;/script&gt;</code> again. After confirming the review, view the confirmation page. You&rsquo;ll notice that the script is now triggered automatically, indicating the potential risk of using <code>template.HTML</code> without proper validation.</p>
+</li>
+</ol>
+<hr>
+<h3 id="try-it-yourself-avoiding-the-template-package-entirely">
+  Try It Yourself: Avoiding the Template Package Entirely
+  <a class="heading-link" href="#try-it-yourself-avoiding-the-template-package-entirely">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol start="3">
+<li>
+<p><strong>Avoiding the Template Package Entirely</strong></p>
+<p>In this scenario, modify the <code>SubmitReview</code> function to directly write to the response writer using <code>Fprint</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">SubmitReview</span><span class="p">(</span><span class="nx">c</span> <span class="nx">echo</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Retrieve form values
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">username</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">FormValue</span><span class="p">(</span><span class="s">&#34;username&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">ratingStr</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">FormValue</span><span class="p">(</span><span class="s">&#34;rating&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">comment</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">FormValue</span><span class="p">(</span><span class="s">&#34;comment&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Convert rating to int
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">rating</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">strconv</span><span class="p">.</span><span class="nf">Atoi</span><span class="p">(</span><span class="nx">ratingStr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nf">String</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusBadRequest</span><span class="p">,</span> <span class="s">&#34;Invalid rating&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Construct the HTML for the confirmation page
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">confirmationHTML</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">`
+</span></span></span><span class="line"><span class="cl"><span class="s">        &lt;!DOCTYPE html&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">        &lt;html lang=&#34;en&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">        &lt;head&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">            &lt;meta charset=&#34;UTF-8&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">            &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">            &lt;title&gt;Review Confirmation&lt;/title&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">        &lt;/head&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">        &lt;body&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">            &lt;h1&gt;Review Submitted&lt;/h1&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">            &lt;p&gt;Thank you for your review!&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">            &lt;h2&gt;Review Details:&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">            &lt;p&gt;Username: %s&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">            &lt;p&gt;Rating: %d&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">            &lt;p&gt;Comment: %s&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">        &lt;/body&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">        &lt;/html&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">    `</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">rating</span><span class="p">,</span> <span class="nx">comment</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Write the HTML directly to the response writer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">io</span><span class="p">.</span><span class="nf">WriteString</span><span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nf">Response</span><span class="p">().</span><span class="nx">Writer</span><span class="p">,</span> <span class="nx">confirmationHTML</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><hr>
+</li>
+</ol>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2023
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

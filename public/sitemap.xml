@@ -3,10 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mkabdelrahman.github.io/authors/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/categories/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/contextual-encoding/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/go/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/categories/go/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/authors/mohamed-kamal/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/security/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/series/security/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/categories/security/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/series/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/xss/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/xss-attacks/</loc>
+    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/tags/concurrecny/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
@@ -17,31 +56,10 @@
     <loc>https://mkabdelrahman.github.io/tags/context/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/go/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/go/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mkabdelrahman.github.io/series/go-context-package/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/posts/cause/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/authors/mohamed-kamal/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/series/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/posts/afterfunc/</loc>
@@ -95,6 +113,8 @@
     <loc>https://mkabdelrahman.github.io/about/</loc>
   </url><url>
     <loc>https://mkabdelrahman.github.io/contact/</loc>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/http/template/</loc>
   </url><url>
     <loc>https://mkabdelrahman.github.io/projects/</loc>
   </url>
