@@ -2,101 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>contextual encoding</title>
-      <link>https://mkabdelrahman.github.io/tags/contextual-encoding/</link>
+      <title>Microservices</title>
+      <link>http://localhost:1313/tags/microservices/</link>
+      <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/microservices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Contextual Encoding</title>
+      <link>http://localhost:1313/tags/contextual-encoding/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/contextual-encoding/</guid>
+      <guid>http://localhost:1313/tags/contextual-encoding/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>https://mkabdelrahman.github.io/tags/go/</link>
+      <link>http://localhost:1313/tags/go/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/go/</guid>
+      <guid>http://localhost:1313/tags/go/</guid>
       <description></description>
     </item>
     <item>
-      <title>security</title>
-      <link>https://mkabdelrahman.github.io/tags/security/</link>
+      <title>Http/Template</title>
+      <link>http://localhost:1313/tags/http/template/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/security/</guid>
+      <guid>http://localhost:1313/tags/http/template/</guid>
       <description></description>
     </item>
     <item>
-      <title>xss attacks</title>
-      <link>https://mkabdelrahman.github.io/tags/xss-attacks/</link>
+      <title>Layered Architecture</title>
+      <link>http://localhost:1313/tags/layered-architecture/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/xss-attacks/</guid>
+      <guid>http://localhost:1313/tags/layered-architecture/</guid>
       <description></description>
     </item>
     <item>
-      <title>concurrecny</title>
-      <link>https://mkabdelrahman.github.io/tags/concurrecny/</link>
+      <title>Security</title>
+      <link>http://localhost:1313/tags/security/</link>
+      <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xss Attacks</title>
+      <link>http://localhost:1313/tags/xss-attacks/</link>
+      <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/xss-attacks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concurrecny</title>
+      <link>http://localhost:1313/tags/concurrecny/</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/concurrecny/</guid>
+      <guid>http://localhost:1313/tags/concurrecny/</guid>
       <description></description>
     </item>
     <item>
-      <title>context</title>
-      <link>https://mkabdelrahman.github.io/tags/context/</link>
+      <title>Context</title>
+      <link>http://localhost:1313/tags/context/</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/context/</guid>
+      <guid>http://localhost:1313/tags/context/</guid>
       <description></description>
     </item>
     <item>
       <title>Containers</title>
-      <link>https://mkabdelrahman.github.io/tags/containers/</link>
+      <link>http://localhost:1313/tags/containers/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/containers/</guid>
+      <guid>http://localhost:1313/tags/containers/</guid>
       <description></description>
     </item>
     <item>
       <title>Deployment</title>
-      <link>https://mkabdelrahman.github.io/tags/deployment/</link>
+      <link>http://localhost:1313/tags/deployment/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/deployment/</guid>
+      <guid>http://localhost:1313/tags/deployment/</guid>
       <description></description>
     </item>
     <item>
-      <title>docker</title>
-      <link>https://mkabdelrahman.github.io/tags/docker/</link>
+      <title>Docker</title>
+      <link>http://localhost:1313/tags/docker/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/docker/</guid>
+      <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Kubernetes</title>
-      <link>https://mkabdelrahman.github.io/tags/kubernetes/</link>
+      <link>http://localhost:1313/tags/kubernetes/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/kubernetes/</guid>
+      <guid>http://localhost:1313/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Node.js</title>
-      <link>https://mkabdelrahman.github.io/tags/node.js/</link>
+      <link>http://localhost:1313/tags/node.js/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/node.js/</guid>
+      <guid>http://localhost:1313/tags/node.js/</guid>
       <description></description>
     </item>
     <item>
-      <title>conf</title>
-      <link>https://mkabdelrahman.github.io/tags/conf/</link>
+      <title>Conf</title>
+      <link>http://localhost:1313/tags/conf/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/conf/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>http/template</title>
-      <link>https://mkabdelrahman.github.io/tags/http/template/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/tags/http/template/</guid>
+      <guid>http://localhost:1313/tags/conf/</guid>
       <description></description>
     </item>
   </channel>

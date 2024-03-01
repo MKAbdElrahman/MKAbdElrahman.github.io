@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  The Layered Architecture Style · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="The Layered Architecture Style Link to heading The layered architecture is a monolithic architectural style that organizes an application into horizontal layers, each focused on distinct technical concerns.
+Understanding the Terms:
+Monolithic application: The entire application is deployed as a single unit. Distributed application: Application components are split across different machines and communicate through a network. Technical partitioning: Application components are organized based on technical aspects like data access or user interface, rather than business domains.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="The Layered Architecture Style"/>
+<meta name="twitter:description" content="The Layered Architecture Style Link to heading The layered architecture is a monolithic architectural style that organizes an application into horizontal layers, each focused on distinct technical concerns.
+Understanding the Terms:
+Monolithic application: The entire application is deployed as a single unit. Distributed application: Application components are split across different machines and communicate through a network. Technical partitioning: Application components are organized based on technical aspects like data access or user interface, rather than business domains."/>
+
+<meta property="og:title" content="The Layered Architecture Style" />
+<meta property="og:description" content="The Layered Architecture Style Link to heading The layered architecture is a monolithic architectural style that organizes an application into horizontal layers, each focused on distinct technical concerns.
+Understanding the Terms:
+Monolithic application: The entire application is deployed as a single unit. Distributed application: Application components are split across different machines and communicate through a network. Technical partitioning: Application components are organized based on technical aspects like data access or user interface, rather than business domains." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/layered-architecture-style/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-02-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-02-29T00:00:00+00:00" />
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/layered-architecture-style/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/layered-architecture-style/">
+              The Layered Architecture Style
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-02-29T00:00:00Z">
+                February 29, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa fa-user" aria-hidden="true"></i>
+    <a href="/authors/mohamed-kamal/">Mohamed Kamal</a></div>
+
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/software-architecture/">Software Architecture</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/software-architecture/">Software Architecture</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="the-layered-architecture-style">
+  The Layered Architecture Style
+  <a class="heading-link" href="#the-layered-architecture-style">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="layered architecture style" src="/images/layered-architecture-style.png"></p>
+<p>The <strong>layered architecture</strong> is a monolithic architectural style that organizes an application into <strong>horizontal layers</strong>, each focused on <strong>distinct technical concerns</strong>.</p>
+<p><strong>Understanding the Terms:</strong></p>
+<ul>
+<li><strong>Monolithic application:</strong> The entire application is deployed as a single unit.</li>
+<li><strong>Distributed application:</strong> Application components are split across different machines and communicate through a network.</li>
+<li><strong>Technical partitioning:</strong> Application components are organized based on technical aspects like data access or user interface, rather than business domains.</li>
+</ul>
+<p><strong>Layers in the Layered Architecture:</strong></p>
+<p>The layered architecture typically consists of three core layers:</p>
+<ol>
+<li><strong>Presentation Layer:</strong> Handles external interactions, input and output.</li>
+<li><strong>Business Logic Layer:</strong> Encapsulates the core business logic of the application, independent of UI or data storage specifics.</li>
+<li><strong>Data Access Layer:</strong> Bridges the gap between the business logic and data storage (database or other mechanisms). It handles data retrieval, manipulation, and persistence.</li>
+</ol>
+<p><strong>Architectural Philosophy:</strong></p>
+<p>The philosophy behind the layered architecture revolves around two key principles:</p>
+<ol>
+<li>
+<p><strong>Separation of Concerns:</strong> Each layer focuses on its specific technical responsibility, preventing overlap and promoting cleaner, more maintainable code. Business logic should strictly reside in the <strong>business logic layer</strong>, not the presentation layer.</p>
+</li>
+<li>
+<p><strong>Directed Dependencies:</strong> Dependencies flow <strong>downward</strong> in the hierarchy. Each layer <strong>only knows and interacts with the layer directly below it</strong>. This minimizes coupling and avoids tangled dependencies when making changes.</p>
+</li>
+</ol>
+<ul>
+<li><strong>Presentation Layer:</strong> Communicates with the <strong>business logic layer</strong> for processed data and user interaction handling, <strong>not directly</strong> with the data access layer.</li>
+<li><strong>Business Logic Layer:</strong> Receives user input from the presentation layer, applies business logic, and interacts with the data access layer for data needs.</li>
+<li><strong>Data Access Layer:</strong> Directly communicates with the database, handling data operations based on requests from the business logic layer.</li>
+</ul>
+<p>Following these principles ensures changes in the data access layer implementation are <strong>isolated</strong> and don&rsquo;t directly impact the presentation layer. This promotes <strong>loose coupling</strong> and facilitates easier maintenance and future modifications.</p>
+<p><strong>Open Layeres:</strong></p>
+<p>While the core principles are crucial, some variations exist. <strong>Open layered architecture</strong> allows specific layers to interact with <strong>non-adjacent</strong> layers in the hierarchy, offering:</p>
+<ul>
+<li><strong>Improved performance:</strong> Potential performance gains in specific scenarios by bypassing intermediaries.</li>
+<li><strong>Code simplification:</strong> Code simplification for complex interactions involving multiple layers.</li>
+<li><strong>Flexibility:</strong> More flexibility in specific situations where strict adherence to directed dependencies might hinder development or performance.</li>
+</ul>
+<p>However, it also introduces:</p>
+<ul>
+<li><strong>Increased complexity:</strong> Openings make the architecture more complex to understand and maintain due to additional dependencies.</li>
+<li><strong>Reduced modularity:</strong> Interactions between non-adjacent layers can violate separation of concerns, potentially impacting modularity and reusability.</li>
+</ul>
+<p><strong>Implementing Open Layered Architecture:</strong></p>
+<p>Implementing an open layered architecture requires careful <strong>consideration of trade-offs</strong>. Generally, a <strong>closed layered architecture</strong> is recommended for its benefits in maintainability and understandability. However, in specific scenarios where the advantages outweigh the disadvantages, controlled openings can be strategically introduced with <strong>clear documentation</strong> and <strong>thorough testing</strong>.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
