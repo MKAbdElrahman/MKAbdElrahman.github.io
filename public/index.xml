@@ -6,15 +6,8 @@
     <description>Recent content on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Layered Architecture Style</title>
-      <link>https://mkabdelrahman.github.io/posts/layered-architecture-style/</link>
-      <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/layered-architecture-style/</guid>
-      <description>The Layered Architecture Style Link to heading The layered architecture is a monolithic architectural style that organizes an application into horizontal layers, each focused on distinct technical concerns.&#xA;Understanding the Terms:&#xA;Monolithic application: The entire application is deployed as a single unit. Distributed application: Application components are split across different machines and communicate through a network. Technical partitioning: Application components are organized based on technical aspects like data access or user interface, rather than business domains.</description>
-    </item>
     <item>
       <title> Microservices: An Extreme Form of Decoupling for Large-Scale Systems</title>
       <link>https://mkabdelrahman.github.io/posts/microservices-and-coupling/</link>
