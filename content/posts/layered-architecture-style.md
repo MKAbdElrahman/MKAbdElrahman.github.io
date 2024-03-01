@@ -1,5 +1,5 @@
 ---
-title: "he Layered Architecture Style"
+title: "The Layered Architecture Style"
 date: "2024-02-29"
 description: ""
 tags: [Architecture Style]
