@@ -1,16 +1,11 @@
-+++
-authors = ["Mohamed Kamal"]
-title = "The Layered Architecture Style"
-date = "2024-02-29"
-description = ""
-tags = [
-    "Software Architecture",
-]
-categories = [
-    "Software Architecture",
-]
-series = ["Software Architecture"]
-+++
+---
+title: "he Layered Architecture Style"
+date: "2024-02-29"
+description: ""
+tags: [Architecture Style]
+categories: ["technology"]
+---
+
 
 
 ## The Layered Architecture Style
