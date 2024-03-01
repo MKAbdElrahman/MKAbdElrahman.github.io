@@ -2,16 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software Architecture on Mohamed Kamal</title>
-    <link>http://localhost:1313/tags/software-architecture/</link>
+    <link>https://mkabdelrahman.github.io/tags/software-architecture/</link>
     <description>Recent content in Software Architecture on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Layered Architecture Style</title>
-      <link>http://localhost:1313/posts/layered-architecture-style/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/layered-architecture-style/</guid>
+      <link>https://mkabdelrahman.github.io/posts/layered-architecture-style/</link>
+      <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/layered-architecture-style/</guid>
       <description>The Layered Architecture Style Link to heading The layered architecture is a monolithic architectural style that organizes an application into horizontal layers, each focused on distinct technical concerns.&#xA;Understanding the Terms:&#xA;Monolithic application: The entire application is deployed as a single unit. Distributed application: Application components are split across different machines and communicate through a network. Technical partitioning: Application components are organized based on technical aspects like data access or user interface, rather than business domains.</description>
     </item>
   </channel>

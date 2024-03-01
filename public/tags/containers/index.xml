@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Containers on Mohamed Kamal</title>
-    <link>http://localhost:1313/tags/containers/</link>
+    <link>https://mkabdelrahman.github.io/tags/containers/</link>
     <description>Recent content in Containers on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 27 Oct 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/containers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mkabdelrahman.github.io/tags/containers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Workflow: Deploying Node.js Apps with Kubernetes</title>
-      <link>http://localhost:1313/posts/k8s-pods/</link>
+      <link>https://mkabdelrahman.github.io/posts/k8s-pods/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/k8s-pods/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/k8s-pods/</guid>
       <description>Prerequisites Link to heading To successfully follow and execute the App Deployment Workflow within a Kubernetes environment, you&amp;rsquo;ll need the following prerequisites:&#xA;Software and Tools Link to heading Node.js: Ensure Node.js is installed on your local development machine to set up and manage the Node.js application.&#xA;Docker: Docker is essential for containerizing your application into a Docker image. Make sure Docker is installed and configured correctly to build and manage containerized applications.</description>
     </item>
   </channel>

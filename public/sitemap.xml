@@ -2,136 +2,139 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/microservices-and-coupling/</loc>
+    <loc>https://mkabdelrahman.github.io/authors/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/categories/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/authors/mohamed-kamal/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/series/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/software-architecture/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/series/software-architecture/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/categories/software-architecture/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/layered-architecture-style/</loc>
+    <lastmod>2024-02-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/microservices-and-coupling/</loc>
     <lastmod>2024-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/microservices/</loc>
     <lastmod>2024-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/microservices/</loc>
+    <loc>https://mkabdelrahman.github.io/categories/technology/</loc>
     <lastmod>2024-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-02-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-02-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-02-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/technology/</loc>
-    <lastmod>2024-02-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/contextual-encoding/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/contextual-encoding/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/go/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/go/</loc>
+    <loc>https://mkabdelrahman.github.io/categories/go/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/go/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/http/template/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/http/template/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/security/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/layered-architecture/</loc>
+    <loc>https://mkabdelrahman.github.io/series/security/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/mohamed-kamal/</loc>
+    <loc>https://mkabdelrahman.github.io/categories/security/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/xss/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/security/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/xss-attacks/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/security/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/series/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/series/software-architecture/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/layered-architecture-style/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/xss/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/xss-attacks/</loc>
-    <lastmod>2023-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/concurrecny/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/concurrecny/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/concurrency/</loc>
+    <loc>https://mkabdelrahman.github.io/categories/concurrency/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/context/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/context/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/go-context-package/</loc>
+    <loc>https://mkabdelrahman.github.io/series/go-context-package/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/cause/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/cause/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/afterfunc/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/afterfunc/</loc>
     <lastmod>2023-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/application-deployment/</loc>
+    <loc>https://mkabdelrahman.github.io/categories/application-deployment/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/containers/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/containers/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/deployment/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/deployment/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/docker/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/kubernetes/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/kubernetes/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/kubernetes-deployment-workflow/</loc>
+    <loc>https://mkabdelrahman.github.io/series/kubernetes-deployment-workflow/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/kubernetes-workflow/</loc>
+    <loc>https://mkabdelrahman.github.io/categories/kubernetes-workflow/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/node.js/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/node.js/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/k8s-pods/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/k8s-pods/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/conf/</loc>
+    <loc>https://mkabdelrahman.github.io/tags/conf/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/go-conf-pkg/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/go-conf-pkg/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/go-init-functions/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/go-init-functions/</loc>
     <lastmod>2023-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/docker-commands/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/docker-commands/</loc>
     <lastmod>2023-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/docker-go/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/docker-go/</loc>
     <lastmod>2023-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://mkabdelrahman.github.io/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://mkabdelrahman.github.io/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://mkabdelrahman.github.io/projects/</loc>
   </url>
 </urlset>
