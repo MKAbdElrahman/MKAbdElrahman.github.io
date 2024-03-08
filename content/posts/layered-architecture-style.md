@@ -7,7 +7,6 @@ categories: ["technology"]
 ---
 
 
-
 ![layered architecture style](/images/layered-architecture-style.png)
 
 The **layered architecture** is a monolithic architectural style that organizes an application into **horizontal layers**, each focused on **distinct technical concerns**.
