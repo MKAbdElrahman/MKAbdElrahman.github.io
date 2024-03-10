@@ -8,7 +8,7 @@ categories: ["technology"]
 
 
 
-![layered architecture style](/images/microkernel-architecture-style.svg)
+![layered architecture style](/images/The-microkernel-architecture-pattern.png)
 
 Microkernel architecture is an architecural style where a minimal core system (the microkernel) handles generic or stable domain tasks.  Other functionalities are provided by pluggable modules and communicate with the core system through well-defined interfaces. 
 

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/authors/</link>
+    <link>http://localhost:1313/authors/</link>
     <description>Recent content in Authors on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mohamed Kamal</title>
-      <link>https://mkabdelrahman.github.io/authors/mohamed-kamal/</link>
+      <link>http://localhost:1313/authors/mohamed-kamal/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/authors/mohamed-kamal/</guid>
+      <guid>http://localhost:1313/authors/mohamed-kamal/</guid>
       <description></description>
     </item>
   </channel>
