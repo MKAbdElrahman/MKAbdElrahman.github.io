@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+   · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="Event-Driven Architecture (EDA)
+EDA is an architectual style where applications communicate by asynchronously responding to events. Events represent something happened in the system, such as a user placing an order, a product being updated, or a payment being completed.
+Types of Events:
+Initiating Events: These are events that originate from outside the system or represent the starting point of a workflow. Examples include a user placing an order, a sensor detecting a change, or an external system sending data.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Event-Driven Architecture (EDA)
+EDA is an architectual style where applications communicate by asynchronously responding to events. Events represent something happened in the system, such as a user placing an order, a product being updated, or a payment being completed.
+Types of Events:
+Initiating Events: These are events that originate from outside the system or represent the starting point of a workflow. Examples include a user placing an order, a sensor detecting a change, or an external system sending data."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Event-Driven Architecture (EDA)
+EDA is an architectual style where applications communicate by asynchronously responding to events. Events represent something happened in the system, such as a user placing an order, a product being updated, or a payment being completed.
+Types of Events:
+Initiating Events: These are events that originate from outside the system or represent the starting point of a workflow. Examples include a user placing an order, a sensor detecting a change, or an external system sending data." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/event-driven-architecture/" /><meta property="article:section" content="posts" />
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/event-driven-architecture/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/event-driven-architecture/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p><strong>Event-Driven Architecture (EDA)</strong></p>
+<p>EDA is an architectual style where applications communicate by asynchronously responding to <strong>events</strong>.  Events represent something happened in the system, such as a user placing an order, a product being updated, or a payment being completed.</p>
+<p><strong>Types of Events:</strong></p>
+<ul>
+<li><strong>Initiating Events:</strong> These are events that originate from outside the system or represent the starting point of a workflow. Examples include a user placing an order, a sensor detecting a change, or an external system sending data.</li>
+<li><strong>Derived Events:</strong> These events are generated within the system as a consequence of processing an initiating event or another derived event. They represent a change in state or the completion of a specific step in the workflow.  For instance, an &ldquo;Order Placed&rdquo; event could trigger a derived event like &ldquo;Inventory Updated&rdquo; or &ldquo;Payment Processing Initiated.&rdquo;</li>
+</ul>
+<p><strong>Components:</strong></p>
+<ul>
+<li>
+<p><strong>Event Processors :</strong> Services that publish or subscribe to events and take some action.</p>
+</li>
+<li>
+<p><strong>Event Channels:</strong>  Act as intermediaries for event transmission. These channels, often called message queues or event brokers, ensure reliable and ordered delivery of events to interested consumers.</p>
+</li>
+</ul>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li><strong>Asynchronous Communication:</strong>  Event-driven systems are asynchronous, meaning the producer doesn&rsquo;t wait for a response from the consumer after publishing an event. This allows services to be loosely coupled and independently scalable.</li>
+<li><strong>Loose Coupling:</strong>  Services are not tightly bound to each other. They only need to know the format of the events they produce or consume, not the specifics of how other services process them.</li>
+<li><strong>Scalability:</strong>  Event-driven architectures can be easily scaled by adding more producers or consumers independently.</li>
+</ul>
+<p>Example</p>
+<p>services</p>
+<ul>
+<li>
+<p>Order Placement</p>
+</li>
+<li>
+<p>Payment</p>
+</li>
+<li>
+<p>Order Fullfillment</p>
+</li>
+<li>
+<p>Inventory</p>
+</li>
+<li>
+<p>Shipping</p>
+</li>
+<li>
+<p>Notification</p>
+</li>
+<li>
+<p>Warehouse</p>
+</li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
