@@ -97,21 +97,21 @@
       <link>https://mkabdelrahman.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mkabdelrahman.github.io/about/</guid>
-      <description>About Mohamed Kamal&#xA;I&amp;rsquo;m Mohamed Kamal, a software developer. My passion lies in crafting elegant, efficient software systems with a focus on software design, architecture, clean code practices, and proficiency in multiple languages, including Go, C++, and Julia.&#xA;Languages and Tools&#xA;I leverage various programming languages and tools, such as Docker and Kubernetes for containerization and orchestration, alongside Go, C++, and Julia for high-performance applications.&#xA;Software Philosophy&#xA;I&amp;rsquo;m driven by the transformative potential of technology.</description>
+      <description>About Mohamed Kamal&#xA;I&amp;rsquo;m Mohamed Kamal, a software developer. My passion lies in crafting elegant, efficient software systems with a focus on software design, architecture, clean code practices, and proficiency in multiple languages, including Go, C++, and Julia.&#xA;On My Website&#xA;My website features projects, blog posts, and insights covering software design, architecture, clean code practices, and effective programming in Go and C++,. Topics include best practices, design patterns, and tips for writing maintainable code in these languages.</description>
     </item>
     <item>
       <title>Contact</title>
       <link>https://mkabdelrahman.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mkabdelrahman.github.io/contact/</guid>
-      <description>If you&amp;rsquo;d like to get in touch, please feel free to send me an email at: smohamed.abdelrahman@gmail.com</description>
+      <description>If you&amp;rsquo;d like to get in touch, please feel free to send me an email at: mkcodedev@gmail.com</description>
     </item>
     <item>
       <title>Projects</title>
       <link>https://mkabdelrahman.github.io/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mkabdelrahman.github.io/projects/</guid>
-      <description>In Progress!&amp;hellip;</description>
+      <description></description>
     </item>
   </channel>
 </rss>
