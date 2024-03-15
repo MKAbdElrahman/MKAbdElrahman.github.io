@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/tags/docker/</link>
+    <link>http://localhost:1313/tags/docker/</link>
     <description>Recent content in Docker on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 27 Oct 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Workflow: Deploying Node.js Apps with Kubernetes</title>
-      <link>https://mkabdelrahman.github.io/posts/k8s-pods/</link>
+      <link>http://localhost:1313/posts/k8s-pods/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/k8s-pods/</guid>
+      <guid>http://localhost:1313/posts/k8s-pods/</guid>
       <description>Prerequisites Link to heading To successfully follow and execute the App Deployment Workflow within a Kubernetes environment, you&amp;rsquo;ll need the following prerequisites:&#xA;Software and Tools Link to heading Node.js: Ensure Node.js is installed on your local development machine to set up and manage the Node.js application.&#xA;Docker: Docker is essential for containerizing your application into a Docker image. Make sure Docker is installed and configured correctly to build and manage containerized applications.</description>
     </item>
     <item>
       <title>Essential Docker Commands</title>
-      <link>https://mkabdelrahman.github.io/posts/docker-commands/</link>
+      <link>http://localhost:1313/posts/docker-commands/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/docker-commands/</guid>
+      <guid>http://localhost:1313/posts/docker-commands/</guid>
       <description>Display Docker Version Information Link to heading docker version This command provides information about the Docker Engine version.&#xA;List All Docker Images Link to heading docker images This command lists all the Docker images available on your system.&#xA;Pull an Image from the Registry Link to heading docker pull &amp;lt;image_name&amp;gt; You can use this command to download a Docker image from a container registry, like Docker Hub.&#xA;Create and Run a New Ubuntu Container with Interactive Shell Link to heading docker run -it &amp;lt;image&amp;gt; /bin/bash This command starts a new Docker container based on the specified image and opens an interactive shell (in this case, /bin/bash) inside the container.</description>
     </item>
     <item>
       <title>Getting Started with Docker for Go</title>
-      <link>https://mkabdelrahman.github.io/posts/docker-go/</link>
+      <link>http://localhost:1313/posts/docker-go/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/docker-go/</guid>
+      <guid>http://localhost:1313/posts/docker-go/</guid>
       <description>What Is a Container? Link to heading Containers are like isolating an application so it thinks it&amp;rsquo;s running all by itself. It&amp;rsquo;s similar to a virtual machine (VM) but uses the host&amp;rsquo;s operating system instead of its own. To start a container, you begin with a container image that bundles up everything the application needs to run, making it easy to share and distribute.&#xA;The isolation that tricks a container into believing it has control over a whole Linux machine is achieved through the use of namespaces and control groups.</description>
     </item>
   </channel>
