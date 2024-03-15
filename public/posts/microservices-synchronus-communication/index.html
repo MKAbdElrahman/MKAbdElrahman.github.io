@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+   Microservices:  Communication Styles · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:
+Synchronous communication Asynchronous communication Synchronus Communication Link to heading In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=" Microservices:  Communication Styles"/>
+<meta name="twitter:description" content="A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:
+Synchronous communication Asynchronous communication Synchronus Communication Link to heading In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work."/>
+
+<meta property="og:title" content=" Microservices:  Communication Styles" />
+<meta property="og:description" content="A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:
+Synchronous communication Asynchronous communication Synchronus Communication Link to heading In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-01-14T00:00:00+00:00" />
+
+
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/">
+               Microservices:  Communication Styles
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-01-14T00:00:00Z">
+                January 14, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/microservices/">Microservices</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/architecture-style/">Architecture Style</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:</p>
+<ul>
+<li>Synchronous communication</li>
+<li>Asynchronous communication</li>
+</ul>
+<h2 id="synchronus-communication">
+  Synchronus Communication
+  <a class="heading-link" href="#synchronus-communication">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="synchronus-communication" src="/images/synchronus-communication.png">
+In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work.</p>
+<p>Here&rsquo;s a breakdown of synchronous communication in microservices:</p>
+<ul>
+<li><strong>Mechanism:</strong>  A service initiates a request to another service. The requesting service then pauses its execution and waits for a response from the receiving service. Once the response is received, the requesting service can proceed with its tasks.</li>
+</ul>
+<p><strong>Advantages of synchronous communication:</strong></p>
+<ul>
+<li>
+<p><strong>Simplicity:</strong> Synchronous communication is easier to understand and implement compared to asynchronous communication. The flow of execution is straightforward, making it suitable for developers new to microservices.</p>
+</li>
+<li>
+<p><strong>Immediate feedback:</strong> The requesting service receives the response immediately, which is useful for scenarios requiring real-time interaction. For instance, during a user purchase on an e-commerce platform, the shopping cart service might synchronously call the inventory service to check product availability before confirming the order.</p>
+</li>
+</ul>
+<p><strong>Disadvantages of synchronous communication:</strong></p>
+<ul>
+<li>
+<p><strong>Blocking:</strong> The requesting service is blocked while waiting for the response. This can become an issue if the receiving service takes a long time to process the request, potentially impacting the overall responsiveness of the system.</p>
+</li>
+<li>
+<p><strong>Scalability limitations:</strong> Synchronous communication can hinder scalability as the number of requests grows. With many requests waiting for responses, the overall performance of the system can suffer.</p>
+</li>
+</ul>
+<h2 id="asynchronus-communication">
+  Asynchronus Communication
+  <a class="heading-link" href="#asynchronus-communication">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="asynchronus-communication" src="/images/asynchronus-communication.png">
+In contrast to synchronous communication, asynchronous communication allows services to interact with each other without directly waiting for a response. This approach decouples services and offers several benefits for building robust and scalable applications.</p>
+<p>Here&rsquo;s a deeper dive into asynchronous communication in microservices:</p>
+<ul>
+<li>
+<p><strong>Mechanism:</strong> The requesting service sends a message (often an event) to a central intermediary, like a message queue or an event bus. This message queue acts as a buffer, storing the message until a receiving service is available to process it. The requesting service can then continue its execution without being blocked.</p>
+</li>
+<li>
+<p><strong>Popular techniques:</strong> Message queues (like RabbitMQ) are commonly used for asynchronous communication between microservices. Additionally, pub-sub (publish-subscribe) messaging patterns are employed where services publish events to the topic, and interested services subscribe to receive and react to those events.</p>
+</li>
+</ul>
+<p><strong>Advantages of asynchronous communication:</strong></p>
+<ul>
+<li>
+<p><strong>Temporal Decoupling:</strong> Services are loosely coupled as the sender doesn&rsquo;t rely on the receiver&rsquo;s immediate availability. This promotes independent development, deployment, and scaling of individual services.</p>
+</li>
+<li>
+<p><strong>Improved responsiveness:</strong> The requesting service isn&rsquo;t blocked, leading to a more responsive user experience.  The application can continue serving users while tasks are processed asynchronously in the background.</p>
+</li>
+<li>
+<p><strong>Scalability:</strong> Asynchronous communication scales well as the workload increases.  Additional worker instances can be added to consume messages from the queue, handling more messages concurrently.</p>
+</li>
+<li>
+<p><strong>Fault tolerance:</strong>  If a receiving service is unavailable or experiences errors, the message can be retried or handled later, ensuring overall system resilience.</p>
+</li>
+</ul>
+<p><strong>Disadvantages of asynchronous communication:</strong></p>
+<ul>
+<li>
+<p><strong>Complexity:</strong> Implementing asynchronous communication can be more complex compared to synchronous approaches due to the need for additional infrastructure like message queues and managing message flows.</p>
+</li>
+<li>
+<p><strong>Eventual consistency:</strong> As messages might be processed out of order, achieving perfect data consistency across services can be challenging. However, eventual consistency, where data eventually becomes consistent after some time, is often acceptable for many applications.</p>
+</li>
+</ul>
+<p><strong>Choosing synchronous vs asynchronous:</strong></p>
+<p>Synchronous communication is ideal for situations that require immediate feedback and a clear flow of execution. However, for long-running tasks or scenarios where high scalability is crucial, asynchronous communication might be a better choice.</p>
+<p>Here&rsquo;s a table summarizing the key differences between the two styles:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Synchronous Communication</th>
+<th>Asynchronous Communication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mechanism</td>
+<td>Request-response pattern</td>
+<td>Message queue or event bus</td>
+</tr>
+<tr>
+<td>Waiting for response</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Blocking</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>Limited</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Complexity</td>
+<td>Simpler</td>
+<td>More complex</td>
+</tr>
+<tr>
+<td>Use cases</td>
+<td>Real-time interactions</td>
+<td>Long-running tasks, high scalability</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

@@ -37,6 +37,13 @@
       <description>Introduction Link to heading The microservices architecture style represents an extreme form of decoupling tailored for large-scale systems where hundreds of developers collaborate simultaneously. By embracing logical, spatial, temporal, and technology decoupling, teams can work autonomously and iterate rapidly. In this post, we delve into how microservices reduce coupling at various levels, enabling scalability, agility, and independent deployability.&#xA;Microservices: Decoupling at Scale Link to heading Microservices architecture represents a paradigm shift in software development, embodying the principles of extreme decoupling to address the challenges of building and maintaining large-scale applications.</description>
     </item>
     <item>
+      <title> Microservices:  Communication Styles</title>
+      <link>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</link>
+      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</guid>
+      <description>A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:&#xA;Synchronous communication Asynchronous communication Synchronus Communication Link to heading In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work.</description>
+    </item>
+    <item>
       <title>Understanding XSS Attacks and Contextual Encoding in Go</title>
       <link>https://mkabdelrahman.github.io/posts/xss/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
