@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Replication and Sharding: A Coffee Shop Analogy · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="Setting the Stage for Distributed Storage Link to heading Non-distributed Storage (Single-Master System):
+Imagine your favorite local coffee shop. Keeping track of customer preferences on a simple notepad (single-server database) is a breeze. New entries are readily added, and the system is clear-cut. However, as the shop&rsquo;s popularity explodes, the notepad becomes a bottleneck.
+Read Replication Link to heading Read Replication:
+The coffee shop thrives and attracts more customers. To handle the increased workload, the barista team expands.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Replication and Sharding: A Coffee Shop Analogy"/>
+<meta name="twitter:description" content="Setting the Stage for Distributed Storage Link to heading Non-distributed Storage (Single-Master System):
+Imagine your favorite local coffee shop. Keeping track of customer preferences on a simple notepad (single-server database) is a breeze. New entries are readily added, and the system is clear-cut. However, as the shop&rsquo;s popularity explodes, the notepad becomes a bottleneck.
+Read Replication Link to heading Read Replication:
+The coffee shop thrives and attracts more customers. To handle the increased workload, the barista team expands."/>
+
+<meta property="og:title" content="Replication and Sharding: A Coffee Shop Analogy" />
+<meta property="og:description" content="Setting the Stage for Distributed Storage Link to heading Non-distributed Storage (Single-Master System):
+Imagine your favorite local coffee shop. Keeping track of customer preferences on a simple notepad (single-server database) is a breeze. New entries are readily added, and the system is clear-cut. However, as the shop&rsquo;s popularity explodes, the notepad becomes a bottleneck.
+Read Replication Link to heading Read Replication:
+The coffee shop thrives and attracts more customers. To handle the increased workload, the barista team expands." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/replication-and-sharding/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-03-17T00:00:00+00:00" />
+
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/replication-and-sharding/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/replication-and-sharding/">
+              Replication and Sharding: A Coffee Shop Analogy
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-03-17T00:00:00Z">
+                March 17, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/distrubuted-storage/">Distrubuted Storage</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/distrubuted-systems/">Distrubuted Systems</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="setting-the-stage-for-distributed-storage">
+  Setting the Stage for Distributed Storage
+  <a class="heading-link" href="#setting-the-stage-for-distributed-storage">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="single master database" src="/images/2-single-master-db.png"></p>
+<p><strong>Non-distributed Storage (Single-Master System):</strong></p>
+<p>Imagine your favorite local coffee shop. Keeping track of customer preferences on a simple notepad (single-server database) is a breeze. New entries are readily added, and the system is clear-cut. However, as the shop&rsquo;s popularity explodes, the notepad becomes a bottleneck.</p>
+<h2 id="read-replication">
+  Read Replication
+  <a class="heading-link" href="#read-replication">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="read replication" src="/images/read-replication.png">
+<strong>Read Replication:</strong></p>
+<ul>
+<li>The coffee shop thrives and attracts more customers.</li>
+<li>To handle the increased workload, the barista team expands.</li>
+<li>The single pad of paper (master database) is replicated for the new baristas (read replicas).</li>
+<li>The head barista (master) updates the original pad, then copies the changes to the replicas (asynchronously).</li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Scales read traffic: Customers can be served faster by multiple baristas (read replicas) accessing customer preferences.</li>
+</ul>
+<p><strong>Drawbacks:</strong></p>
+<ul>
+<li><strong>Eventual Consistency:</strong> Updates might not be immediately reflected on all copies. Ordering a new favorite drink might not be available to all baristas right away.</li>
+<li><strong>Increased Complexity:</strong> Managing and maintaining multiple copies introduces operational overhead.</li>
+<li><strong>Limited for Write-Heavy Workloads:</strong> Read replication is not ideal for scenarios with frequent updates (writes).</li>
+</ul>
+<h2 id="sharidng">
+  Sharidng
+  <a class="heading-link" href="#sharidng">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="sharding" src="/images/sharding.png"></p>
+<p><strong>Sharding for Scalability:</strong></p>
+<ul>
+<li>Read replication becomes insufficient for a highly popular coffee shop (heavy write workload).</li>
+<li>A single head barista updating all favorite drinks creates a bottleneck.</li>
+</ul>
+<p><strong>Sharding Approach:</strong></p>
+<ul>
+<li>Sharding distributes the workload by splitting the data based on a key (customer name).</li>
+<li>Two head baristas (shards) are responsible for different name ranges (alphabetical).</li>
+<li>Each shard maintains its own read replica set for scalability.</li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Increases write throughput by distributing updates across multiple shards.</li>
+</ul>
+<p><strong>Drawbacks:</strong></p>
+<ul>
+<li>Increased Complexity: Clients need to know which shard to access for their data (routing).</li>
+<li>Limited Data Model: Sharding works best with data models where every query has a common key.</li>
+<li>Limited Data Access Patterns: Complex queries that span multiple shards require gathering data from all shards (scatter-gather), reducing efficiency.</li>
+</ul>
+<h2 id="reference">
+  Reference
+  <a class="heading-link" href="#reference">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Distributed Systems in One Lesson by Tim Berglund: <a href="https://www.youtube.com/watch?v=Y6Ev8GIlbxc&amp;ab_channel=DevoxxPoland"  class="external-link" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Y6Ev8GIlbxc&ab_channel=DevoxxPoland</a></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

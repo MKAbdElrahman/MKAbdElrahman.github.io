@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Replication and Sharding: A Coffee Shop Analogy</title>
+      <link>https://mkabdelrahman.github.io/posts/replication-and-sharding/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/replication-and-sharding/</guid>
+      <description>Setting the Stage for Distributed Storage Link to heading Non-distributed Storage (Single-Master System):&#xA;Imagine your favorite local coffee shop. Keeping track of customer preferences on a simple notepad (single-server database) is a breeze. New entries are readily added, and the system is clear-cut. However, as the shop&amp;rsquo;s popularity explodes, the notepad becomes a bottleneck.&#xA;Read Replication Link to heading Read Replication:&#xA;The coffee shop thrives and attracts more customers. To handle the increased workload, the barista team expands.</description>
+    </item>
     <item>
       <title>Kafka Fundamentals: APIs, Topics and Partitions</title>
       <link>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</link>
