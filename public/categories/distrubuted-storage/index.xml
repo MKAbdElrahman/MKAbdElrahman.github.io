@@ -6,8 +6,15 @@
     <description>Recent content in Distrubuted Storage on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/categories/distrubuted-storage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Replication Topologies for Scaling: A Coffee Shop Analogy</title>
+      <link>https://mkabdelrahman.github.io/posts/replication-toplogies/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/replication-toplogies/</guid>
+      <description>Following the coffe shop analogy in the previous blog post, the coffee shop is booming, and you need to expand your team to handle the growing customer base. But simply adding more baristas isn&amp;rsquo;t enough. You need a well-organized system to ensure smooth operations, quick recovery from unexpected situations, and efficient storage of customer preferences. This is where replication topologies come in – different ways to structure your team of baristas and order pads (replicas) to achieve specific goals.</description>
+    </item>
     <item>
       <title>Replication and Sharding: A Coffee Shop Analogy</title>
       <link>https://mkabdelrahman.github.io/posts/replication-and-sharding/</link>
