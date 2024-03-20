@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Sharding: A Coffee Shop Analogy · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="Remember our last blog post where we tamed the rush of order requests with a team of baristas dedicated to just reading orders? Well, get ready for another challenge! Our beloved coffee shop is brewing with excitement thanks to new customers and delicious new drinks. This means a flood of updates and sign-ups, and our trusty &ldquo;master barista&rdquo; who handles all these changes is feeling the pressure.
+Just like throwing more baristas at a long line wouldn&rsquo;t be the smartest idea, we need a well-thought-out plan to tackle this avalanche of updates.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Sharding: A Coffee Shop Analogy"/>
+<meta name="twitter:description" content="Remember our last blog post where we tamed the rush of order requests with a team of baristas dedicated to just reading orders? Well, get ready for another challenge! Our beloved coffee shop is brewing with excitement thanks to new customers and delicious new drinks. This means a flood of updates and sign-ups, and our trusty &ldquo;master barista&rdquo; who handles all these changes is feeling the pressure.
+Just like throwing more baristas at a long line wouldn&rsquo;t be the smartest idea, we need a well-thought-out plan to tackle this avalanche of updates."/>
+
+<meta property="og:title" content="Sharding: A Coffee Shop Analogy" />
+<meta property="og:description" content="Remember our last blog post where we tamed the rush of order requests with a team of baristas dedicated to just reading orders? Well, get ready for another challenge! Our beloved coffee shop is brewing with excitement thanks to new customers and delicious new drinks. This means a flood of updates and sign-ups, and our trusty &ldquo;master barista&rdquo; who handles all these changes is feeling the pressure.
+Just like throwing more baristas at a long line wouldn&rsquo;t be the smartest idea, we need a well-thought-out plan to tackle this avalanche of updates." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/sharding/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-03-19T00:00:00+00:00" />
+
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/sharding/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/sharding/">
+              Sharding: A Coffee Shop Analogy
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-03-19T00:00:00Z">
+                March 19, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/distrubuted-storage/">Distrubuted Storage</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/distrubuted-systems/">Distrubuted Systems</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Remember our last blog post where we tamed the rush of order requests with a team of baristas dedicated to just reading orders? Well, get ready for another challenge! Our beloved coffee shop is brewing with excitement thanks to new customers and delicious new drinks. This means a flood of updates and sign-ups, and our trusty &ldquo;master barista&rdquo; who handles all these changes is feeling the pressure.</p>
+<p>Just like throwing more baristas at a long line wouldn&rsquo;t be the smartest idea, we need a well-thought-out plan to tackle this avalanche of updates. In this post, we&rsquo;ll explore two main ways to improve our service – making our master barista stronger and spreading the work around. We&rsquo;ll explain everything using the fun example of our coffee shop.</p>
+<h2 id="vertical-scaling">
+  Vertical Scaling
+  <a class="heading-link" href="#vertical-scaling">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="alt text" src="/images/vertical-scaling.png">
+Imagine your master barista, the one who carefully records everyone&rsquo;s coffee preferences, is about to reach their limit. Making them stronger at their job is what vertical scaling is all about.</p>
+<p>Vertical scaling is a quick solution. We could train our master barista to work smarter and faster, or give them better tools like a faster tablet or a more powerful computer. This will help them handle more requests at once. However, there&rsquo;s a limit to how many orders one person can take. If our popularity keeps growing, vertical scaling will eventually hit a wall.</p>
+<h2 id="horizontal-scaling">
+  Horizontal Scaling
+  <a class="heading-link" href="#horizontal-scaling">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="alt text" src="/images/horizental-scaling.png">
+The other approach, horizontal scaling, admits that one barista can&rsquo;t do it all. Here&rsquo;s where teamwork comes in! Imagine a more advanced technique called sharding. Think of dividing customer names into sections (A-M, N-Z) and assigning each section (shard) to a specific barista. This way, update requests are automatically distributed, making things much more manageable.</p>
+<h2 id="behind-the-scenes">
+  Behind the Scenes
+  <a class="heading-link" href="#behind-the-scenes">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>
+<p><strong>Finding the Right Barista:</strong> Our system needs to smoothly direct customers to the barista who handles their updates.</p>
+</li>
+<li>
+<p><strong>Sharding Efficiency:</strong> As long as a customer&rsquo;s updates and requests for information (like their preferences and those of others with the same last name) go to the same barista, everything runs smoothly. But what if we need to know, for example, how many people love lattes?</p>
+</li>
+<li>
+<p><strong>Keeping Everyone Busy:</strong> If some names are more common, some baristas will be busier than others. We could use techniques like hashing to spread the work around more evenly. However, this might make it trickier to answer specific questions like &ldquo;how many latte lovers have names that start with &lsquo;L&rsquo;?&rdquo;</p>
+</li>
+<li>
+<p><strong>Growing Our Team:</strong> We can always add more baristas (resharding) as needed. But remember, the key is to find a balance between spreading out the work and making sure we can answer the questions our customers ask most often (data access patterns).</p>
+</li>
+</ul>
+<h2 id="replication-and-sharidng">
+  Replication and Sharidng
+  <a class="heading-link" href="#replication-and-sharidng">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="alt text" src="/images/replication-and-sharding.png">
+We can add a replica set behind each shard. This will make handle the heavy read requests.</p>
+<p>Imagine each barista in our spread-out system (handling a specific customer name shard) has a team of helpers. These helpers are like trainee baristas, but they can only look up information, not change it. Their information is always up-to-date (almost) because it&rsquo;s constantly copied from the master barista. This allows for:</p>
+<ul>
+<li>
+<p><strong>Faster Information for Customers:</strong> Customers can ask about their preferences or browse the menu (read requests) without slowing down the master barista. These requests can be handled quickly by the trainee baristas, freeing up the master barista to focus on new sign-ups and updates (write requests).</p>
+</li>
+<li>
+<p><strong>Staying Open Even When Busy:</strong> If a master barista (or their computer) has a problem, a trainee barista can take over seamlessly, causing minimal disruption to service.</p>
+</li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

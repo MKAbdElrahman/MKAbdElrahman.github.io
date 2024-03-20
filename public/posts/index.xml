@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sharding: A Coffee Shop Analogy</title>
+      <link>https://mkabdelrahman.github.io/posts/sharding/</link>
+      <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/sharding/</guid>
+      <description>Remember our last blog post where we tamed the rush of order requests with a team of baristas dedicated to just reading orders? Well, get ready for another challenge! Our beloved coffee shop is brewing with excitement thanks to new customers and delicious new drinks. This means a flood of updates and sign-ups, and our trusty &amp;ldquo;master barista&amp;rdquo; who handles all these changes is feeling the pressure.&#xA;Just like throwing more baristas at a long line wouldn&amp;rsquo;t be the smartest idea, we need a well-thought-out plan to tackle this avalanche of updates.</description>
+    </item>
     <item>
       <title>Replication Topologies for Scaling: A Coffee Shop Analogy</title>
       <link>https://mkabdelrahman.github.io/posts/replication-toplogies/</link>
