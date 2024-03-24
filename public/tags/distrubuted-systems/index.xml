@@ -6,8 +6,15 @@
     <description>Recent content in Distrubuted Systems on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/tags/distrubuted-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Quorums Ensure Agreement in Distributed Systems</title>
+      <link>https://mkabdelrahman.github.io/posts/majority-quorum/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/majority-quorum/</guid>
+      <description>In distributed systems, where tasks are spread across multiple interconnected machines, quorums provide a fundamental mechanism for ensuring data consistency and system-wide agreement. In essence, a quorum is a minimum number of nodes (machines) that must agree on an operation for it to be valid. Think of it like a voting threshold. An update to a database or the election of a leader in a cluster – these actions only happen if a designated group (the quorum) participates and reaches a consensus.</description>
+    </item>
     <item>
       <title>Sharding: A Coffee Shop Analogy</title>
       <link>https://mkabdelrahman.github.io/posts/sharding/</link>
