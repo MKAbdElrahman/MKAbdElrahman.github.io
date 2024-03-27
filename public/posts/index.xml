@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Architecture: A 4-Dimensional View</title>
+      <link>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</guid>
+      <description>Software Architecture: A 4-Dimensional View Link to heading Note: I took these note while reading &amp;ldquo;Head First Software Architecture: A Learner&amp;rsquo;s Guide to Architectural Thinking by Mark Andrew Richards, Neal Ford, and Raju Gandhi&amp;rdquo;. I also used AI to clean it.&#xA;Software architecture isn&amp;rsquo;t a singular concept, but rather a multi-dimensional approach to building robust and adaptable systems. Let&amp;rsquo;s explore these key dimensions:&#xA;1. Architectural Characteristics&#xA;Architectural characteristics are the essential capabilities your system needs to possess.</description>
+    </item>
     <item>
       <title>How Quorums Ensure Agreement in Distributed Systems</title>
       <link>https://mkabdelrahman.github.io/posts/majority-quorum/</link>

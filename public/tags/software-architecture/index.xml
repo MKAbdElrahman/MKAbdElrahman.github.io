@@ -6,14 +6,14 @@
     <description>Recent content in Software Architecture on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The Layered Architecture Style</title>
-      <link>https://mkabdelrahman.github.io/posts/layered-architecture-style/</link>
-      <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/layered-architecture-style/</guid>
-      <description>The Layered Architecture Style Link to heading The layered architecture is a monolithic architectural style that organizes an application into horizontal layers, each focused on distinct technical concerns.&#xA;Understanding the Terms:&#xA;Monolithic application: The entire application is deployed as a single unit. Distributed application: Application components are split across different machines and communicate through a network. Technical partitioning: Application components are organized based on technical aspects like data access or user interface, rather than business domains.</description>
+      <title>Software Architecture: A 4-Dimensional View</title>
+      <link>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</guid>
+      <description>Software Architecture: A 4-Dimensional View Link to heading Note: I took these note while reading &amp;ldquo;Head First Software Architecture: A Learner&amp;rsquo;s Guide to Architectural Thinking by Mark Andrew Richards, Neal Ford, and Raju Gandhi&amp;rdquo;. I also used AI to clean it.&#xA;Software architecture isn&amp;rsquo;t a singular concept, but rather a multi-dimensional approach to building robust and adaptable systems. Let&amp;rsquo;s explore these key dimensions:&#xA;1. Architectural Characteristics&#xA;Architectural characteristics are the essential capabilities your system needs to possess.</description>
     </item>
   </channel>
 </rss>
