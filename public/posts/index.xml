@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Architecture Vs. Desgin</title>
+      <link>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</guid>
+      <description>Architecture is primarily concerned with the structure of the system, including its services, databases, and how they communicate with each other. Design, on the other hand, focuses more easy to change later decesions like choosing a design pattern or splitting or renaming a class.&#xA;The line between architecture and design can sometimes be blurry. Understanding the difference, however, is crucial for determining who should make key decisions throughout a project. The development team handles decisions related to implementing features, such as designing classes.</description>
+    </item>
     <item>
       <title>Software Architecture: A 4-Dimensional View</title>
       <link>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</link>
