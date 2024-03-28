@@ -13,7 +13,7 @@
       <link>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</guid>
-      <description>Architecture is primarily concerned with the structure of the system, including its services, databases, and how they communicate with each other. Design, on the other hand, focuses more easy to change later decesions like choosing a design pattern or splitting or renaming a class.&#xA;The line between architecture and design can sometimes be blurry. Understanding the difference, however, is crucial for determining who should make key decisions throughout a project. The development team handles decisions related to implementing features, such as designing classes.</description>
+      <description>Architecture is primarily concerned with the structure of the system, including its services, databases, and how they communicate with each other. Design, on the other hand, focuses more on the easy to change later decesions like choosing a specific design pattern or whether to split a class or not.&#xA;The line between architecture and design can sometimes be blurry. Understanding the difference, however, is crucial for determining who should make key decisions throughout a project.</description>
     </item>
     <item>
       <title>Software Architecture: A 4-Dimensional View</title>

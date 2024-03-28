@@ -6,7 +6,7 @@ tags: [Software Architecture]
 categories: ["Software Architecture"]
 ---
 
-Architecture is primarily concerned with the structure of the system, including its services, databases, and how they communicate with each other. Design, on the other hand, focuses more easy to change later decesions like choosing a design pattern or splitting or renaming a class.
+Architecture is primarily concerned with the structure of the system, including its services, databases, and how they communicate with each other. Design, on the other hand, focuses more on the easy to change later decesions like choosing a specific design pattern or whether to split a class or not.
 
 The line between architecture and design can sometimes be blurry. Understanding the difference, however, is crucial for determining who should make key decisions throughout a project. The development team handles decisions related to implementing features, such as designing classes. Architectural decisions, on the other hand, focus on the system's overall structure, like choosing an architectural style. Finally, some decisions require collaboration from both sides, such as breaking down or merging services within the system.
 
