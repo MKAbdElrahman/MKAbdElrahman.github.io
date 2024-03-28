@@ -8,9 +8,6 @@ categories: ["Software Architecture"]
 
 ##  Software Architecture: A 4-Dimensional View 
 
-**Note: I took these note while reading "Head First Software Architecture: A Learner's Guide to Architectural Thinking by Mark Andrew Richards, Neal Ford, and Raju Gandhi". I also used AI to clean it.**
-
-
 
 Software architecture isn't a singular concept, but rather a multi-dimensional approach to building robust and adaptable systems. Let's explore these key dimensions:
 
@@ -44,4 +41,6 @@ Remember, these dimensions are interconnected. The chosen architectural style sh
 ## Reference 
 
 Head First Software Architecture: A Learner's Guide to Architectural Thinking by Mark Andrew Richards, Neal Ford, and Raju Gandhi
+
+**Note: I took these note while reading "Head First Software Architecture: A Learner's Guide to Architectural Thinking by Mark Andrew Richards, Neal Ford, and Raju Gandhi". I also used AI to clean it.**
 
