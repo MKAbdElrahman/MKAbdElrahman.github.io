@@ -1,5 +1,5 @@
 ---
-title: "Software Architecture Vs. Desgin"
+title: "Software Architecture Vs. Design"
 date: "2024-03-27"
 description: "The line between architecture and design can sometimes be blurry.  Understanding the difference, however, is crucial for determining who should make key decisions throughout a project."
 tags: [Software Architecture]
