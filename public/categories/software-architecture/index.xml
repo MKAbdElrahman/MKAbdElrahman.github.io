@@ -6,8 +6,15 @@
     <description>Recent content in Software Architecture on Mohamed Kamal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/categories/software-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Architecture: Architectural Characteristics</title>
+      <link>https://mkabdelrahman.github.io/posts/hfsa-architectural-charcteristics-part-1/</link>
+      <pubDate>Fri, 29 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/hfsa-architectural-charcteristics-part-1/</guid>
+      <description>Why Architectural Characteristics Link to heading Architectural characteristics are fundamental to making informed decisions throughout the software development process. Here&amp;rsquo;s why they&amp;rsquo;re important:&#xA;Guiding Architectural Decisions: Without a clear understanding of these characteristics, it&amp;rsquo;s difficult to make informed choices about your application&amp;rsquo;s structure.&#xA;Selecting an Architectural Style: Different architectural styles are better suited for specific needs. Analyzing characteristics helps you choose the most appropriate style for your project.&#xA;What are Architectural Characteristics?</description>
+    </item>
     <item>
       <title>Software Architecture Vs. Design</title>
       <link>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</link>
