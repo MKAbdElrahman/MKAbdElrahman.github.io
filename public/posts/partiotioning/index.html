@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Software Architecture: Partitioning Strategies · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="Distribution Link to heading Single Process Application: A self-contained program that executes on a single computer. It handles all its processing tasks, data storage, and retrieval using the local machine&rsquo;s resources (memory and storage). Examples include offline games and mobile apps without network functionality.
+Distributed System: A software program designed to function across multiple computers connected over a network. These applications are broken down into smaller components that run on different machines.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Software Architecture: Partitioning Strategies"/>
+<meta name="twitter:description" content="Distribution Link to heading Single Process Application: A self-contained program that executes on a single computer. It handles all its processing tasks, data storage, and retrieval using the local machine&rsquo;s resources (memory and storage). Examples include offline games and mobile apps without network functionality.
+Distributed System: A software program designed to function across multiple computers connected over a network. These applications are broken down into smaller components that run on different machines."/>
+
+<meta property="og:title" content="Software Architecture: Partitioning Strategies" />
+<meta property="og:description" content="Distribution Link to heading Single Process Application: A self-contained program that executes on a single computer. It handles all its processing tasks, data storage, and retrieval using the local machine&rsquo;s resources (memory and storage). Examples include offline games and mobile apps without network functionality.
+Distributed System: A software program designed to function across multiple computers connected over a network. These applications are broken down into smaller components that run on different machines." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/partiotioning/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-04-02T00:00:00+00:00" />
+
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/partiotioning/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/partiotioning/">
+              Software Architecture: Partitioning Strategies
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-04-02T00:00:00Z">
+                April 2, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/software-architecture/">Software Architecture</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/software-architecture/">Software Architecture</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="distribution">
+  Distribution
+  <a class="heading-link" href="#distribution">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="alt text" src="/images/single-distributed.png"></p>
+<p><strong>Single Process Application:</strong> A self-contained program that executes on a single computer. It handles all its processing tasks, data storage, and retrieval using the local machine&rsquo;s resources (memory and storage). Examples include offline games and mobile apps without network functionality.</p>
+<p><strong>Distributed System:</strong> A software program designed to function across multiple computers connected over a network. These applications are broken down into smaller components that run on different machines. These components communicate with each other to achieve a common goal.</p>
+<p>A basic distributed system can consist of just two components like a Backend API and a Database.</p>
+<p>A microservices architecture is a more complex form of a distributed system. Here, the application is broken down into many smaller, independently deployable services, each with a specific function. These services communicate with each other using well-defined APIs.</p>
+<h2 id="domain-partitoning">
+  Domain Partitoning
+  <a class="heading-link" href="#domain-partitoning">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="alt text" src="/images/domain-partitioning.png"></p>
+<p>The application is divided into modules or components, each aligned with a specific business subdomain.  This means modules are responsible for the functionality and data related to their assigned subdomain.</p>
+<p><strong>Example:</strong></p>
+<p>Imagine an e-commerce application. Domain partitioning could create separate modules for:</p>
+<ul>
+<li><strong>Product Catalog:</strong> Manages product information, images, and descriptions.</li>
+<li><strong>Shopping Cart:</strong> Handles adding and removing items from the cart, calculating totals, and applying promotions.</li>
+<li><strong>Payment Processing:</strong> Securely processes customer payments and interacts with payment gateways.</li>
+<li><strong>Order Fulfillment:</strong> Tracks orders, manages shipping, and interacts with shipping carriers.</li>
+<li><strong>Customer Account Management:</strong> Allows customers to create accounts, manage profiles, and track order history.</li>
+</ul>
+<p><strong>Implementation Styles:</strong></p>
+<p>Domain partitioning can be implemented in different ways depending on the overall architecture of your application:</p>
+<ul>
+<li>
+<p><strong>Distributed Systems (Microservices):</strong>  In microservices, each domain partition becomes a separate, independent service.  These services run on their own processes, potentially on different machines, and communicate with each other via APIs.</p>
+</li>
+<li>
+<p><strong>Single Process (Modular Monolith):</strong>  Even within a single process application (monolith), domain partitioning can be beneficial.  The application code can be organized into modules that align with business subdomains.</p>
+</li>
+</ul>
+<h2 id="technical-partitioning">
+  Technical Partitioning
+  <a class="heading-link" href="#technical-partitioning">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="alt text" src="/images/technical-partitioning.png">
+Unlike domain partitioning, which focuses on business functionalities, technical partitioning divides the system based on technical characteristics.</p>
+<p>Imagine a web application for managing customer accounts.  Technical partitioning could create separate layers:</p>
+<ul>
+<li><strong>Presentation Layer:</strong> Handles the web user interface for creating, editing, and viewing customer accounts.</li>
+<li><strong>Business Logic Layer:</strong> Contains the application logic for validating user input, processing account information, and interacting with the data layer.</li>
+<li><strong>Data Access Layer:</strong>  Talks to the database to store and retrieve customer account data.</li>
+</ul>
+<p><strong>Implementation Styles:</strong></p>
+<p>Similar to domain partitioning, technical partitioning can be applied in both distributed and single-process applications:</p>
+<ul>
+<li>
+<p><strong>Distributed Systems:</strong> In a distributed system, each technical layer could be implemented as a separate service running on its own process.</p>
+</li>
+<li>
+<p><strong>Single Process Applications:</strong> Even within a single process, technical layers can be used to organize the codebase around technical concerns.</p>
+</li>
+</ul>
+<h2 id="monolith">
+  Monolith
+  <a class="heading-link" href="#monolith">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I avoided using the word &ldquo;monolith&rdquo; because it can refer to both single-process and distributed applications. As long as application components cannot be deployed independently, they exhibit characteristics of a monolithic architecture. The common term used to describe such applications is a two-tier or three-tier architecture.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
