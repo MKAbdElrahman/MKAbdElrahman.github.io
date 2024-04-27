@@ -4,28 +4,28 @@
     <title>Series on Mohamed Kamal</title>
     <link>https://mkabdelrahman.github.io/series/</link>
     <description>Recent content in Series on Mohamed Kamal</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Security</title>
       <link>https://mkabdelrahman.github.io/series/security/</link>
-      <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mkabdelrahman.github.io/series/security/</guid>
       <description></description>
     </item>
     <item>
       <title>Go Context Package</title>
       <link>https://mkabdelrahman.github.io/series/go-context-package/</link>
-      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mkabdelrahman.github.io/series/go-context-package/</guid>
       <description></description>
     </item>
     <item>
       <title>Kubernetes Deployment Workflow</title>
       <link>https://mkabdelrahman.github.io/series/kubernetes-deployment-workflow/</link>
-      <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mkabdelrahman.github.io/series/kubernetes-deployment-workflow/</guid>
       <description></description>
     </item>

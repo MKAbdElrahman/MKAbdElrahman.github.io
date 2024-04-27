@@ -4,10 +4,17 @@
     <title>Posts on Mohamed Kamal</title>
     <link>https://mkabdelrahman.github.io/posts/</link>
     <description>Recent content in Posts on Mohamed Kamal</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Idempotent Integration with a Third-Party REST API</title>
+      <link>https://mkabdelrahman.github.io/posts/idempotentintegrationwithathird-partyrestapi/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/idempotentintegrationwithathird-partyrestapi/</guid>
+      <description>Scenario:&#xA;You have an event-driven application that needs to integrate with a third-party REST API (Service B) without modifying it. To ensure reliable message processing, you want to introduce Service A as a mediator that consumes events and interacts with Service B in an idempotent manner.&#xA;Idempotency Requirement:&#xA;Service A: Service A must be idempotent to prevent duplicate event processing. This means if the same event is received multiple times, Service A should only process it once.</description>
+    </item>
     <item>
       <title>Software Architecture: Partitioning Strategies</title>
       <link>https://mkabdelrahman.github.io/posts/head-first-architecture-partitioning/</link>
