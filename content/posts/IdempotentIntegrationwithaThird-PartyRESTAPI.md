@@ -1,5 +1,5 @@
 ---
-title: "Idempotent Integration with a Third-Party REST API"
+title: "EDA Patterns: Idempotent Integration with a Third-Party REST API"
 date: "2024-04-26"
 description: ""
 tags: [Event-driven Architecture]
