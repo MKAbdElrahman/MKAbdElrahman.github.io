@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EDA Patterns: Event sourcing &amp; CQRS</title>
+      <link>https://mkabdelrahman.github.io/posts/cqrs/</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/cqrs/</guid>
+      <description>Event sourcing is a data management approach that centers around events, recognizing them as the core building blocks of any system. These events, representing state changes, are stored in an immutable append-only log, preserving the order they occurred in. This approach offers a comprehensive audit trail of the system&amp;rsquo;s activity and allows replaying the event log to reconstruct the current system state.&#xA;CQRS, or Command Query Responsibility Segregation, complements event sourcing by advocating for the separation of write operations (commands) and read operations (queries).</description>
+    </item>
     <item>
       <title>EDA Patterns: Idempotent Integration with a Third-Party REST API</title>
       <link>https://mkabdelrahman.github.io/posts/idempotentintegrationwithathird-partyrestapi/</link>
