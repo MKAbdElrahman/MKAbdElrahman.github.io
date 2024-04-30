@@ -6,8 +6,15 @@
     <description>Recent content on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EDA Patterns: The Single Writer Principle</title>
+      <link>https://mkabdelrahman.github.io/posts/eda-single-write-principle/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/eda-single-write-principle/</guid>
+      <description>The Single Writer Principle states that only one service should be responsible for making changes to a specific type of data or event.&#xA;Let&amp;rsquo;s consider an e-commerce system with separate services for Orders, Payments, and Shipments. In this scenario, the Order service serves as the single writer for all order-related data. Here&amp;rsquo;s how it works:&#xA;When a customer clicks &amp;ldquo;buy,&amp;rdquo; the Basket service triggers an &amp;ldquo;Order Requested&amp;rdquo; event. The Order service receives this event, validates the order details, and publishes an &amp;ldquo;Order Confirmed&amp;rdquo; event if successful.</description>
+    </item>
     <item>
       <title>EDA Patterns: Event sourcing &amp; CQRS</title>
       <link>https://mkabdelrahman.github.io/posts/cqrs/</link>
