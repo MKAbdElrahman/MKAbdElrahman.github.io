@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  EDA Patterns: Thin and Thick Events · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="Event-driven systems (EDS) rely on exchanging events for communication. Other services subscribe to these events and react accordingly. This loose coupling keeps services unaware of each other, with the only connection being the event&rsquo;s data format. Since events act as contracts, careful design and consideration for future changes are crucial.
+Scenario: Imagine an e-commerce application. When a customer submits an order, the order service emits an &ldquo;order-requested&rdquo; event. Both the payment service and inventory service are interested in this event.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="EDA Patterns: Thin and Thick Events">
+<meta name="twitter:description" content="Event-driven systems (EDS) rely on exchanging events for communication. Other services subscribe to these events and react accordingly. This loose coupling keeps services unaware of each other, with the only connection being the event&rsquo;s data format. Since events act as contracts, careful design and consideration for future changes are crucial.
+Scenario: Imagine an e-commerce application. When a customer submits an order, the order service emits an &ldquo;order-requested&rdquo; event. Both the payment service and inventory service are interested in this event.">
+
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/eda-patterns-thin-thick-events/">
+  <meta property="og:site_name" content="Mohamed Kamal">
+  <meta property="og:title" content="EDA Patterns: Thin and Thick Events">
+  <meta property="og:description" content="Event-driven systems (EDS) rely on exchanging events for communication. Other services subscribe to these events and react accordingly. This loose coupling keeps services unaware of each other, with the only connection being the event’s data format. Since events act as contracts, careful design and consideration for future changes are crucial.
+Scenario: Imagine an e-commerce application. When a customer submits an order, the order service emits an “order-requested” event. Both the payment service and inventory service are interested in this event.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-05-02T00:00:00+00:00">
+    <meta property="article:tag" content="Event-Driven Architecture">
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/eda-patterns-thin-thick-events/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/eda-patterns-thin-thick-events/">
+              EDA Patterns: Thin and Thick Events
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-05-02T00:00:00Z">
+                May 2, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/software-architecture/">Software Architecture</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/event-driven-architecture/">Event-Driven Architecture</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p><img alt="thin and thick events" src="/images/thin-thick-event.svg"></p>
+<p>Event-driven systems (EDS) rely on exchanging events for communication. Other services <strong>subscribe</strong> to these events and react accordingly. This loose coupling keeps services unaware of each other, with the only connection being the event&rsquo;s data format. Since events act as contracts, careful design and consideration for future changes are crucial.</p>
+<p><strong>Scenario:</strong> Imagine an e-commerce application. When a customer submits an order, the order service emits an &ldquo;order-requested&rdquo; event. Both the payment service and inventory service are interested in this event. The question is, what format should this event take?</p>
+<p><strong>Thin Event:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;order-requested&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;order_id&#34;</span><span class="p">:</span> <span class="mi">123</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This format includes only the essential data - the order ID. The payment service, needing more details, would make an additional database query to retrieve the full order information.</p>
+<p><strong>Thick Event:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;order-requested&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;order_id&#34;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;customer&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;username&#34;</span><span class="p">:</span> <span class="s2">&#34;mohamed&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;mohamed@example.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;phone&#34;</span><span class="p">:</span> <span class="s2">&#34;+1234567890&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;items&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Plastic Chair&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;quantity&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;price&#34;</span><span class="p">:</span> <span class="mf">19.99</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ... additional items if applicable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;shipping_address&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;street&#34;</span><span class="p">:</span> <span class="s2">&#34;123 Main St&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;billing_address&#34;</span><span class="p">:</span> <span class="p">{</span> <span class="c1">// Include if different from shipping address
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">&#34;street&#34;</span><span class="p">:</span> <span class="s2">&#34;456 Elm St&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;payment_method&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;credit_card&#34;</span><span class="p">,</span> <span class="c1">// Or other payment type
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;promo_code&#34;</span><span class="p">:</span> <span class="s2">&#34;SUMMER10&#34;</span> <span class="c1">// Optional, include if used
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>This format includes all the order details within the event itself.</p>
+<p><strong>Trade-off Analysis:</strong></p>
+<ul>
+<li><strong>Scalability and Performance:</strong>
+<ul>
+<li><strong>Thin Events:</strong> Reduce database load, improving scalability and performance.</li>
+<li><strong>Thick Events:</strong> Increase database load, potentially hindering scalability.</li>
+</ul>
+</li>
+<li><strong>Contract Management:</strong>
+<ul>
+<li><strong>Thin Events:</strong> No contract management needed, as services rely on the database for details.</li>
+<li><strong>Thick Events:</strong> Require complex contract management. Downstream services expect specific fields with defined names and types within the event. Versioning this contract becomes an additional concern.</li>
+</ul>
+</li>
+<li><strong>Bandwidth:</strong>
+<ul>
+<li><strong>Thin Events:</strong> Less bandwidth consumption due to smaller event size.</li>
+<li><strong>Thick Events:</strong> Consume more bandwidth due to larger event size.</li>
+</ul>
+</li>
+<li><strong>Data Exposure:</strong>
+<ul>
+<li><strong>Thin Events:</strong> Services only see the data they need through database queries.</li>
+<li><strong>Thick Events:</strong> Services might see fields they don&rsquo;t care about, potentially exposing unnecessary data. Exposing excessive data can pose security risks.</li>
+</ul>
+</li>
+<li><strong>Consistency:</strong>
+<ul>
+<li><strong>Thin Events:</strong> All services access the database for a single source of truth, ensuring consistency.</li>
+<li><strong>Thick Events:</strong> Introduce eventual consistency, as multiple records representing the same data may exist temporarily across different services.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Choosing Wisely:</strong></p>
+<p>While thick events can reduce database load, their downsides like complex contract management and bandwidth consumption can outweigh the benefits. In most cases, <strong>thin events</strong> are preferred due to their simplicity, scalability, and loose coupling. However, the optimal choice depends on your specific needs. Weigh the trade-offs carefully to ensure a well-designed systems.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
