@@ -63,8 +63,8 @@ This format includes all the order details within the event itself.
 **Trade-off Analysis:**
 
 - **Scalability and Performance:**
-  - **Thin Events:** Reduce database load, improving scalability and performance.
-  - **Thick Events:** Increase database load, potentially hindering scalability.
+  - **Thick Events:** Reduce database load, improving scalability and performance.
+  - **Thin Events:** Increase database load, potentially hindering scalability.
 - **Contract Management:**
   - **Thin Events:** No contract management needed, as services rely on the database for details.
   - **Thick Events:** Require complex contract management. Downstream services expect specific fields with defined names and types within the event. Versioning this contract becomes an additional concern.
