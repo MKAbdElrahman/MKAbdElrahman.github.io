@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conf on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/tags/conf/</link>
+    <link>http://localhost:1313/tags/conf/</link>
     <description>Recent content in Conf on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/tags/conf/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/conf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simplify Configuration Management in Go with the &#39;conf&#39; Package</title>
-      <link>https://mkabdelrahman.github.io/posts/go-conf-pkg/</link>
+      <link>http://localhost:1313/posts/go-conf-pkg/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/go-conf-pkg/</guid>
+      <guid>http://localhost:1313/posts/go-conf-pkg/</guid>
       <description>The &amp;ldquo;conf&amp;rdquo; package is designed to make configuration management in Go straightforward and flexible. It allows you to define your application&amp;rsquo;s configuration as a struct and then parse it for both environment variables and command-line arguments. This approach makes it easy to handle different configuration sources, and the package provides a variety of customization options through struct tags.&#xA;First, you need to install the &amp;ldquo;conf&amp;rdquo; package:&#xA;go get github.com/ardanlabs/conf/v3 Define a struct that represents your application&amp;rsquo;s configuration.</description>
     </item>
   </channel>

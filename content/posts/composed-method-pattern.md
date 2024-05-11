@@ -27,3 +27,40 @@ Then Beck explains how to use the pattern, giving two main ways:
 
 
 
+## Example
+
+
+```go
+
+type CartItem struct {
+    Price    float64
+    Quantity int
+    Discount float64
+}
+
+func calculateTotalPrice(cartItems []CartItem) float64 {
+    totalPrice := 0.0
+    
+    for _, item := range cartItems {
+ 
+        if isItemAvailable(item) {
+            totalPrice += calculateItemPrice(item)
+        }
+    }
+    return totalPrice
+}
+
+func isItemAvailable(item CartItem) bool {
+    return item.Quantity > 0
+}
+
+func calculateItemPrice(item CartItem) float64 {
+    itemPrice := item.Price * float64(item.Quantity)
+    if item.Discount > 0 {
+        itemPrice -= item.Discount
+    }
+    return itemPrice
+}
+```
+
+In this sketch, the `calculateTotalPrice` function represents the composed method, which orchestrates the calculation process. It calls two helper functions: `isItemAvailable` to check if an item is available, and `calculateItemPrice` to calculate the price of a single item. These helper functions encapsulate smaller tasks and contribute to the clarity and maintainability of the code.

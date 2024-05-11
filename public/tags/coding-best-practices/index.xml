@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding Best Practices on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/tags/coding-best-practices/</link>
+    <link>http://localhost:1313/tags/coding-best-practices/</link>
     <description>Recent content in Coding Best Practices on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 10 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/tags/coding-best-practices/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/coding-best-practices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding Best Practices: The Composed Method</title>
-      <link>https://mkabdelrahman.github.io/posts/composed-method-pattern/</link>
+      <link>http://localhost:1313/posts/composed-method-pattern/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/composed-method-pattern/</guid>
+      <guid>http://localhost:1313/posts/composed-method-pattern/</guid>
       <description>After reading Kent Beck&amp;rsquo;s book Tidy First, I decided to check out another one by him. This time it&amp;rsquo;s about the best practices in Smalltalk. Even though the book seems old, its ideas are relevant. Let me introduce you to the first pattern from the book, called the Composed Method pattern. This pattern might have different names nowadays, but its main idea is to encourage using smaller functions with names that clearly say what they do.</description>
     </item>
   </channel>
