@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture Style on Mohamed Kamal</title>
-    <link>http://localhost:1313/tags/architecture-style/</link>
+    <link>https://mkabdelrahman.github.io/tags/architecture-style/</link>
     <description>Recent content in Architecture Style on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/architecture-style/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mkabdelrahman.github.io/tags/architecture-style/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kafka Fundamentals: APIs, Topics and Partitions</title>
-      <link>http://localhost:1313/posts/kafka-fundamentals-part1/</link>
+      <link>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kafka-fundamentals-part1/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</guid>
       <description>Kafka is an event streaming platform designed to handle massive volumes of real-time data efficiently. At its core lies a distributed storage system built for scalability, ensuring it can seamlessly accommodate ever-growing data demands.&#xA;This distributed nature allows Kafka to function as a cluster of machines, each playing a role in storing the data stream. This approach offers significant advantages:&#xA;Scalability: As data volumes increase, additional nodes can be added to the cluster, effectively distributing the storage burden and ensuring smooth operation.</description>
     </item>
     <item>
       <title>Microkernel Architecture (Plug-in Architecture)</title>
-      <link>http://localhost:1313/posts/microkernel/</link>
+      <link>https://mkabdelrahman.github.io/posts/microkernel/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/microkernel/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/microkernel/</guid>
       <description>Microkernel architecture is an architecural style where a minimal core system (the microkernel) handles generic or stable domain tasks. Other functionalities are provided by pluggable modules and communicate with the core system through well-defined interfaces.&#xA;You might encounter it in familiar applications:&#xA;Web Browser Extensions: Many web browsers allow you to install extensions that add new functionality. These extensions act as plug-ins, extending the core features of the browser without modifying its core code.</description>
     </item>
     <item>
       <title>The Layered Architecture Style</title>
-      <link>http://localhost:1313/posts/layered-architecture-style/</link>
+      <link>https://mkabdelrahman.github.io/posts/layered-architecture-style/</link>
       <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/layered-architecture-style/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/layered-architecture-style/</guid>
       <description>The layered architecture is a monolithic architectural style that organizes an application into horizontal layers, each focused on distinct technical concerns.&#xA;Understanding the Terms:&#xA;Monolithic application: The entire application is deployed as a single unit. Distributed application: Application components are split across different machines and communicate through a network. Technical partitioning: Application components are organized based on technical aspects like data access or user interface, rather than business domains. Layers in the Layered Architecture:</description>
     </item>
     <item>
       <title> Microservices:  Communication Styles</title>
-      <link>http://localhost:1313/posts/microservices-synchronus-communication/</link>
+      <link>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</link>
       <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/microservices-synchronus-communication/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</guid>
       <description>A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:&#xA;Synchronous communication Asynchronous communication Synchronus Communication Link to heading In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work.</description>
     </item>
   </channel>
