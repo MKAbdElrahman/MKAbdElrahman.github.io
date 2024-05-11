@@ -1,9 +1,9 @@
 ---
-title: "Coding Best Practicies: The Composed Method"
+title: "Coding Best Practices: The Composed Method"
 date: "2024-05-10"
 description: ""
-tags: [Coding Best Practicies]
-categories: ["Coding Best Practicies"]
+tags: [Coding Best Practices]
+categories: ["Coding Best Practices"]
 ---
 
 After reading Kent Beck's book Tidy First, I decided to check out another one by him. This time it's about the best practices in Smalltalk. Even though the book seems old, its ideas are relevant. Let me introduce you to the first pattern from the book, called the Composed Method pattern. This pattern might have different names nowadays, but its main idea is to encourage using smaller functions with names that clearly say what they do.
