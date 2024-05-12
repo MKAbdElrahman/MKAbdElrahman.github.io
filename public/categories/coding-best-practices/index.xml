@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding Best Practices on Mohamed Kamal</title>
-    <link>http://localhost:1313/categories/coding-best-practices/</link>
+    <link>https://mkabdelrahman.github.io/categories/coding-best-practices/</link>
     <description>Recent content in Coding Best Practices on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 12 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/coding-best-practices/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mkabdelrahman.github.io/categories/coding-best-practices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding Best Practices: The Constructor Parameter Method</title>
-      <link>http://localhost:1313/posts/constructor-parameter-method/</link>
+      <link>https://mkabdelrahman.github.io/posts/constructor-parameter-method/</link>
       <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/constructor-parameter-method/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/constructor-parameter-method/</guid>
       <description>This is the third pattern discussed in the Smalltalk Patterns book. I found it difficult to understand Kent&amp;rsquo;s intention at first, but here&amp;rsquo;s my interpretation.&#xA;In the previous &amp;ldquo;best practice&amp;rdquo; or pattern, we discussed the significance of constructors as the sole point of truth for healthy object creation.&#xA;This time, the focus is on passing parameters to the constructor to initialize the object.&#xA;Here&amp;rsquo;s the first point:&#xA;Directly assigning the parameters to the object isn&amp;rsquo;t safe.</description>
     </item>
     <item>
+      <title>Why I Love Go</title>
+      <link>https://mkabdelrahman.github.io/posts/why-i-love-go/</link>
+      <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/why-i-love-go/</guid>
+      <description>Go prevents you from hiding behind programming language shortcuts.&#xA;In other languages, there are always shortcuts and idioms that work in certain scenarios. While these can save you time, they can also leave you feeling like you&amp;rsquo;re missing something and lacking mastery.&#xA;For example, in Go, there is one iteration construct, namely for, to define loops. We don&amp;rsquo;t have constructors, we can live without inheritance, and the language is clean from the public-private-protected overkill.</description>
+    </item>
+    <item>
       <title>Coding Best Practices: The Constructor Method</title>
-      <link>http://localhost:1313/posts/constructor-method-pattern/</link>
+      <link>https://mkabdelrahman.github.io/posts/constructor-method-pattern/</link>
       <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/constructor-method-pattern/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/constructor-method-pattern/</guid>
       <description>One way to construct an object in GoLang is by first creating an object of the type and then directly accessing the fields to put the object in a valid state.&#xA;user := &amp;amp;User{} user.Name = &amp;#34;Mohamed&amp;#34; user.Age = 29 The problem with this approach includes:&#xA;Forcing clients to delve into the source code to understand which fields are essential for initialization. Lack of validation. Exposing implementation details. Increasing the surface area of our type, creating more potential points of coupling.</description>
     </item>
     <item>
       <title>Coding Best Practices: The Composed Method</title>
-      <link>http://localhost:1313/posts/composed-method-pattern/</link>
+      <link>https://mkabdelrahman.github.io/posts/composed-method-pattern/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/composed-method-pattern/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/composed-method-pattern/</guid>
       <description>After reading Kent Beck&amp;rsquo;s book Tidy First, I decided to check out another one by him. This time it&amp;rsquo;s about the best practices in Smalltalk. Even though the book seems old, its ideas are relevant. Let me introduce you to the first pattern from the book, called the Composed Method pattern. This pattern might have different names nowadays, but its main idea is to encourage using smaller functions with names that clearly say what they do.</description>
     </item>
   </channel>
