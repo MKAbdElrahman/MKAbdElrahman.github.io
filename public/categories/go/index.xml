@@ -2,59 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/categories/go/</link>
+    <link>http://localhost:1313/categories/go/</link>
     <description>Recent content in Go on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding Best Practices: How to work with constructors with long list of parameters</title>
+      <link>http://localhost:1313/posts/how-to-work-with-long-constrcutor-parameter-lists/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-work-with-long-constrcutor-parameter-lists/</guid>
+      <description>The fourth pattern in Kent Beck&amp;rsquo;s book &amp;lsquo;Smalltalk Best Practice Patterns&amp;rsquo; is called the shortcut constructor method. It was hard for me to understand anything other than the problem it&amp;rsquo;s trying to solve, which is constructors with long lists of parameters. This time, I will not mention how Kent solves this because I don&amp;rsquo;t understand the solution he is proposing, or what I understood looks very stupid to me because I grew up in modern languages, and these old solutions were the best at their own time and context.</description>
+    </item>
     <item>
       <title>Coding Best Practices: The Constructor Parameter Method</title>
-      <link>https://mkabdelrahman.github.io/posts/constructor-parameter-method/</link>
+      <link>http://localhost:1313/posts/constructor-parameter-method/</link>
       <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/constructor-parameter-method/</guid>
+      <guid>http://localhost:1313/posts/constructor-parameter-method/</guid>
       <description>This is the third pattern discussed in the Smalltalk Patterns book. I found it difficult to understand Kent&amp;rsquo;s intention at first, but here&amp;rsquo;s my interpretation.&#xA;In the previous &amp;ldquo;best practice&amp;rdquo; or pattern, we discussed the significance of constructors as the sole point of truth for healthy object creation.&#xA;This time, the focus is on passing parameters to the constructor to initialize the object.&#xA;Here&amp;rsquo;s the first point:&#xA;Directly assigning the parameters to the object isn&amp;rsquo;t safe.</description>
     </item>
     <item>
       <title>Why I Love Go</title>
-      <link>https://mkabdelrahman.github.io/posts/why-i-love-go/</link>
+      <link>http://localhost:1313/posts/why-i-love-go/</link>
       <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/why-i-love-go/</guid>
+      <guid>http://localhost:1313/posts/why-i-love-go/</guid>
       <description>Go prevents you from hiding behind programming language shortcuts.&#xA;In other languages, there are always shortcuts and idioms that work in certain scenarios. While these can save you time, they can also leave you feeling like you&amp;rsquo;re missing something and lacking mastery.&#xA;For example, in Go, there is one iteration construct, namely for, to define loops. We don&amp;rsquo;t have constructors, we can live without inheritance, and the language is clean from the public-private-protected overkill.</description>
     </item>
     <item>
       <title>Coding Best Practices: The Constructor Method</title>
-      <link>https://mkabdelrahman.github.io/posts/constructor-method-pattern/</link>
+      <link>http://localhost:1313/posts/constructor-method-pattern/</link>
       <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/constructor-method-pattern/</guid>
+      <guid>http://localhost:1313/posts/constructor-method-pattern/</guid>
       <description>One way to construct an object in GoLang is by first creating an object of the type and then directly accessing the fields to put the object in a valid state.&#xA;user := &amp;amp;User{} user.Name = &amp;#34;Mohamed&amp;#34; user.Age = 29 The problem with this approach includes:&#xA;Forcing clients to delve into the source code to understand which fields are essential for initialization. Lack of validation. Exposing implementation details. Increasing the surface area of our type, creating more potential points of coupling.</description>
     </item>
     <item>
       <title>Coding Best Practices: The Composed Method</title>
-      <link>https://mkabdelrahman.github.io/posts/composed-method-pattern/</link>
+      <link>http://localhost:1313/posts/composed-method-pattern/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/composed-method-pattern/</guid>
+      <guid>http://localhost:1313/posts/composed-method-pattern/</guid>
       <description>After reading Kent Beck&amp;rsquo;s book Tidy First, I decided to check out another one by him. This time it&amp;rsquo;s about the best practices in Smalltalk. Even though the book seems old, its ideas are relevant. Let me introduce you to the first pattern from the book, called the Composed Method pattern. This pattern might have different names nowadays, but its main idea is to encourage using smaller functions with names that clearly say what they do.</description>
     </item>
     <item>
       <title>Understanding XSS Attacks and Contextual Encoding in Go</title>
-      <link>https://mkabdelrahman.github.io/posts/xss/</link>
+      <link>http://localhost:1313/posts/xss/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/xss/</guid>
+      <guid>http://localhost:1313/posts/xss/</guid>
       <description>XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code.</description>
     </item>
     <item>
       <title>Go Context Package: Cause-aware Context Cancellation</title>
-      <link>https://mkabdelrahman.github.io/posts/cause/</link>
+      <link>http://localhost:1313/posts/cause/</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/cause/</guid>
+      <guid>http://localhost:1313/posts/cause/</guid>
       <description>The context package in Go has recently introduced cause-aware context cancellation functions. This update includes the WithCancelCause, WithDeadlineCause, and WithTimeoutCause functions, as well as the Cause function for retrieving the cause of context cancellation.&#xA;func WithCancelCause(parent Context) (ctx Context, cancel CancelCauseFunc) This function is analogous to WithCancel, but it returns a CancelCauseFunc that allows setting an error as the cause of cancellation.&#xA;func WithDeadlineCause(parent Context, d time.Time, cause error) (Context, CancelFunc) Combining features of WithDeadline with the ability to provide a cause for context cancellation.</description>
     </item>
     <item>
       <title>Go Context Package: AfterFunc</title>
-      <link>https://mkabdelrahman.github.io/posts/afterfunc/</link>
+      <link>http://localhost:1313/posts/afterfunc/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/afterfunc/</guid>
+      <guid>http://localhost:1313/posts/afterfunc/</guid>
       <description>The AfterFunc function in Go&amp;rsquo;s context package provides a robust tool for scheduling the execution of a specified function after a given context concludes, be it due to cancellation or a timeout. This blog post delves into the practical application of AfterFunc through an illustrative example, shedding light on its functionality and potential use cases.&#xA;The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (stop func() bool) ctx: The context that determines when the function f should be executed.</description>
     </item>
   </channel>
