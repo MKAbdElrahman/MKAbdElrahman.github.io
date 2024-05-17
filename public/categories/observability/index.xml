@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Observability on Mohamed Kamal</title>
+    <link>https://mkabdelrahman.github.io/categories/observability/</link>
+    <description>Recent content in Observability on Mohamed Kamal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 16 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/categories/observability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Observability: Introduction</title>
+      <link>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</link>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</guid>
+      <description>Observability is the ability to understand the internal workings of a system by examining the signals it emits externally. This means you can gain insights into the system&amp;rsquo;s health and performance without needing to directly access its internal components.&#xA;There are several reasons why observability is important. It allows you to troubleshoot problems more effectively by providing you with the data you need to identify the root cause of issues. It also enables you to answer questions about how your system is behaving and to proactively identify potential problems before they occur.</description>
+    </item>
+  </channel>
+</rss>
