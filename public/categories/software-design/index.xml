@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Design on Mohamed Kamal</title>
+    <link>https://mkabdelrahman.github.io/categories/software-design/</link>
+    <description>Recent content in Software Design on Mohamed Kamal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/categories/software-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Coupling in Software Design</title>
+      <link>https://mkabdelrahman.github.io/posts/coupling/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/coupling/</guid>
+      <description>What is Coupling? Link to heading Imagine you have two software components, A and B. In the worst-case scenario of tight coupling, changing one component unexpectedly affects the other, even if they don&amp;rsquo;t directly collaborate. This interdependence creates a tangled mess, making modifications difficult and prone to errors.&#xA;However, software often thrives on collaboration. This is where loose coupling comes into play. Loose coupling promotes independence between components. They can function with minimal reliance on each other&amp;rsquo;s internal workings.</description>
+    </item>
+  </channel>
+</rss>

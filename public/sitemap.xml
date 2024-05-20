@@ -3,10 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mkabdelrahman.github.io/categories/</loc>
-    <lastmod>2024-05-16T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/</loc>
-    <lastmod>2024-05-16T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/categories/software-design/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/coupling/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/categories/observability/</loc>
     <lastmod>2024-05-16T00:00:00+00:00</lastmod>
@@ -14,7 +23,7 @@
     <loc>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</loc>
     <lastmod>2024-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/</loc>
+    <loc>https://mkabdelrahman.github.io/posts/open-telemetry-part2/</loc>
     <lastmod>2024-05-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/categories/coding-best-practices/</loc>

@@ -6,14 +6,28 @@
     <description>Recent content on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Coupling in Software Design</title>
+      <link>https://mkabdelrahman.github.io/posts/coupling/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/coupling/</guid>
+      <description>What is Coupling? Link to heading Imagine you have two software components, A and B. In the worst-case scenario of tight coupling, changing one component unexpectedly affects the other, even if they don&amp;rsquo;t directly collaborate. This interdependence creates a tangled mess, making modifications difficult and prone to errors.&#xA;However, software often thrives on collaboration. This is where loose coupling comes into play. Loose coupling promotes independence between components. They can function with minimal reliance on each other&amp;rsquo;s internal workings.</description>
+    </item>
     <item>
       <title>Observability: Introduction</title>
       <link>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
       <guid>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</guid>
       <description>Observability is the ability to understand the internal workings of a system by examining the signals it emits externally. This means you can gain insights into the system&amp;rsquo;s health and performance without needing to directly access its internal components.&#xA;There are several reasons why observability is important. It allows you to troubleshoot problems more effectively by providing you with the data you need to identify the root cause of issues. It also enables you to answer questions about how your system is behaving and to proactively identify potential problems before they occur.</description>
+    </item>
+    <item>
+      <title>Observability: Introduction to OpenTelemetry</title>
+      <link>https://mkabdelrahman.github.io/posts/open-telemetry-part2/</link>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/open-telemetry-part2/</guid>
+      <description>OpenTelemetry: A Standardized Approach to Observability Link to heading OpenTelemetry (OTel for short) simplifies how you gain insights into your applications&amp;rsquo; health and performance. It&amp;rsquo;s an observability framework that provides a consistent way to:&#xA;Instrument your applications: Regardless of the programming language, OTel offers language-specific libraries and APIs to streamline this process. Generate telemetry data: This data comes in three forms: metrics (numerical data), logs (event messages), and traces (which track request journeys).</description>
     </item>
     <item>
       <title>Coding Best Practices: How to work with constructors with long list of parameters</title>
