@@ -6,8 +6,15 @@
     <description>Recent content in Software Design on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/categories/software-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The True Single Responsibility Principle (SRP)</title>
+      <link>https://mkabdelrahman.github.io/posts/true-srp/</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/true-srp/</guid>
+      <description>&amp;ldquo;A software module (class, function, package, &amp;hellip;) should have one and only one reason to change. One actor that is the source of change.&amp;rdquo; - Uncle Bob&#xA;On the surface, this principle might remind you of the Linux philosophy: &amp;ldquo;do one thing and do it well.&amp;rdquo; However, this is not Uncle Bob&amp;rsquo;s interpretation. The challenge lies in defining what constitutes a single responsibility. According to Uncle Bob, a module&amp;rsquo;s changes should be initiated by only one type of actor group.</description>
+    </item>
     <item>
       <title>Understanding Coupling in Software Design</title>
       <link>https://mkabdelrahman.github.io/posts/coupling/</link>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  The True Single Responsibility Principle (SRP) · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="This post explores the first principle in SOLID.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The True Single Responsibility Principle (SRP)">
+  <meta name="twitter:description" content="This post explores the first principle in SOLID.">
+
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/true-srp/">
+  <meta property="og:site_name" content="Mohamed Kamal">
+  <meta property="og:title" content="The True Single Responsibility Principle (SRP)">
+  <meta property="og:description" content="This post explores the first principle in SOLID.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-06-12T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/true-srp/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/true-srp/">
+              The True Single Responsibility Principle (SRP)
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-06-12T00:00:00Z">
+                June 12, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/software-design/">Software Design</a>
+      <span class="separator">•</span>
+    <a href="/categories/solid/">SOLID</a></div>
+
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>&ldquo;A software module (class, function, package, &hellip;) should have one and only one reason to change. One actor that is the source of change.&rdquo; - Uncle Bob</p>
+<p>On the surface, this principle might remind you of the Linux philosophy: &ldquo;do one thing and do it well.&rdquo; However, this is not Uncle Bob&rsquo;s interpretation. The challenge lies in defining what constitutes a single responsibility. According to Uncle Bob, a module&rsquo;s changes should be initiated by only one type of actor group. For example, a class that includes business logic for both administrators and managers clearly violates SRP. Therefore, SRP dictates that a module should be influenced by only one actor group, as each actor has well-defined business responsibilities. A user might belong to multiple actor groups, acting as an admin at one time and a regular user at another.</p>
+<p>Let&rsquo;s go through an example to illustrate the Single Responsibility Principle and how to determine if a module adheres to it by identifying the actors that might request changes to its functions.</p>
+<h3 id="example-scenario">
+  Example Scenario
+  <a class="heading-link" href="#example-scenario">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Consider a type called <code>UserManagement</code> in Go which handles various operations related to users in a system. Here&rsquo;s a sample implementation of the struct:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">UserManagement</span> <span class="kd">struct</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">um</span> <span class="o">*</span><span class="nx">UserManagement</span><span class="p">)</span> <span class="nf">CreateUser</span><span class="p">(</span><span class="nx">userData</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to create a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">um</span> <span class="o">*</span><span class="nx">UserManagement</span><span class="p">)</span> <span class="nf">DeleteUser</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to delete a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">um</span> <span class="o">*</span><span class="nx">UserManagement</span><span class="p">)</span> <span class="nf">UpdateUserDetails</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">newData</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to update user details
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">um</span> <span class="o">*</span><span class="nx">UserManagement</span><span class="p">)</span> <span class="nf">GrantAdminPrivileges</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to grant admin privileges to a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">um</span> <span class="o">*</span><span class="nx">UserManagement</span><span class="p">)</span> <span class="nf">RevokeAdminPrivileges</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to revoke admin privileges from a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">um</span> <span class="o">*</span><span class="nx">UserManagement</span><span class="p">)</span> <span class="nf">GenerateUserReport</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to generate a report for a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><h3 id="analyzing-the-type">
+  Analyzing the type
+  <a class="heading-link" href="#analyzing-the-type">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>To determine if this type adheres to SRP, we need to identify the different actors who might request changes to these methods.</p>
+<ol>
+<li>
+<p><strong>Create, Delete, and Update User Details</strong>: These methods are likely to be requested by <strong>User Management</strong> teams or <strong>HR</strong> departments, whose primary responsibility is to manage user information.</p>
+</li>
+<li>
+<p><strong>Grant and Revoke Admin Privileges</strong>: These methods are likely to be requested by <strong>System Administrators</strong> or <strong>Security</strong> teams, who are responsible for managing user roles and permissions.</p>
+</li>
+<li>
+<p><strong>Generate User Report</strong>: This method might be requested by <strong>Reporting</strong> teams or <strong>Auditors</strong>, who need to generate and analyze user-related data.</p>
+</li>
+</ol>
+<h3 id="srp-violation">
+  SRP Violation
+  <a class="heading-link" href="#srp-violation">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>From the analysis, it&rsquo;s clear that there are multiple distinct actor groups involved:</p>
+<ul>
+<li><strong>User Management/HR</strong> for creating, deleting, and updating user details.</li>
+<li><strong>System Administrators/Security</strong> for granting and revoking admin privileges.</li>
+<li><strong>Reporting/Auditors</strong> for generating user reports.</li>
+</ul>
+<p>This indicates that the <code>UserManagement</code> struct violates the SRP because it has multiple reasons to change, each driven by a different actor group.</p>
+<h3 id="refactoring-to-adhere-to-srp">
+  Refactoring to Adhere to SRP
+  <a class="heading-link" href="#refactoring-to-adhere-to-srp">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>To adhere to SRP, we should split this type into multiple types, each with a single responsibility:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">UserManager</span> <span class="kd">struct</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">um</span> <span class="o">*</span><span class="nx">UserManager</span><span class="p">)</span> <span class="nf">CreateUser</span><span class="p">(</span><span class="nx">userData</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to create a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">um</span> <span class="o">*</span><span class="nx">UserManager</span><span class="p">)</span> <span class="nf">DeleteUser</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to delete a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">um</span> <span class="o">*</span><span class="nx">UserManager</span><span class="p">)</span> <span class="nf">UpdateUserDetails</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">newData</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to update user details
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">AdminPrivilegesManager</span> <span class="kd">struct</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">apm</span> <span class="o">*</span><span class="nx">AdminPrivilegesManager</span><span class="p">)</span> <span class="nf">GrantAdminPrivileges</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to grant admin privileges to a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">apm</span> <span class="o">*</span><span class="nx">AdminPrivilegesManager</span><span class="p">)</span> <span class="nf">RevokeAdminPrivileges</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to revoke admin privileges from a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">UserReportGenerator</span> <span class="kd">struct</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">urg</span> <span class="o">*</span><span class="nx">UserReportGenerator</span><span class="p">)</span> <span class="nf">GenerateUserReport</span><span class="p">(</span><span class="nx">userID</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Logic to generate a report for a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><h3 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>By refactoring the <code>UserManagement</code> struct into <code>UserManager</code>, <code>AdminPrivilegesManager</code>, and <code>UserReportGenerator</code>, we now have each type with a single reason to change, aligned with a specific actor group. This adheres to the Single Responsibility Principle, making the system more maintainable and understandable.</p>
+<p>When evaluating whether methods belong to a type and adhere to SRP, always ask: <strong>&ldquo;Who are the actors that will ask for changes to these functions?&rdquo;</strong> If the answer includes multiple actor groups with distinct responsibilities, it&rsquo;s a sign that the struct or module should be refactored to better align with SRP.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
