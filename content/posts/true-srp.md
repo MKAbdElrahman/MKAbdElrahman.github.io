@@ -1,5 +1,5 @@
 ---
-title: "The True Single Responsibility Principle (SRP)"
+title: "The True Single Responsibility Principle"
 date: "2024-06-12"
 description: "This post explores the first principle in SOLID."
 categories: ["Software Design","SOLID"]

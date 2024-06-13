@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software Design on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/categories/software-design/</link>
+    <link>http://localhost:1313/categories/software-design/</link>
     <description>Recent content in Software Design on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/categories/software-design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/software-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The True Single Responsibility Principle (SRP)</title>
-      <link>https://mkabdelrahman.github.io/posts/true-srp/</link>
+      <link>http://localhost:1313/posts/true-srp/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/true-srp/</guid>
+      <guid>http://localhost:1313/posts/true-srp/</guid>
       <description>&amp;ldquo;A software module (class, function, package, &amp;hellip;) should have one and only one reason to change. One actor that is the source of change.&amp;rdquo; - Uncle Bob&#xA;On the surface, this principle might remind you of the Linux philosophy: &amp;ldquo;do one thing and do it well.&amp;rdquo; However, this is not Uncle Bob&amp;rsquo;s interpretation. The challenge lies in defining what constitutes a single responsibility. According to Uncle Bob, a module&amp;rsquo;s changes should be initiated by only one type of actor group.</description>
     </item>
     <item>
       <title>Understanding Coupling in Software Design</title>
-      <link>https://mkabdelrahman.github.io/posts/coupling/</link>
+      <link>http://localhost:1313/posts/coupling/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/coupling/</guid>
+      <guid>http://localhost:1313/posts/coupling/</guid>
       <description>What is Coupling? Link to heading Imagine you have two software components, A and B. In the worst-case scenario of tight coupling, changing one component unexpectedly affects the other, even if they don&amp;rsquo;t directly collaborate. This interdependence creates a tangled mess, making modifications difficult and prone to errors.&#xA;However, software often thrives on collaboration. This is where loose coupling comes into play. Loose coupling promotes independence between components. They can function with minimal reliance on each other&amp;rsquo;s internal workings.</description>
     </item>
   </channel>
