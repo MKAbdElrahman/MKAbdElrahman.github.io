@@ -6,8 +6,15 @@
     <description>Recent content on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Short Note on Software Architecture Terminology</title>
+      <link>https://mkabdelrahman.github.io/posts/layered-and-modular-monolith-boundaries/</link>
+      <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/layered-and-modular-monolith-boundaries/</guid>
+      <description>Unlike other fields of science and engineering, software engineering is replete with terms that describe the same or very similar concepts. Often, these terms are created to distinguish themselves from other concepts, inadvertently obscuring their true nature and strong interrelations.&#xA;One of these terms is the &amp;ldquo;layered and modular monolith.&amp;rdquo;&#xA;Other similar concepts include Clean Architecture, Onion Architecture, Ports and Adapters, and Hexagonal Architecture&amp;hellip;&#xA;For someone new to software development, this can be very intimidating.</description>
+    </item>
     <item>
       <title>The Real Single Responsibility Principle</title>
       <link>https://mkabdelrahman.github.io/posts/true-srp/</link>
