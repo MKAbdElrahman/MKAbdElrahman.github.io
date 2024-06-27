@@ -2,22 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mkabdelrahman.github.io/categories/caching/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/caching_patterns/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/categories/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/software-architecture/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/categories/software-architecture/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mkabdelrahman.github.io/posts/layered-and-modular-monolith-boundaries/</loc>
     <lastmod>2024-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/tags/architecture-style/</loc>
-    <lastmod>2024-06-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/</loc>
-    <lastmod>2024-06-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/</loc>
-    <lastmod>2024-06-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/</loc>
-    <lastmod>2024-06-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/</loc>
     <lastmod>2024-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/categories/technology/</loc>
@@ -71,9 +83,6 @@
     <loc>https://mkabdelrahman.github.io/tags/event-driven-architecture/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/software-architecture/</loc>
-    <lastmod>2024-05-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mkabdelrahman.github.io/posts/eda-single-write-principle/</loc>
     <lastmod>2024-04-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -82,9 +91,6 @@
   </url><url>
     <loc>https://mkabdelrahman.github.io/posts/idempotentintegrationwithathird-partyrestapi/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/software-architecture/</loc>
-    <lastmod>2024-04-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/posts/head-first-architecture-partitioning/</loc>
     <lastmod>2024-04-02T00:00:00+00:00</lastmod>

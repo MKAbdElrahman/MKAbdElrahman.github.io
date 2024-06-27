@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Caching: Topologies and Patterns · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="What is a Cache? Link to heading A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:
+Reducing network calls to the primary data store: Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Caching: Topologies and Patterns">
+  <meta name="twitter:description" content="What is a Cache? Link to heading A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:
+Reducing network calls to the primary data store: Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.">
+
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/caching_patterns/">
+  <meta property="og:site_name" content="Mohamed Kamal">
+  <meta property="og:title" content="Caching: Topologies and Patterns">
+  <meta property="og:description" content="What is a Cache? Link to heading A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:
+Reducing network calls to the primary data store: Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-06-26T00:00:00+00:00">
+    <meta property="article:tag" content="Software Architecture">
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/caching_patterns/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/caching_patterns/">
+              Caching: Topologies and Patterns
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-06-26T00:00:00Z">
+                June 26, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/software-architecture/">Software Architecture</a>
+      <span class="separator">•</span>
+    <a href="/categories/caching/">Caching</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/software-architecture/">Software Architecture</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="what-is-a-cache">
+  What is a Cache?
+  <a class="heading-link" href="#what-is-a-cache">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:</p>
+<ul>
+<li><strong>Reducing network calls to the primary data store:</strong> Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.</li>
+<li><strong>Increasing performance:</strong> Data in a cache is typically stored in random-access memory (RAM), providing quicker access than querying a database.</li>
+</ul>
+<p>In distributed databases, the performance enhancement might be marginal due to network call latency, but the increase in scalability can be significant.</p>
+<h2 id="caching-patterns">
+  Caching Patterns
+  <a class="heading-link" href="#caching-patterns">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="standard-readwrite">
+  Standard Read/Write
+  <a class="heading-link" href="#standard-readwrite">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img alt="alt text" src="/images/caching/standard.png"></p>
+<h4 id="read-operation">
+  Read Operation:
+  <a class="heading-link" href="#read-operation">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>The service attempts to fetch an item from the cache.</li>
+<li>If the item is not found, it queries the database.</li>
+<li>Once retrieved, the item is added to the cache.</li>
+<li>The service returns the item to the user.</li>
+</ol>
+<h4 id="write-operation">
+  Write Operation:
+  <a class="heading-link" href="#write-operation">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>The service removes the item from the database.</li>
+<li>The service then removes the item from the cache.</li>
+<li>The service returns a success response to the user.</li>
+</ol>
+<p>These steps keep the cache and database in sync, though they are separate transactions.</p>
+<h3 id="read-through">
+  Read-Through
+  <a class="heading-link" href="#read-through">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img alt="alt text" src="/images/caching/read-through.png"></p>
+<p>Read-through caching modifies the standard read process by making the cache responsible for database queries:</p>
+<ol>
+<li>The service checks the cache for the requested item.</li>
+<li>If the item is not in the cache, it queries the database.</li>
+<li>The item is retrieved and added to the cache.</li>
+<li>The cache returns the item to the service, which passes it to the user.</li>
+</ol>
+<p>The service only interacts with the cache, which handles all database operations.</p>
+<h3 id="write-through">
+  Write-Through
+  <a class="heading-link" href="#write-through">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img alt="alt text" src="/images/caching/write-through.png"></p>
+<p>Write-through caching modifies the standard write process by delegating database updates to the cache:</p>
+<ol>
+<li>The service removes the item from the cache.</li>
+<li>The cache then removes the item from the database.</li>
+<li>The service only interacts with the cache, which handles database operations.</li>
+</ol>
+<p>This approach simplifies the service logic by allowing it to view the cache as the primary data store.</p>
+<h3 id="write-behind-write-back">
+  Write-Behind (Write-Back)
+  <a class="heading-link" href="#write-behind-write-back">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img alt="alt text" src="/images/caching/write-back.png"></p>
+<p>In a write-behind setup:</p>
+<ol>
+<li>The service removes the item from the cache.</li>
+<li>The cache immediately returns a success response to the service.</li>
+<li>Asynchronously, the cache updates the database in the background.</li>
+</ol>
+<p>While this offers high performance and responsiveness, it introduces risks such as complex error handling and potential data inconsistencies.</p>
+<h2 id="caching-topologies">
+  Caching Topologies
+  <a class="heading-link" href="#caching-topologies">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="traditional-isolated-in-memory-cache">
+  Traditional Isolated In-Memory Cache
+  <a class="heading-link" href="#traditional-isolated-in-memory-cache">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img alt="alt text" src="/images/caching/traditional.png"></p>
+<p>A traditional single in-memory cache stores data in the memory of an application instance, allowing for fast data retrieval. This approach works well in monolithic applications, reducing database load and speeding up response times.</p>
+<p>However, in a microservices architecture, where multiple instances of the same service may run simultaneously, each instance may maintain its own local cache. This can lead to issues such as:</p>
+<ol>
+<li>
+<p><strong>Inconsistent Response Times:</strong></p>
+<ul>
+<li><strong>Example:</strong> In an orders service with multiple instances, if instance 1 has all order items cached, requests to instance 1 will be fast. But if instance 3 has an empty cache, it will query the database, leading to slower response times. This inconsistency can frustrate users.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cache Inconsistency:</strong></p>
+<ul>
+<li><strong>Example:</strong> If an order is removed and the removal request hits instance 1, it will remove the item from its cache and the database. However, instance 3, which has the item cached, will still show the item, leading to outdated or incorrect data being presented to users.</li>
+</ul>
+</li>
+</ol>
+<p>Despite these challenges, a single in-memory cache is useful for data that doesn’t change frequently, such as configuration values, code lookups, or read-only data.</p>
+<h3 id="embedded-replicated-cache">
+  Embedded (Replicated) Cache
+  <a class="heading-link" href="#embedded-replicated-cache">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img alt="alt text" src="/images/caching/embedded.png">
+In embedded mode, the application and the cache share the same memory space. Each application instance has its own cache, synchronized with others to ensure consistency. This approach eliminates the need for an external cache server, reducing latency for cache reads and writes. However, large caches can cause memory issues, making embedded caching suitable for smaller datasets.</p>
+<h3 id="distributed-client-server-cache">
+  Distributed (Client-Server) Cache
+  <a class="heading-link" href="#distributed-client-server-cache">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img alt="alt text" src="/images/caching/client-server.png"></p>
+<p>In the distributed topology, the cache is separated from the application, running on dedicated servers. Applications connect to these cache nodes through clients. This allows the cache cluster to scale independently, suitable for applications with large datasets and high availability requirements. However, this approach can introduce higher latency due to network requests and depends on the external cache servers&rsquo; availability.</p>
+<h3 id="near-cache-hybrid">
+  Near Cache Hybrid
+  <a class="heading-link" href="#near-cache-hybrid">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img alt="alt text" src="/images/caching/near.png"></p>
+<p>The near cache hybrid topology combines embedded and distributed caches. It uses a local cache on the client side and a distributed cache on the server side. The client-side cache stores frequently accessed data locally, reducing the need for network requests. This approach reduces latency and improves performance, combining the scalability of a distributed cache with the performance benefits of a local cache.</p>
+<h3 id="performance-and-fault-tolerance-considerations">
+  Performance and Fault Tolerance Considerations
+  <a class="heading-link" href="#performance-and-fault-tolerance-considerations">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Performance varies among topologies. Replicated caches offer the fastest access, distributed caches have higher latency due to network requests, and near cache hybrid varies depending on synchronization needs. Fault tolerance also differs: replicated caches are highly fault-tolerant, distributed caches depend on external servers, and near cache hybrid requires careful synchronization for data consistency.</p>
+<p>Update rates are another consideration. Replicated caches suit low update rates, distributed caches handle high update rates better, and near cache hybrid works well with relatively low update rates.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

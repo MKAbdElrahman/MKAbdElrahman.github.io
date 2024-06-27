@@ -6,8 +6,15 @@
     <description>Recent content in Software Architecture on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Caching: Topologies and Patterns</title>
+      <link>https://mkabdelrahman.github.io/posts/caching_patterns/</link>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/caching_patterns/</guid>
+      <description>What is a Cache? Link to heading A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:&#xA;Reducing network calls to the primary data store: Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.</description>
+    </item>
     <item>
       <title>Software Architecture: Partitioning Strategies</title>
       <link>https://mkabdelrahman.github.io/posts/head-first-architecture-partitioning/</link>
