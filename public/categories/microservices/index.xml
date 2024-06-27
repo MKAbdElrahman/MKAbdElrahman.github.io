@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microservices on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/categories/microservices/</link>
+    <link>http://localhost:1313/categories/microservices/</link>
     <description>Recent content in Microservices on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/categories/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Sharing Between Microservices Using Synchronized Embedded Caches</title>
+      <link>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</link>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</guid>
+      <description>Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:&#xA;Menu Service: Manages the list of available dishes. Order Service: Allows customers to create and manage their orders. How It Works Link to heading Starting the Menu Service:&#xA;The menu service starts and loads a cache containing information about available dishes. This cache is distributed, enabling it to be shared across different services. Starting the Order Service:</description>
+    </item>
     <item>
       <title> Microservices:  Communication Styles</title>
-      <link>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</link>
+      <link>http://localhost:1313/posts/microservices-synchronus-communication/</link>
       <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</guid>
+      <guid>http://localhost:1313/posts/microservices-synchronus-communication/</guid>
       <description>A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:&#xA;Synchronous communication Asynchronous communication Synchronus Communication Link to heading In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work.</description>
     </item>
   </channel>

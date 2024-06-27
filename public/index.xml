@@ -2,276 +2,283 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Sharing Between Microservices Using Synchronized Embedded Caches</title>
+      <link>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</link>
+      <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</guid>
+      <description>Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:&#xA;Menu Service: Manages the list of available dishes. Order Service: Allows customers to create and manage their orders. How It Works Link to heading Starting the Menu Service:&#xA;The menu service starts and loads a cache containing information about available dishes. This cache is distributed, enabling it to be shared across different services. Starting the Order Service:</description>
+    </item>
     <item>
       <title>Caching: Topologies and Patterns</title>
-      <link>https://mkabdelrahman.github.io/posts/caching_patterns/</link>
+      <link>http://localhost:1313/posts/caching_patterns/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/caching_patterns/</guid>
+      <guid>http://localhost:1313/posts/caching_patterns/</guid>
       <description>What is a Cache? Link to heading A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:&#xA;Reducing network calls to the primary data store: Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.</description>
     </item>
     <item>
       <title>A Short Note on Software Architecture Terminology</title>
-      <link>https://mkabdelrahman.github.io/posts/layered-and-modular-monolith-boundaries/</link>
+      <link>http://localhost:1313/posts/layered-and-modular-monolith-boundaries/</link>
       <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/layered-and-modular-monolith-boundaries/</guid>
+      <guid>http://localhost:1313/posts/layered-and-modular-monolith-boundaries/</guid>
       <description>Unlike other fields of science and engineering, software engineering is replete with terms that describe the same or very similar concepts. Often, these terms are created to distinguish themselves from other concepts, inadvertently obscuring their true nature and strong interrelations.&#xA;One of these terms is the &amp;ldquo;layered and modular monolith.&amp;rdquo;&#xA;Other similar concepts include Clean Architecture, Onion Architecture, Ports and Adapters, and Hexagonal Architecture&amp;hellip;&#xA;For someone new to software development, this can be very intimidating.</description>
     </item>
     <item>
       <title>The Real Single Responsibility Principle</title>
-      <link>https://mkabdelrahman.github.io/posts/true-srp/</link>
+      <link>http://localhost:1313/posts/true-srp/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/true-srp/</guid>
+      <guid>http://localhost:1313/posts/true-srp/</guid>
       <description>&amp;ldquo;A software module (class, function, package, &amp;hellip;) should have one and only one reason to change. One actor that is the source of change.&amp;rdquo; - Uncle Bob&#xA;On the surface, this principle might remind you of the Linux philosophy: &amp;ldquo;do one thing and do it well.&amp;rdquo; However, this is not Uncle Bob&amp;rsquo;s interpretation. The challenge lies in defining what constitutes a single responsibility. According to Uncle Bob, a module&amp;rsquo;s changes should be initiated by only one type of actor group.</description>
     </item>
     <item>
       <title>Understanding Coupling in Software Design</title>
-      <link>https://mkabdelrahman.github.io/posts/coupling/</link>
+      <link>http://localhost:1313/posts/coupling/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/coupling/</guid>
+      <guid>http://localhost:1313/posts/coupling/</guid>
       <description>What is Coupling? Link to heading Imagine you have two software components, A and B. In the worst-case scenario of tight coupling, changing one component unexpectedly affects the other, even if they don&amp;rsquo;t directly collaborate. This interdependence creates a tangled mess, making modifications difficult and prone to errors.&#xA;However, software often thrives on collaboration. This is where loose coupling comes into play. Loose coupling promotes independence between components. They can function with minimal reliance on each other&amp;rsquo;s internal workings.</description>
     </item>
     <item>
       <title>Observability: Introduction</title>
-      <link>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</link>
+      <link>http://localhost:1313/posts/opentelemetry-part-1/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</guid>
+      <guid>http://localhost:1313/posts/opentelemetry-part-1/</guid>
       <description>Observability is the ability to understand the internal workings of a system by examining the signals it emits externally. This means you can gain insights into the system&amp;rsquo;s health and performance without needing to directly access its internal components.&#xA;There are several reasons why observability is important. It allows you to troubleshoot problems more effectively by providing you with the data you need to identify the root cause of issues. It also enables you to answer questions about how your system is behaving and to proactively identify potential problems before they occur.</description>
     </item>
     <item>
       <title>Observability: Introduction to OpenTelemetry</title>
-      <link>https://mkabdelrahman.github.io/posts/open-telemetry-part2/</link>
+      <link>http://localhost:1313/posts/open-telemetry-part2/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/open-telemetry-part2/</guid>
+      <guid>http://localhost:1313/posts/open-telemetry-part2/</guid>
       <description>OpenTelemetry: A Standardized Approach to Observability Link to heading OpenTelemetry (OTel for short) simplifies how you gain insights into your applications&amp;rsquo; health and performance. It&amp;rsquo;s an observability framework that provides a consistent way to:&#xA;Instrument your applications: Regardless of the programming language, OTel offers language-specific libraries and APIs to streamline this process. Generate telemetry data: This data comes in three forms: metrics (numerical data), logs (event messages), and traces (which track request journeys).</description>
     </item>
     <item>
       <title>Coding Best Practices: How to work with constructors with long list of parameters</title>
-      <link>https://mkabdelrahman.github.io/posts/how-to-work-with-long-constrcutor-parameter-lists/</link>
+      <link>http://localhost:1313/posts/how-to-work-with-long-constrcutor-parameter-lists/</link>
       <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/how-to-work-with-long-constrcutor-parameter-lists/</guid>
+      <guid>http://localhost:1313/posts/how-to-work-with-long-constrcutor-parameter-lists/</guid>
       <description>The fourth pattern in Kent Beck&amp;rsquo;s book &amp;lsquo;Smalltalk Best Practice Patterns&amp;rsquo; is called the shortcut constructor method. It was hard for me to understand anything other than the problem it&amp;rsquo;s trying to solve, which is constructors with long lists of parameters. This time, I will not mention how Kent solves this because I don&amp;rsquo;t understand the solution he is proposing, or what I understood looks very stupid to me because I grew up in modern languages, and these old solutions were the best at their own time and context.</description>
     </item>
     <item>
       <title>Coding Best Practices: The Constructor Parameter Method</title>
-      <link>https://mkabdelrahman.github.io/posts/constructor-parameter-method/</link>
+      <link>http://localhost:1313/posts/constructor-parameter-method/</link>
       <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/constructor-parameter-method/</guid>
+      <guid>http://localhost:1313/posts/constructor-parameter-method/</guid>
       <description>This is the third pattern discussed in the Smalltalk Patterns book. I found it difficult to understand Kent&amp;rsquo;s intention at first, but here&amp;rsquo;s my interpretation.&#xA;In the previous &amp;ldquo;best practice&amp;rdquo; or pattern, we discussed the significance of constructors as the sole point of truth for healthy object creation.&#xA;This time, the focus is on passing parameters to the constructor to initialize the object.&#xA;Here&amp;rsquo;s the first point:&#xA;Directly assigning the parameters to the object isn&amp;rsquo;t safe.</description>
     </item>
     <item>
       <title>Why I Love Go</title>
-      <link>https://mkabdelrahman.github.io/posts/why-i-love-go/</link>
+      <link>http://localhost:1313/posts/why-i-love-go/</link>
       <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/why-i-love-go/</guid>
+      <guid>http://localhost:1313/posts/why-i-love-go/</guid>
       <description>Go prevents you from hiding behind programming language shortcuts.&#xA;In other languages, there are always shortcuts and idioms that work in certain scenarios. While these can save you time, they can also leave you feeling like you&amp;rsquo;re missing something and lacking mastery.&#xA;For example, in Go, there is one iteration construct, namely for, to define loops. We don&amp;rsquo;t have constructors, we can live without inheritance, and the language is clean from the public-private-protected overkill.</description>
     </item>
     <item>
       <title>Coding Best Practices: The Constructor Method</title>
-      <link>https://mkabdelrahman.github.io/posts/constructor-method-pattern/</link>
+      <link>http://localhost:1313/posts/constructor-method-pattern/</link>
       <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/constructor-method-pattern/</guid>
+      <guid>http://localhost:1313/posts/constructor-method-pattern/</guid>
       <description>One way to construct an object in GoLang is by first creating an object of the type and then directly accessing the fields to put the object in a valid state.&#xA;user := &amp;amp;User{} user.Name = &amp;#34;Mohamed&amp;#34; user.Age = 29 The problem with this approach includes:&#xA;Forcing clients to delve into the source code to understand which fields are essential for initialization. Lack of validation. Exposing implementation details. Increasing the surface area of our type, creating more potential points of coupling.</description>
     </item>
     <item>
       <title>Coding Best Practices: The Composed Method</title>
-      <link>https://mkabdelrahman.github.io/posts/composed-method-pattern/</link>
+      <link>http://localhost:1313/posts/composed-method-pattern/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/composed-method-pattern/</guid>
+      <guid>http://localhost:1313/posts/composed-method-pattern/</guid>
       <description>After reading Kent Beck&amp;rsquo;s book Tidy First, I decided to check out another one by him. This time it&amp;rsquo;s about the best practices in Smalltalk. Even though the book seems old, its ideas are relevant. Let me introduce you to the first pattern from the book, called the Composed Method pattern. This pattern might have different names nowadays, but its main idea is to encourage using smaller functions with names that clearly say what they do.</description>
     </item>
     <item>
       <title>EDA Patterns: Thin and Thick Events</title>
-      <link>https://mkabdelrahman.github.io/posts/eda-patterns-thin-thick-events/</link>
+      <link>http://localhost:1313/posts/eda-patterns-thin-thick-events/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/eda-patterns-thin-thick-events/</guid>
+      <guid>http://localhost:1313/posts/eda-patterns-thin-thick-events/</guid>
       <description>Event-driven systems (EDS) rely on exchanging events for communication. Other services subscribe to these events and react accordingly. This loose coupling keeps services unaware of each other, with the only connection being the event&amp;rsquo;s data format. Since events act as contracts, careful design and consideration for future changes are crucial.&#xA;Scenario: Imagine an e-commerce application. When a customer submits an order, the order service emits an &amp;ldquo;order-requested&amp;rdquo; event. Both the payment service and inventory service are interested in this event.</description>
     </item>
     <item>
       <title>EDA Patterns: The Single Writer Principle</title>
-      <link>https://mkabdelrahman.github.io/posts/eda-single-write-principle/</link>
+      <link>http://localhost:1313/posts/eda-single-write-principle/</link>
       <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/eda-single-write-principle/</guid>
+      <guid>http://localhost:1313/posts/eda-single-write-principle/</guid>
       <description>The Single Writer Principle states that only one service should be responsible for making changes to a specific type of data or event.&#xA;Let&amp;rsquo;s consider an e-commerce system with separate services for Orders, Payments, and Shipments. In this scenario, the Order service serves as the single writer for all order-related data. Here&amp;rsquo;s how it works:&#xA;When a customer clicks &amp;ldquo;buy,&amp;rdquo; the Basket service triggers an &amp;ldquo;Order Requested&amp;rdquo; event. The Order service receives this event, validates the order details, and publishes an &amp;ldquo;Order Confirmed&amp;rdquo; event if successful.</description>
     </item>
     <item>
       <title>EDA Patterns: Event sourcing &amp; CQRS</title>
-      <link>https://mkabdelrahman.github.io/posts/cqrs/</link>
+      <link>http://localhost:1313/posts/cqrs/</link>
       <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/cqrs/</guid>
+      <guid>http://localhost:1313/posts/cqrs/</guid>
       <description>Event sourcing is a data management approach that centers around events, recognizing them as the core building blocks of any system. These events, representing state changes, are stored in an immutable append-only log, preserving the order they occurred in. This approach offers a comprehensive audit trail of the system&amp;rsquo;s activity and allows replaying the event log to reconstruct the current system state.&#xA;CQRS, or Command Query Responsibility Segregation, complements event sourcing by advocating for the separation of write operations (commands) and read operations (queries).</description>
     </item>
     <item>
       <title>EDA Patterns: Idempotent Integration with a Third-Party REST API</title>
-      <link>https://mkabdelrahman.github.io/posts/idempotentintegrationwithathird-partyrestapi/</link>
+      <link>http://localhost:1313/posts/idempotentintegrationwithathird-partyrestapi/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/idempotentintegrationwithathird-partyrestapi/</guid>
+      <guid>http://localhost:1313/posts/idempotentintegrationwithathird-partyrestapi/</guid>
       <description>Scenario:&#xA;You have an event-driven application that needs to integrate with a third-party REST API (Service B) without modifying it. To ensure reliable message processing, you want to introduce Service A as a mediator that consumes events and interacts with Service B in an idempotent manner.&#xA;Idempotency Requirement:&#xA;Service A: Service A must be idempotent to prevent duplicate event processing. This means if the same event is received multiple times, Service A should only process it once.</description>
     </item>
     <item>
       <title>Software Architecture: Partitioning Strategies</title>
-      <link>https://mkabdelrahman.github.io/posts/head-first-architecture-partitioning/</link>
+      <link>http://localhost:1313/posts/head-first-architecture-partitioning/</link>
       <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/head-first-architecture-partitioning/</guid>
+      <guid>http://localhost:1313/posts/head-first-architecture-partitioning/</guid>
       <description>Distributed or Single Process Link to heading Single Process Application: A self-contained program that executes on a single computer. It handles all its processing tasks, data storage, and retrieval using the local machine&amp;rsquo;s resources (memory and storage). Examples include offline games and mobile apps without network functionality.&#xA;Distributed System: A software program designed to function across multiple computers connected over a network. These applications are broken down into smaller components that run on different machines.</description>
     </item>
     <item>
       <title>Software Architecture: Architectural Characteristics</title>
-      <link>https://mkabdelrahman.github.io/posts/hfsa-architectural-charcteristics-part-1/</link>
+      <link>http://localhost:1313/posts/hfsa-architectural-charcteristics-part-1/</link>
       <pubDate>Fri, 29 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/hfsa-architectural-charcteristics-part-1/</guid>
+      <guid>http://localhost:1313/posts/hfsa-architectural-charcteristics-part-1/</guid>
       <description>Why Architectural Characteristics Link to heading Architectural characteristics are fundamental to making informed decisions throughout the software development process. Here&amp;rsquo;s why they&amp;rsquo;re important:&#xA;Guiding Architectural Decisions: Without a clear understanding of these characteristics, it&amp;rsquo;s difficult to make informed choices about your application&amp;rsquo;s structure.&#xA;Selecting an Architectural Style: Different architectural styles are better suited for specific needs. Analyzing characteristics helps you choose the most appropriate style for your project.&#xA;What are Architectural Characteristics?</description>
     </item>
     <item>
       <title>Software Architecture Vs. Design</title>
-      <link>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</link>
+      <link>http://localhost:1313/posts/head-first-software-architecture-and-design/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</guid>
+      <guid>http://localhost:1313/posts/head-first-software-architecture-and-design/</guid>
       <description>Architecture is primarily concerned with the structure of the system, including its services, databases, and how they communicate with each other. Design, on the other hand, focuses more on the easy to change later decesions like choosing a specific design pattern or whether to split a class or not.&#xA;The line between architecture and design can sometimes be blurry. Understanding the difference, however, is crucial for determining who should make key decisions throughout a project.</description>
     </item>
     <item>
       <title>Software Architecture: A 4-Dimensional View</title>
-      <link>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</link>
+      <link>http://localhost:1313/posts/head-first-architecture-dimensions/</link>
       <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</guid>
+      <guid>http://localhost:1313/posts/head-first-architecture-dimensions/</guid>
       <description>Software Architecture: A 4-Dimensional View Link to heading Software architecture isn&amp;rsquo;t a singular concept, but rather a multi-dimensional approach to building robust and adaptable systems. Let&amp;rsquo;s explore these key dimensions:&#xA;1. Architectural Characteristics&#xA;Architectural characteristics are the essential capabilities your system needs to possess. They determine how the system will perform, like speed (performance) and uptime (availability). These are also known as &amp;ldquo;ilities&amp;rdquo; for the suffix they often share (scalability, reliability, etc.</description>
     </item>
     <item>
       <title>How Quorums Ensure Agreement in Distributed Systems</title>
-      <link>https://mkabdelrahman.github.io/posts/majority-quorum/</link>
+      <link>http://localhost:1313/posts/majority-quorum/</link>
       <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/majority-quorum/</guid>
+      <guid>http://localhost:1313/posts/majority-quorum/</guid>
       <description>In distributed systems, where tasks are spread across multiple interconnected machines, quorums provide a fundamental mechanism for ensuring data consistency and system-wide agreement. In essence, a quorum is a minimum number of nodes (machines) that must agree on an operation for it to be valid. Think of it like a voting threshold. An update to a database or the election of a leader in a cluster – these actions only happen if a designated group (the quorum) participates and reaches a consensus.</description>
     </item>
     <item>
       <title>Sharding: A Coffee Shop Analogy</title>
-      <link>https://mkabdelrahman.github.io/posts/sharding/</link>
+      <link>http://localhost:1313/posts/sharding/</link>
       <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/sharding/</guid>
+      <guid>http://localhost:1313/posts/sharding/</guid>
       <description>Remember our last blog post where we tamed the rush of order requests with a team of baristas dedicated to just reading orders? Well, get ready for another challenge! Our beloved coffee shop is brewing with excitement thanks to new customers and delicious new drinks. This means a flood of updates and sign-ups, and our trusty &amp;ldquo;master barista&amp;rdquo; who handles all these changes is feeling the pressure.&#xA;Just like throwing more baristas at a long line wouldn&amp;rsquo;t be the smartest idea, we need a well-thought-out plan to tackle this avalanche of updates.</description>
     </item>
     <item>
       <title>Replication Topologies for Scaling: A Coffee Shop Analogy</title>
-      <link>https://mkabdelrahman.github.io/posts/replication-toplogies/</link>
+      <link>http://localhost:1313/posts/replication-toplogies/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/replication-toplogies/</guid>
+      <guid>http://localhost:1313/posts/replication-toplogies/</guid>
       <description>Following the coffe shop analogy in the previous blog post, the coffee shop is booming, and you need to expand your team to handle the growing customer base. But simply adding more baristas isn&amp;rsquo;t enough. You need a well-organized system to ensure smooth operations, quick recovery from unexpected situations, and efficient storage of customer preferences. This is where replication topologies come in – different ways to structure your team of baristas and order pads (replicas) to achieve specific goals.</description>
     </item>
     <item>
       <title>Replication and Sharding: A Coffee Shop Analogy</title>
-      <link>https://mkabdelrahman.github.io/posts/replication-and-sharding/</link>
+      <link>http://localhost:1313/posts/replication-and-sharding/</link>
       <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/replication-and-sharding/</guid>
+      <guid>http://localhost:1313/posts/replication-and-sharding/</guid>
       <description>Setting the Stage for Distributed Storage Link to heading Non-distributed Storage (Single-Master System):&#xA;Imagine your favorite local coffee shop. Keeping track of customer preferences on a simple notepad (single-server database) is a breeze. New entries are readily added, and the system is clear-cut. However, as the shop&amp;rsquo;s popularity explodes, the notepad becomes a bottleneck.&#xA;Read Replication Link to heading Read Replication:&#xA;The coffee shop thrives and attracts more customers. To handle the increased workload, the barista team expands.</description>
     </item>
     <item>
       <title>Kafka Fundamentals: APIs, Topics and Partitions</title>
-      <link>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</link>
+      <link>http://localhost:1313/posts/kafka-fundamentals-part1/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</guid>
+      <guid>http://localhost:1313/posts/kafka-fundamentals-part1/</guid>
       <description>Kafka is an event streaming platform designed to handle massive volumes of real-time data efficiently. At its core lies a distributed storage system built for scalability, ensuring it can seamlessly accommodate ever-growing data demands.&#xA;This distributed nature allows Kafka to function as a cluster of machines, each playing a role in storing the data stream. This approach offers significant advantages:&#xA;Scalability: As data volumes increase, additional nodes can be added to the cluster, effectively distributing the storage burden and ensuring smooth operation.</description>
     </item>
     <item>
       <title>Microkernel Architecture (Plug-in Architecture)</title>
-      <link>https://mkabdelrahman.github.io/posts/microkernel/</link>
+      <link>http://localhost:1313/posts/microkernel/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/microkernel/</guid>
+      <guid>http://localhost:1313/posts/microkernel/</guid>
       <description>Microkernel architecture is an architecural style where a minimal core system (the microkernel) handles generic or stable domain tasks. Other functionalities are provided by pluggable modules and communicate with the core system through well-defined interfaces.&#xA;You might encounter it in familiar applications:&#xA;Web Browser Extensions: Many web browsers allow you to install extensions that add new functionality. These extensions act as plug-ins, extending the core features of the browser without modifying its core code.</description>
     </item>
     <item>
       <title>The Layered Architecture Style</title>
-      <link>https://mkabdelrahman.github.io/posts/layered-architecture-style/</link>
+      <link>http://localhost:1313/posts/layered-architecture-style/</link>
       <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/layered-architecture-style/</guid>
+      <guid>http://localhost:1313/posts/layered-architecture-style/</guid>
       <description>The layered architecture is a monolithic architectural style that organizes an application into horizontal layers, each focused on distinct technical concerns.&#xA;Understanding the Terms:&#xA;Monolithic application: The entire application is deployed as a single unit. Distributed application: Application components are split across different machines and communicate through a network. Technical partitioning: Application components are organized based on technical aspects like data access or user interface, rather than business domains. Layers in the Layered Architecture:</description>
     </item>
     <item>
       <title> Microservices: An Extreme Form of Decoupling for Large-Scale Systems</title>
-      <link>https://mkabdelrahman.github.io/posts/microservices-and-coupling/</link>
+      <link>http://localhost:1313/posts/microservices-and-coupling/</link>
       <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/microservices-and-coupling/</guid>
+      <guid>http://localhost:1313/posts/microservices-and-coupling/</guid>
       <description>Introduction Link to heading The microservices architecture style represents an extreme form of decoupling tailored for large-scale systems where hundreds of developers collaborate simultaneously. By embracing logical, spatial, temporal, and technology decoupling, teams can work autonomously and iterate rapidly. In this post, we delve into how microservices reduce coupling at various levels, enabling scalability, agility, and independent deployability.&#xA;Microservices: Decoupling at Scale Link to heading Microservices architecture represents a paradigm shift in software development, embodying the principles of extreme decoupling to address the challenges of building and maintaining large-scale applications.</description>
     </item>
     <item>
       <title> Microservices:  Communication Styles</title>
-      <link>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</link>
+      <link>http://localhost:1313/posts/microservices-synchronus-communication/</link>
       <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</guid>
+      <guid>http://localhost:1313/posts/microservices-synchronus-communication/</guid>
       <description>A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:&#xA;Synchronous communication Asynchronous communication Synchronus Communication Link to heading In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work.</description>
     </item>
     <item>
       <title>Understanding XSS Attacks and Contextual Encoding in Go</title>
-      <link>https://mkabdelrahman.github.io/posts/xss/</link>
+      <link>http://localhost:1313/posts/xss/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/xss/</guid>
+      <guid>http://localhost:1313/posts/xss/</guid>
       <description>XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code.</description>
     </item>
     <item>
       <title>Go Context Package: Cause-aware Context Cancellation</title>
-      <link>https://mkabdelrahman.github.io/posts/cause/</link>
+      <link>http://localhost:1313/posts/cause/</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/cause/</guid>
+      <guid>http://localhost:1313/posts/cause/</guid>
       <description>The context package in Go has recently introduced cause-aware context cancellation functions. This update includes the WithCancelCause, WithDeadlineCause, and WithTimeoutCause functions, as well as the Cause function for retrieving the cause of context cancellation.&#xA;func WithCancelCause(parent Context) (ctx Context, cancel CancelCauseFunc) This function is analogous to WithCancel, but it returns a CancelCauseFunc that allows setting an error as the cause of cancellation.&#xA;func WithDeadlineCause(parent Context, d time.Time, cause error) (Context, CancelFunc) Combining features of WithDeadline with the ability to provide a cause for context cancellation.</description>
     </item>
     <item>
       <title>Go Context Package: AfterFunc</title>
-      <link>https://mkabdelrahman.github.io/posts/afterfunc/</link>
+      <link>http://localhost:1313/posts/afterfunc/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/afterfunc/</guid>
+      <guid>http://localhost:1313/posts/afterfunc/</guid>
       <description>The AfterFunc function in Go&amp;rsquo;s context package provides a robust tool for scheduling the execution of a specified function after a given context concludes, be it due to cancellation or a timeout. This blog post delves into the practical application of AfterFunc through an illustrative example, shedding light on its functionality and potential use cases.&#xA;The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (stop func() bool) ctx: The context that determines when the function f should be executed.</description>
     </item>
     <item>
       <title>Workflow: Deploying Node.js Apps with Kubernetes</title>
-      <link>https://mkabdelrahman.github.io/posts/k8s-pods/</link>
+      <link>http://localhost:1313/posts/k8s-pods/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/k8s-pods/</guid>
+      <guid>http://localhost:1313/posts/k8s-pods/</guid>
       <description>Prerequisites Link to heading To successfully follow and execute the App Deployment Workflow within a Kubernetes environment, you&amp;rsquo;ll need the following prerequisites:&#xA;Software and Tools Link to heading Node.js: Ensure Node.js is installed on your local development machine to set up and manage the Node.js application.&#xA;Docker: Docker is essential for containerizing your application into a Docker image. Make sure Docker is installed and configured correctly to build and manage containerized applications.</description>
     </item>
     <item>
       <title>Simplify Configuration Management in Go with the &#39;conf&#39; Package</title>
-      <link>https://mkabdelrahman.github.io/posts/go-conf-pkg/</link>
+      <link>http://localhost:1313/posts/go-conf-pkg/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/go-conf-pkg/</guid>
+      <guid>http://localhost:1313/posts/go-conf-pkg/</guid>
       <description>The &amp;ldquo;conf&amp;rdquo; package is designed to make configuration management in Go straightforward and flexible. It allows you to define your application&amp;rsquo;s configuration as a struct and then parse it for both environment variables and command-line arguments. This approach makes it easy to handle different configuration sources, and the package provides a variety of customization options through struct tags.&#xA;First, you need to install the &amp;ldquo;conf&amp;rdquo; package:&#xA;go get github.com/ardanlabs/conf/v3 Define a struct that represents your application&amp;rsquo;s configuration.</description>
     </item>
     <item>
       <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
-      <link>https://mkabdelrahman.github.io/posts/go-init-functions/</link>
+      <link>http://localhost:1313/posts/go-init-functions/</link>
       <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/go-init-functions/</guid>
+      <guid>http://localhost:1313/posts/go-init-functions/</guid>
       <description>In Go, init functions play a crucial role in package initialization. They are used to set up the initial state of your application, and their behavior can be both powerful and tricky to manage. In this blog post, we&amp;rsquo;ll delve into the concept of init functions, their use cases, execution order, and common pitfalls.&#xA;What Are init Functions? Link to heading In Go, an init function is a special type of function used for package-level initialization.</description>
     </item>
     <item>
       <title>Essential Docker Commands</title>
-      <link>https://mkabdelrahman.github.io/posts/docker-commands/</link>
+      <link>http://localhost:1313/posts/docker-commands/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/docker-commands/</guid>
+      <guid>http://localhost:1313/posts/docker-commands/</guid>
       <description>Display Docker Version Information Link to heading docker version This command provides information about the Docker Engine version.&#xA;List All Docker Images Link to heading docker images This command lists all the Docker images available on your system.&#xA;Pull an Image from the Registry Link to heading docker pull &amp;lt;image_name&amp;gt; You can use this command to download a Docker image from a container registry, like Docker Hub.&#xA;Create and Run a New Ubuntu Container with Interactive Shell Link to heading docker run -it &amp;lt;image&amp;gt; /bin/bash This command starts a new Docker container based on the specified image and opens an interactive shell (in this case, /bin/bash) inside the container.</description>
     </item>
     <item>
       <title>Getting Started with Docker for Go</title>
-      <link>https://mkabdelrahman.github.io/posts/docker-go/</link>
+      <link>http://localhost:1313/posts/docker-go/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/docker-go/</guid>
+      <guid>http://localhost:1313/posts/docker-go/</guid>
       <description>What Is a Container? Link to heading Containers are like isolating an application so it thinks it&amp;rsquo;s running all by itself. It&amp;rsquo;s similar to a virtual machine (VM) but uses the host&amp;rsquo;s operating system instead of its own. To start a container, you begin with a container image that bundles up everything the application needs to run, making it easy to share and distribute.&#xA;The isolation that tricks a container into believing it has control over a whole Linux machine is achieved through the use of namespaces and control groups.</description>
     </item>
     <item>
       <title>About</title>
-      <link>https://mkabdelrahman.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>About Mohamed Kamal&#xA;I&amp;rsquo;m Mohamed Kamal, a software developer. My passion lies in crafting elegant, efficient software systems with a focus on software design, architecture, clean code practices, and proficiency in multiple languages, including Go, C++, and Julia.&#xA;On My Website&#xA;My website features projects, blog posts, and insights covering software design, architecture, clean code practices, and effective programming in Go and C++,. Topics include best practices, design patterns, and tips for writing maintainable code in these languages.</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>https://mkabdelrahman.github.io/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/contact/</guid>
+      <guid>http://localhost:1313/contact/</guid>
       <description>If you&amp;rsquo;d like to get in touch, please feel free to send me an email at: mkcodedev@gmail.com</description>
     </item>
   </channel>

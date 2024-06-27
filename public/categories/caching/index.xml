@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Caching on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/categories/caching/</link>
+    <link>http://localhost:1313/categories/caching/</link>
     <description>Recent content in Caching on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/categories/caching/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/caching/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Caching: Topologies and Patterns</title>
-      <link>https://mkabdelrahman.github.io/posts/caching_patterns/</link>
+      <link>http://localhost:1313/posts/caching_patterns/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/caching_patterns/</guid>
+      <guid>http://localhost:1313/posts/caching_patterns/</guid>
       <description>What is a Cache? Link to heading A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:&#xA;Reducing network calls to the primary data store: Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.</description>
+    </item>
+    <item>
+      <title>Data Sharing Between Microservices Using Synchronized Embedded Caches</title>
+      <link>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</link>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</guid>
+      <description>Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:&#xA;Menu Service: Manages the list of available dishes. Order Service: Allows customers to create and manage their orders. How It Works Link to heading Starting the Menu Service:&#xA;The menu service starts and loads a cache containing information about available dishes. This cache is distributed, enabling it to be shared across different services. Starting the Order Service:</description>
     </item>
   </channel>
 </rss>

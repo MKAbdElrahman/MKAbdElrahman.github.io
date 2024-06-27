@@ -2,245 +2,248 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mkabdelrahman.github.io/categories/caching/</loc>
+    <loc>http://localhost:1313/categories/caching/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/caching_patterns/</loc>
+    <loc>http://localhost:1313/posts/caching_patterns/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/</loc>
+    <loc>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/</loc>
+    <loc>http://localhost:1313/categories/microservices/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/software-architecture/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/software-architecture/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/software-architecture/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/layered-and-modular-monolith-boundaries/</loc>
+    <loc>http://localhost:1313/categories/software-architecture/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/layered-and-modular-monolith-boundaries/</loc>
     <lastmod>2024-06-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/architecture-style/</loc>
+    <loc>http://localhost:1313/tags/architecture-style/</loc>
     <lastmod>2024-06-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/technology/</loc>
+    <loc>http://localhost:1313/categories/technology/</loc>
     <lastmod>2024-06-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/software-design/</loc>
+    <loc>http://localhost:1313/categories/software-design/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/solid/</loc>
+    <loc>http://localhost:1313/categories/solid/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/true-srp/</loc>
+    <loc>http://localhost:1313/posts/true-srp/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/coupling/</loc>
+    <loc>http://localhost:1313/posts/coupling/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/observability/</loc>
+    <loc>http://localhost:1313/categories/observability/</loc>
     <lastmod>2024-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</loc>
+    <loc>http://localhost:1313/posts/opentelemetry-part-1/</loc>
     <lastmod>2024-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/open-telemetry-part2/</loc>
+    <loc>http://localhost:1313/posts/open-telemetry-part2/</loc>
     <lastmod>2024-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/coding-best-practices/</loc>
+    <loc>http://localhost:1313/categories/coding-best-practices/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/how-to-work-with-long-constrcutor-parameter-lists/</loc>
+    <loc>http://localhost:1313/posts/how-to-work-with-long-constrcutor-parameter-lists/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/go/</loc>
+    <loc>http://localhost:1313/categories/go/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/constructor-parameter-method/</loc>
+    <loc>http://localhost:1313/posts/constructor-parameter-method/</loc>
     <lastmod>2024-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/why-i-love-go/</loc>
+    <loc>http://localhost:1313/posts/why-i-love-go/</loc>
     <lastmod>2024-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/constructor-method-pattern/</loc>
+    <loc>http://localhost:1313/posts/constructor-method-pattern/</loc>
     <lastmod>2024-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/composed-method-pattern/</loc>
+    <loc>http://localhost:1313/posts/composed-method-pattern/</loc>
     <lastmod>2024-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/eda-patterns-thin-thick-events/</loc>
+    <loc>http://localhost:1313/posts/eda-patterns-thin-thick-events/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/event-driven-architecture/</loc>
+    <loc>http://localhost:1313/tags/event-driven-architecture/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/eda-single-write-principle/</loc>
+    <loc>http://localhost:1313/posts/eda-single-write-principle/</loc>
     <lastmod>2024-04-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/cqrs/</loc>
+    <loc>http://localhost:1313/posts/cqrs/</loc>
     <lastmod>2024-04-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/idempotentintegrationwithathird-partyrestapi/</loc>
+    <loc>http://localhost:1313/posts/idempotentintegrationwithathird-partyrestapi/</loc>
     <lastmod>2024-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/head-first-architecture-partitioning/</loc>
+    <loc>http://localhost:1313/posts/head-first-architecture-partitioning/</loc>
     <lastmod>2024-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/hfsa-architectural-charcteristics-part-1/</loc>
+    <loc>http://localhost:1313/posts/hfsa-architectural-charcteristics-part-1/</loc>
     <lastmod>2024-03-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</loc>
+    <loc>http://localhost:1313/posts/head-first-software-architecture-and-design/</loc>
     <lastmod>2024-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</loc>
+    <loc>http://localhost:1313/posts/head-first-architecture-dimensions/</loc>
     <lastmod>2024-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/distrubuted-storage/</loc>
+    <loc>http://localhost:1313/categories/distrubuted-storage/</loc>
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/distrubuted-systems/</loc>
+    <loc>http://localhost:1313/tags/distrubuted-systems/</loc>
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/majority-quorum/</loc>
+    <loc>http://localhost:1313/posts/majority-quorum/</loc>
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/sharding/</loc>
+    <loc>http://localhost:1313/posts/sharding/</loc>
     <lastmod>2024-03-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/replication-toplogies/</loc>
+    <loc>http://localhost:1313/posts/replication-toplogies/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/replication-and-sharding/</loc>
+    <loc>http://localhost:1313/posts/replication-and-sharding/</loc>
     <lastmod>2024-03-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/kafka/</loc>
+    <loc>http://localhost:1313/categories/kafka/</loc>
     <lastmod>2024-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</loc>
+    <loc>http://localhost:1313/posts/kafka-fundamentals-part1/</loc>
     <lastmod>2024-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/microkernel/</loc>
+    <loc>http://localhost:1313/posts/microkernel/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/layered-architecture-style/</loc>
+    <loc>http://localhost:1313/posts/layered-architecture-style/</loc>
     <lastmod>2024-02-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/microservices-and-coupling/</loc>
+    <loc>http://localhost:1313/posts/microservices-and-coupling/</loc>
     <lastmod>2024-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/microservices/</loc>
+    <loc>http://localhost:1313/tags/microservices/</loc>
     <lastmod>2024-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</loc>
+    <loc>http://localhost:1313/posts/microservices-synchronus-communication/</loc>
     <lastmod>2024-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/microservices/</loc>
-    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/authors/</loc>
+    <loc>http://localhost:1313/authors/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/contextual-encoding/</loc>
+    <loc>http://localhost:1313/tags/contextual-encoding/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/go/</loc>
+    <loc>http://localhost:1313/tags/go/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/http/template/</loc>
+    <loc>http://localhost:1313/tags/http/template/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/authors/mohamed-kamal/</loc>
+    <loc>http://localhost:1313/authors/mohamed-kamal/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/security/</loc>
+    <loc>http://localhost:1313/tags/security/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/series/security/</loc>
+    <loc>http://localhost:1313/series/security/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/security/</loc>
+    <loc>http://localhost:1313/categories/security/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/series/</loc>
+    <loc>http://localhost:1313/series/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/xss/</loc>
+    <loc>http://localhost:1313/posts/xss/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/xss-attacks/</loc>
+    <loc>http://localhost:1313/tags/xss-attacks/</loc>
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/concurrecny/</loc>
+    <loc>http://localhost:1313/tags/concurrecny/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/concurrency/</loc>
+    <loc>http://localhost:1313/categories/concurrency/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/context/</loc>
+    <loc>http://localhost:1313/tags/context/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/series/go-context-package/</loc>
+    <loc>http://localhost:1313/series/go-context-package/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/cause/</loc>
+    <loc>http://localhost:1313/posts/cause/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/afterfunc/</loc>
+    <loc>http://localhost:1313/posts/afterfunc/</loc>
     <lastmod>2023-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/application-deployment/</loc>
+    <loc>http://localhost:1313/categories/application-deployment/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/containers/</loc>
+    <loc>http://localhost:1313/tags/containers/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/deployment/</loc>
+    <loc>http://localhost:1313/tags/deployment/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/docker/</loc>
+    <loc>http://localhost:1313/tags/docker/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/kubernetes/</loc>
+    <loc>http://localhost:1313/tags/kubernetes/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/series/kubernetes-deployment-workflow/</loc>
+    <loc>http://localhost:1313/series/kubernetes-deployment-workflow/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/kubernetes-workflow/</loc>
+    <loc>http://localhost:1313/categories/kubernetes-workflow/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/node.js/</loc>
+    <loc>http://localhost:1313/tags/node.js/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/k8s-pods/</loc>
+    <loc>http://localhost:1313/posts/k8s-pods/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/conf/</loc>
+    <loc>http://localhost:1313/tags/conf/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/go-conf-pkg/</loc>
+    <loc>http://localhost:1313/posts/go-conf-pkg/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/go-init-functions/</loc>
+    <loc>http://localhost:1313/posts/go-init-functions/</loc>
     <lastmod>2023-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/docker-commands/</loc>
+    <loc>http://localhost:1313/posts/docker-commands/</loc>
     <lastmod>2023-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/docker-go/</loc>
+    <loc>http://localhost:1313/posts/docker-go/</loc>
     <lastmod>2023-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
   </url>
 </urlset>

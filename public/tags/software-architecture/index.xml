@@ -2,45 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software Architecture on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/tags/software-architecture/</link>
+    <link>http://localhost:1313/tags/software-architecture/</link>
     <description>Recent content in Software Architecture on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Caching: Topologies and Patterns</title>
-      <link>https://mkabdelrahman.github.io/posts/caching_patterns/</link>
+      <link>http://localhost:1313/posts/caching_patterns/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/caching_patterns/</guid>
+      <guid>http://localhost:1313/posts/caching_patterns/</guid>
       <description>What is a Cache? Link to heading A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:&#xA;Reducing network calls to the primary data store: Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.</description>
     </item>
     <item>
+      <title>Data Sharing Between Microservices Using Synchronized Embedded Caches</title>
+      <link>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</link>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</guid>
+      <description>Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:&#xA;Menu Service: Manages the list of available dishes. Order Service: Allows customers to create and manage their orders. How It Works Link to heading Starting the Menu Service:&#xA;The menu service starts and loads a cache containing information about available dishes. This cache is distributed, enabling it to be shared across different services. Starting the Order Service:</description>
+    </item>
+    <item>
       <title>Software Architecture: Partitioning Strategies</title>
-      <link>https://mkabdelrahman.github.io/posts/head-first-architecture-partitioning/</link>
+      <link>http://localhost:1313/posts/head-first-architecture-partitioning/</link>
       <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/head-first-architecture-partitioning/</guid>
+      <guid>http://localhost:1313/posts/head-first-architecture-partitioning/</guid>
       <description>Distributed or Single Process Link to heading Single Process Application: A self-contained program that executes on a single computer. It handles all its processing tasks, data storage, and retrieval using the local machine&amp;rsquo;s resources (memory and storage). Examples include offline games and mobile apps without network functionality.&#xA;Distributed System: A software program designed to function across multiple computers connected over a network. These applications are broken down into smaller components that run on different machines.</description>
     </item>
     <item>
       <title>Software Architecture: Architectural Characteristics</title>
-      <link>https://mkabdelrahman.github.io/posts/hfsa-architectural-charcteristics-part-1/</link>
+      <link>http://localhost:1313/posts/hfsa-architectural-charcteristics-part-1/</link>
       <pubDate>Fri, 29 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/hfsa-architectural-charcteristics-part-1/</guid>
+      <guid>http://localhost:1313/posts/hfsa-architectural-charcteristics-part-1/</guid>
       <description>Why Architectural Characteristics Link to heading Architectural characteristics are fundamental to making informed decisions throughout the software development process. Here&amp;rsquo;s why they&amp;rsquo;re important:&#xA;Guiding Architectural Decisions: Without a clear understanding of these characteristics, it&amp;rsquo;s difficult to make informed choices about your application&amp;rsquo;s structure.&#xA;Selecting an Architectural Style: Different architectural styles are better suited for specific needs. Analyzing characteristics helps you choose the most appropriate style for your project.&#xA;What are Architectural Characteristics?</description>
     </item>
     <item>
       <title>Software Architecture Vs. Design</title>
-      <link>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</link>
+      <link>http://localhost:1313/posts/head-first-software-architecture-and-design/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/head-first-software-architecture-and-design/</guid>
+      <guid>http://localhost:1313/posts/head-first-software-architecture-and-design/</guid>
       <description>Architecture is primarily concerned with the structure of the system, including its services, databases, and how they communicate with each other. Design, on the other hand, focuses more on the easy to change later decesions like choosing a specific design pattern or whether to split a class or not.&#xA;The line between architecture and design can sometimes be blurry. Understanding the difference, however, is crucial for determining who should make key decisions throughout a project.</description>
     </item>
     <item>
       <title>Software Architecture: A 4-Dimensional View</title>
-      <link>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</link>
+      <link>http://localhost:1313/posts/head-first-architecture-dimensions/</link>
       <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/head-first-architecture-dimensions/</guid>
+      <guid>http://localhost:1313/posts/head-first-architecture-dimensions/</guid>
       <description>Software Architecture: A 4-Dimensional View Link to heading Software architecture isn&amp;rsquo;t a singular concept, but rather a multi-dimensional approach to building robust and adaptable systems. Let&amp;rsquo;s explore these key dimensions:&#xA;1. Architectural Characteristics&#xA;Architectural characteristics are the essential capabilities your system needs to possess. They determine how the system will perform, like speed (performance) and uptime (availability). These are also known as &amp;ldquo;ilities&amp;rdquo; for the suffix they often share (scalability, reliability, etc.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/series/security/</link>
+    <link>http://localhost:1313/series/security/</link>
     <description>Recent content in Security on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/series/security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/series/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding XSS Attacks and Contextual Encoding in Go</title>
-      <link>https://mkabdelrahman.github.io/posts/xss/</link>
+      <link>http://localhost:1313/posts/xss/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/xss/</guid>
+      <guid>http://localhost:1313/posts/xss/</guid>
       <description>XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code.</description>
     </item>
   </channel>
