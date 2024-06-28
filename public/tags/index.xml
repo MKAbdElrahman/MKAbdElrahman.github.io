@@ -2,136 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mohamed Kamal</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://mkabdelrahman.github.io/tags/</link>
     <description>Recent content in Tags on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Software Architecture</title>
-      <link>http://localhost:1313/tags/software-architecture/</link>
+      <link>https://mkabdelrahman.github.io/tags/software-architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/software-architecture/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/software-architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Architecture Style</title>
-      <link>http://localhost:1313/tags/architecture-style/</link>
+      <link>https://mkabdelrahman.github.io/tags/architecture-style/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/architecture-style/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/architecture-style/</guid>
       <description></description>
     </item>
     <item>
       <title>Event-Driven Architecture</title>
-      <link>http://localhost:1313/tags/event-driven-architecture/</link>
+      <link>https://mkabdelrahman.github.io/tags/event-driven-architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/event-driven-architecture/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/event-driven-architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Distrubuted Systems</title>
-      <link>http://localhost:1313/tags/distrubuted-systems/</link>
+      <link>https://mkabdelrahman.github.io/tags/distrubuted-systems/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/distrubuted-systems/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/distrubuted-systems/</guid>
       <description></description>
     </item>
     <item>
       <title>Microservices</title>
-      <link>http://localhost:1313/tags/microservices/</link>
+      <link>https://mkabdelrahman.github.io/tags/microservices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/microservices/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/microservices/</guid>
       <description></description>
     </item>
     <item>
       <title>Contextual Encoding</title>
-      <link>http://localhost:1313/tags/contextual-encoding/</link>
+      <link>https://mkabdelrahman.github.io/tags/contextual-encoding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/contextual-encoding/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/contextual-encoding/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>http://localhost:1313/tags/go/</link>
+      <link>https://mkabdelrahman.github.io/tags/go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/go/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Http/Template</title>
-      <link>http://localhost:1313/tags/http/template/</link>
+      <link>https://mkabdelrahman.github.io/tags/http/template/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/http/template/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/http/template/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/tags/security/</link>
+      <link>https://mkabdelrahman.github.io/tags/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/security/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/security/</guid>
       <description></description>
     </item>
     <item>
       <title>Xss Attacks</title>
-      <link>http://localhost:1313/tags/xss-attacks/</link>
+      <link>https://mkabdelrahman.github.io/tags/xss-attacks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/xss-attacks/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/xss-attacks/</guid>
       <description></description>
     </item>
     <item>
       <title>Concurrecny</title>
-      <link>http://localhost:1313/tags/concurrecny/</link>
+      <link>https://mkabdelrahman.github.io/tags/concurrecny/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/concurrecny/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/concurrecny/</guid>
       <description></description>
     </item>
     <item>
       <title>Context</title>
-      <link>http://localhost:1313/tags/context/</link>
+      <link>https://mkabdelrahman.github.io/tags/context/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/context/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/context/</guid>
       <description></description>
     </item>
     <item>
       <title>Containers</title>
-      <link>http://localhost:1313/tags/containers/</link>
+      <link>https://mkabdelrahman.github.io/tags/containers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/containers/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/containers/</guid>
       <description></description>
     </item>
     <item>
       <title>Deployment</title>
-      <link>http://localhost:1313/tags/deployment/</link>
+      <link>https://mkabdelrahman.github.io/tags/deployment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/deployment/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/deployment/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/tags/docker/</link>
+      <link>https://mkabdelrahman.github.io/tags/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/docker/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Kubernetes</title>
-      <link>http://localhost:1313/tags/kubernetes/</link>
+      <link>https://mkabdelrahman.github.io/tags/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/kubernetes/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Node.js</title>
-      <link>http://localhost:1313/tags/node.js/</link>
+      <link>https://mkabdelrahman.github.io/tags/node.js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/node.js/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/node.js/</guid>
       <description></description>
     </item>
     <item>
       <title>Conf</title>
-      <link>http://localhost:1313/tags/conf/</link>
+      <link>https://mkabdelrahman.github.io/tags/conf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/conf/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/conf/</guid>
       <description></description>
     </item>
   </channel>

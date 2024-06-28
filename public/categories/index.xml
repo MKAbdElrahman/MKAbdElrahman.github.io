@@ -2,115 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Mohamed Kamal</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://mkabdelrahman.github.io/categories/</link>
     <description>Recent content in Categories on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Caching</title>
-      <link>http://localhost:1313/categories/caching/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/caching/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Fri, 28 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Microservices</title>
-      <link>http://localhost:1313/categories/microservices/</link>
+      <link>https://mkabdelrahman.github.io/categories/microservices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/microservices/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/microservices/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Architecture</title>
-      <link>http://localhost:1313/categories/software-architecture/</link>
+      <link>https://mkabdelrahman.github.io/categories/software-architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/software-architecture/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/software-architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Caching</title>
+      <link>https://mkabdelrahman.github.io/categories/caching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/categories/caching/</guid>
       <description></description>
     </item>
     <item>
       <title>Technology</title>
-      <link>http://localhost:1313/categories/technology/</link>
+      <link>https://mkabdelrahman.github.io/categories/technology/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/technology/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/technology/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Design</title>
-      <link>http://localhost:1313/categories/software-design/</link>
+      <link>https://mkabdelrahman.github.io/categories/software-design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/software-design/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/software-design/</guid>
       <description></description>
     </item>
     <item>
       <title>SOLID</title>
-      <link>http://localhost:1313/categories/solid/</link>
+      <link>https://mkabdelrahman.github.io/categories/solid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/solid/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/solid/</guid>
       <description></description>
     </item>
     <item>
       <title>Observability</title>
-      <link>http://localhost:1313/categories/observability/</link>
+      <link>https://mkabdelrahman.github.io/categories/observability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/observability/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/observability/</guid>
       <description></description>
     </item>
     <item>
       <title>Coding Best Practices</title>
-      <link>http://localhost:1313/categories/coding-best-practices/</link>
+      <link>https://mkabdelrahman.github.io/categories/coding-best-practices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/coding-best-practices/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/coding-best-practices/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>http://localhost:1313/categories/go/</link>
+      <link>https://mkabdelrahman.github.io/categories/go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/go/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Distrubuted Storage</title>
-      <link>http://localhost:1313/categories/distrubuted-storage/</link>
+      <link>https://mkabdelrahman.github.io/categories/distrubuted-storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/distrubuted-storage/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/distrubuted-storage/</guid>
       <description></description>
     </item>
     <item>
       <title>Kafka</title>
-      <link>http://localhost:1313/categories/kafka/</link>
+      <link>https://mkabdelrahman.github.io/categories/kafka/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/kafka/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/kafka/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/categories/security/</link>
+      <link>https://mkabdelrahman.github.io/categories/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/security/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/security/</guid>
       <description></description>
     </item>
     <item>
       <title>Concurrency</title>
-      <link>http://localhost:1313/categories/concurrency/</link>
+      <link>https://mkabdelrahman.github.io/categories/concurrency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/concurrency/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/concurrency/</guid>
       <description></description>
     </item>
     <item>
       <title>Application Deployment</title>
-      <link>http://localhost:1313/categories/application-deployment/</link>
+      <link>https://mkabdelrahman.github.io/categories/application-deployment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/application-deployment/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/application-deployment/</guid>
       <description></description>
     </item>
     <item>
       <title>Kubernetes Workflow</title>
-      <link>http://localhost:1313/categories/kubernetes-workflow/</link>
+      <link>https://mkabdelrahman.github.io/categories/kubernetes-workflow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/kubernetes-workflow/</guid>
+      <guid>https://mkabdelrahman.github.io/categories/kubernetes-workflow/</guid>
       <description></description>
     </item>
   </channel>

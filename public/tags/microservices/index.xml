@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microservices on Mohamed Kamal</title>
-    <link>http://localhost:1313/tags/microservices/</link>
+    <link>https://mkabdelrahman.github.io/tags/microservices/</link>
     <description>Recent content in Microservices on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mkabdelrahman.github.io/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title> Microservices: An Extreme Form of Decoupling for Large-Scale Systems</title>
-      <link>http://localhost:1313/posts/microservices-and-coupling/</link>
+      <link>https://mkabdelrahman.github.io/posts/microservices-and-coupling/</link>
       <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/microservices-and-coupling/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/microservices-and-coupling/</guid>
       <description>Introduction Link to heading The microservices architecture style represents an extreme form of decoupling tailored for large-scale systems where hundreds of developers collaborate simultaneously. By embracing logical, spatial, temporal, and technology decoupling, teams can work autonomously and iterate rapidly. In this post, we delve into how microservices reduce coupling at various levels, enabling scalability, agility, and independent deployability.&#xA;Microservices: Decoupling at Scale Link to heading Microservices architecture represents a paradigm shift in software development, embodying the principles of extreme decoupling to address the challenges of building and maintaining large-scale applications.</description>
     </item>
   </channel>

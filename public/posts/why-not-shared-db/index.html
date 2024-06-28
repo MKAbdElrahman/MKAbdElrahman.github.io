@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Microservices: Why Not a Shared Monolithic Database? · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.
+Change Control Link to heading Managing changes in a shared monolithic database is a complex task. Any schema change necessitates coordination across all dependent services, which can be cumbersome and time-consuming. This coordination is required to ensure that all services are redeployed simultaneously to prevent schema mismatch errors, which can cause significant downtime and service disruption.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Microservices: Why Not a Shared Monolithic Database?">
+  <meta name="twitter:description" content="In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.
+Change Control Link to heading Managing changes in a shared monolithic database is a complex task. Any schema change necessitates coordination across all dependent services, which can be cumbersome and time-consuming. This coordination is required to ensure that all services are redeployed simultaneously to prevent schema mismatch errors, which can cause significant downtime and service disruption.">
+
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/why-not-shared-db/">
+  <meta property="og:site_name" content="Mohamed Kamal">
+  <meta property="og:title" content="Microservices: Why Not a Shared Monolithic Database?">
+  <meta property="og:description" content="In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.
+Change Control Link to heading Managing changes in a shared monolithic database is a complex task. Any schema change necessitates coordination across all dependent services, which can be cumbersome and time-consuming. This coordination is required to ensure that all services are redeployed simultaneously to prevent schema mismatch errors, which can cause significant downtime and service disruption.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-06-28T00:00:00+00:00">
+    <meta property="article:tag" content="Software Architecture">
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/why-not-shared-db/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/why-not-shared-db/">
+              Microservices: Why Not a Shared Monolithic Database?
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-06-28T00:00:00Z">
+                June 28, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/software-architecture/">Software Architecture</a>
+      <span class="separator">•</span>
+    <a href="/categories/microservices/">Microservices</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/software-architecture/">Software Architecture</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p><img alt="alt text" src="/images/microservices/shared-db.png"></p>
+<p>In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.</p>
+<h3 id="change-control">
+  Change Control
+  <a class="heading-link" href="#change-control">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Managing changes in a shared monolithic database is a complex task. Any schema change necessitates coordination across all dependent services, which can be cumbersome and time-consuming. This coordination is required to ensure that all services are redeployed simultaneously to prevent schema mismatch errors, which can cause significant downtime and service disruption.</p>
+<h3 id="database-connections">
+  Database Connections
+  <a class="heading-link" href="#database-connections">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Each microservice typically has its own connection pool to the database. As the number of microservices grows, the number of database connections increases correspondingly. This can lead to database timeouts and performance degradation due to the sheer volume of simultaneous connections.</p>
+<p>In contrast, a monolithic application typically requires fewer connections because a single query can handle operations that span multiple functions within the same application. However, in a microservices architecture, a single business transaction might involve multiple services, each initiating its own database connection. This multiplies the number of connections required and can strain the database&rsquo;s capacity.</p>
+<h3 id="scalability">
+  Scalability
+  <a class="heading-link" href="#scalability">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Scalability is another significant concern. In a microservices architecture, individual services can be scaled independently based on their load and resource requirements. However, if all these services rely on a single shared database, the database becomes a bottleneck. As you scale the number of service instances, you must also scale the database to handle the increased load. This can be challenging and often requires sophisticated sharding and partitioning strategies to distribute the load effectively.</p>
+<h3 id="fault-tolerance">
+  Fault Tolerance
+  <a class="heading-link" href="#fault-tolerance">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A shared monolithic database represents a single point of failure. If the database experiences downtime or performance issues, it impacts all the services that depend on it. This can lead to widespread outages and significantly affect the overall reliability of your system. In contrast, microservices architecture aims to isolate failures within individual services, so issues in one service do not necessarily bring down the entire system. Using a shared database undermines this principle of fault isolation and can lead to cascading failures.</p>
+<h3 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>While a shared monolithic database might seem convenient, especially during the initial stages of transitioning to a microservices architecture, the long-term drawbacks are substantial. Challenges in change control, database connection management, scalability, and fault tolerance make it clear that relying on a shared database can hinder the advantages offered by microservices. It is generally more effective to adopt a database per service approach, allowing each microservice to manage its data independently. This approach aligns better with the principles of microservices and ensures a more resilient, scalable, and manageable architecture.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
