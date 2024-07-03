@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sagas Quantatively: Epic Saga</title>
+      <link>https://mkabdelrahman.github.io/posts/saga-epic/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/saga-epic/</guid>
+      <description>When we transition to microservices, each service owns its data. Achieving transactions across multiple services isn&amp;rsquo;t as straightforward as with a single monolithic database.&#xA;One way to address this challenge is through sagas, which simulate distributed transactions using a series of local transactions. This approach was popularized by Chris Richardson and later analyzed by Mark Richards and Neal Ford in their book &amp;lsquo;Sotware Architecture: The Hard Parts&amp;rsquo;.&#xA;They examined how these factors affect saga characteristics:</description>
+    </item>
     <item>
       <title>Microservices: Why Not a Shared Monolithic Database?</title>
       <link>https://mkabdelrahman.github.io/posts/why-not-shared-db/</link>
