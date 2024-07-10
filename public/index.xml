@@ -6,8 +6,15 @@
     <description>Recent content on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mkabdelrahman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Synchronization with mutexes in Go</title>
+      <link>https://mkabdelrahman.github.io/posts/mutex-in-go/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/mutex-in-go/</guid>
+      <description>sync.Mutex Link to heading sync.Mutex is a mutual exclusion lock. It&amp;rsquo;s a basic locking mechanism used to protect shared resources from concurrent access by multiple goroutines. Only one goroutine can hold the lock at a time. Here&amp;rsquo;s a simple breakdown:&#xA;m.Lock(): When a goroutine calls m.Lock(), it attempts to acquire the lock. If no other goroutine holds the lock, it succeeds immediately. If another goroutine already holds the lock, the calling goroutine blocks (waits) until the lock becomes available.</description>
+    </item>
     <item>
       <title>Sagas Quantatively: Epic Saga</title>
       <link>https://mkabdelrahman.github.io/posts/saga-epic/</link>

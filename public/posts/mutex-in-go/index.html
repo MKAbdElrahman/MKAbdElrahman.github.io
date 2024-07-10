@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Synchronization with mutexes in Go · Mohamed Kamal
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Mohamed Kamal">
+<meta name="description" content="sync.Mutex Link to heading sync.Mutex is a mutual exclusion lock. It&rsquo;s a basic locking mechanism used to protect shared resources from concurrent access by multiple goroutines. Only one goroutine can hold the lock at a time. Here&rsquo;s a simple breakdown:
+m.Lock(): When a goroutine calls m.Lock(), it attempts to acquire the lock. If no other goroutine holds the lock, it succeeds immediately. If another goroutine already holds the lock, the calling goroutine blocks (waits) until the lock becomes available.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Synchronization with mutexes in Go">
+  <meta name="twitter:description" content="sync.Mutex Link to heading sync.Mutex is a mutual exclusion lock. It’s a basic locking mechanism used to protect shared resources from concurrent access by multiple goroutines. Only one goroutine can hold the lock at a time. Here’s a simple breakdown:
+m.Lock(): When a goroutine calls m.Lock(), it attempts to acquire the lock. If no other goroutine holds the lock, it succeeds immediately. If another goroutine already holds the lock, the calling goroutine blocks (waits) until the lock becomes available.">
+
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/mutex-in-go/">
+  <meta property="og:site_name" content="Mohamed Kamal">
+  <meta property="og:title" content="Synchronization with mutexes in Go">
+  <meta property="og:description" content="sync.Mutex Link to heading sync.Mutex is a mutual exclusion lock. It’s a basic locking mechanism used to protect shared resources from concurrent access by multiple goroutines. Only one goroutine can hold the lock at a time. Here’s a simple breakdown:
+m.Lock(): When a goroutine calls m.Lock(), it attempts to acquire the lock. If no other goroutine holds the lock, it succeeds immediately. If another goroutine already holds the lock, the calling goroutine blocks (waits) until the lock becomes available.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-07-10T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/mutex-in-go/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mohamed Kamal
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/mutex-in-go/">
+              Synchronization with mutexes in Go
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-07-10T00:00:00Z">
+                July 10, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/concurrency/">Concurrency</a>
+      <span class="separator">•</span>
+    <a href="/categories/go/">Go</a></div>
+
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="syncmutex">
+  sync.Mutex
+  <a class="heading-link" href="#syncmutex">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><code>sync.Mutex</code> is a mutual exclusion lock. It&rsquo;s a basic locking mechanism used to protect shared resources from concurrent access by multiple goroutines. Only one goroutine can hold the lock at a time. Here&rsquo;s a simple breakdown:</p>
+<ul>
+<li><strong>m.Lock()</strong>: When a goroutine calls <code>m.Lock()</code>, it attempts to acquire the lock. If no other goroutine holds the lock, it succeeds immediately. If another goroutine already holds the lock, the calling goroutine blocks (waits) until the lock becomes available.</li>
+<li><strong>m.Unlock()</strong>: When a goroutine calls <code>m.Unlock()</code>, it releases the lock, allowing other waiting goroutines to acquire it. If no goroutine is waiting for the lock, it simply marks the lock as available.</li>
+</ul>
+<h2 id="syncrwmutex">
+  sync.RWMutex
+  <a class="heading-link" href="#syncrwmutex">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><code>sync.RWMutex</code> stands for Read-Write Mutex. It&rsquo;s a more advanced locking mechanism that allows multiple readers or a single writer:</p>
+<ul>
+<li><strong>rw.RLock()</strong>: When a goroutine calls <code>rw.RLock()</code>, it attempts to acquire a read lock. Multiple goroutines can hold read locks simultaneously, as long as no goroutine holds the write lock. If a write lock is already held, the calling goroutine blocks until the write lock is released.</li>
+<li><strong>rw.RUnlock()</strong>: When a goroutine calls <code>rw.RUnlock()</code>, it releases a read lock. If it was the last read lock, waiting writers are allowed to proceed.</li>
+<li><strong>rw.Lock()</strong>: When a goroutine calls <code>rw.Lock()</code>, it attempts to acquire a write lock. If no goroutine holds a read or write lock, it succeeds immediately. If other goroutines hold read locks or another goroutine holds the write lock, the calling goroutine blocks until all read locks and the write lock are released.</li>
+<li><strong>rw.Unlock()</strong>: When a goroutine calls <code>rw.Unlock()</code>, it releases the write lock, allowing other waiting readers or writers to proceed.</li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Mohamed Kamal 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

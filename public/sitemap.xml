@@ -3,15 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mkabdelrahman.github.io/categories/</loc>
-    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/microservices/</loc>
-    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <loc>https://mkabdelrahman.github.io/categories/concurrency/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/categories/go/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/</loc>
-    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/posts/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/mutex-in-go/</loc>
+    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/categories/microservices/</loc>
     <lastmod>2024-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/posts/saga-epic/</loc>
@@ -72,9 +81,6 @@
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/posts/how-to-work-with-long-constrcutor-parameter-lists/</loc>
-    <lastmod>2024-05-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/go/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/posts/constructor-parameter-method/</loc>
@@ -189,9 +195,6 @@
     <lastmod>2023-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/tags/concurrecny/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/categories/concurrency/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/tags/context/</loc>
