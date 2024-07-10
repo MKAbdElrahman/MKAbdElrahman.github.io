@@ -4,7 +4,7 @@ title: "Sagas Quantatively: Epic Saga"
 date: "2024-07-03"
 description: ""
 tags: [Software Architecture]
-categories: ["Software Architecture","Microservices"]
+categories: ["Software Architecture","Microservices","Saga"]
 ---
 
 ![alt text](/images/saga/epic-saga.png)

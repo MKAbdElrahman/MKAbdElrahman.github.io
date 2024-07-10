@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Distrubuted Systems on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/tags/distrubuted-systems/</link>
+    <link>http://localhost:1313/tags/distrubuted-systems/</link>
     <description>Recent content in Distrubuted Systems on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/tags/distrubuted-systems/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/distrubuted-systems/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Quorums Ensure Agreement in Distributed Systems</title>
-      <link>https://mkabdelrahman.github.io/posts/majority-quorum/</link>
+      <link>http://localhost:1313/posts/majority-quorum/</link>
       <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/majority-quorum/</guid>
+      <guid>http://localhost:1313/posts/majority-quorum/</guid>
       <description>In distributed systems, where tasks are spread across multiple interconnected machines, quorums provide a fundamental mechanism for ensuring data consistency and system-wide agreement. In essence, a quorum is a minimum number of nodes (machines) that must agree on an operation for it to be valid. Think of it like a voting threshold. An update to a database or the election of a leader in a cluster – these actions only happen if a designated group (the quorum) participates and reaches a consensus.</description>
     </item>
     <item>
       <title>Sharding: A Coffee Shop Analogy</title>
-      <link>https://mkabdelrahman.github.io/posts/sharding/</link>
+      <link>http://localhost:1313/posts/sharding/</link>
       <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/sharding/</guid>
+      <guid>http://localhost:1313/posts/sharding/</guid>
       <description>Remember our last blog post where we tamed the rush of order requests with a team of baristas dedicated to just reading orders? Well, get ready for another challenge! Our beloved coffee shop is brewing with excitement thanks to new customers and delicious new drinks. This means a flood of updates and sign-ups, and our trusty &amp;ldquo;master barista&amp;rdquo; who handles all these changes is feeling the pressure.&#xA;Just like throwing more baristas at a long line wouldn&amp;rsquo;t be the smartest idea, we need a well-thought-out plan to tackle this avalanche of updates.</description>
     </item>
     <item>
       <title>Replication Topologies for Scaling: A Coffee Shop Analogy</title>
-      <link>https://mkabdelrahman.github.io/posts/replication-toplogies/</link>
+      <link>http://localhost:1313/posts/replication-toplogies/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/replication-toplogies/</guid>
+      <guid>http://localhost:1313/posts/replication-toplogies/</guid>
       <description>Following the coffe shop analogy in the previous blog post, the coffee shop is booming, and you need to expand your team to handle the growing customer base. But simply adding more baristas isn&amp;rsquo;t enough. You need a well-organized system to ensure smooth operations, quick recovery from unexpected situations, and efficient storage of customer preferences. This is where replication topologies come in – different ways to structure your team of baristas and order pads (replicas) to achieve specific goals.</description>
     </item>
     <item>
       <title>Replication and Sharding: A Coffee Shop Analogy</title>
-      <link>https://mkabdelrahman.github.io/posts/replication-and-sharding/</link>
+      <link>http://localhost:1313/posts/replication-and-sharding/</link>
       <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/replication-and-sharding/</guid>
+      <guid>http://localhost:1313/posts/replication-and-sharding/</guid>
       <description>Setting the Stage for Distributed Storage Link to heading Non-distributed Storage (Single-Master System):&#xA;Imagine your favorite local coffee shop. Keeping track of customer preferences on a simple notepad (single-server database) is a breeze. New entries are readily added, and the system is clear-cut. However, as the shop&amp;rsquo;s popularity explodes, the notepad becomes a bottleneck.&#xA;Read Replication Link to heading Read Replication:&#xA;The coffee shop thrives and attracts more customers. To handle the increased workload, the barista team expands.</description>
     </item>
   </channel>

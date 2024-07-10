@@ -2,38 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microservices on Mohamed Kamal</title>
-    <link>https://mkabdelrahman.github.io/categories/microservices/</link>
+    <link>http://localhost:1313/categories/microservices/</link>
     <description>Recent content in Microservices on Mohamed Kamal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/categories/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sagas Quantatively: Fantasy Fiction</title>
+      <link>http://localhost:1313/posts/saga-fantasyfiction/</link>
+      <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/saga-fantasyfiction/</guid>
+      <description>Last time, we discussed the first saga cataloged by Mark Richards and Neal Ford in their book, &amp;ldquo;Software Architecture: The Hard Parts&amp;rdquo;. We saw how the epic saga is exponentially sensitive to the availabilities of the orchestrator and the orchestrated services. We also noted how latency worsens with increasing availability due to the sequential blocking model. Today, we will discuss the second saga they called the fantasy fiction saga. In this saga, we switch from a blocking communication model to a non-blocking one while maintaining the atomicity constraint.</description>
+    </item>
     <item>
       <title>Sagas Quantatively: Epic Saga</title>
-      <link>https://mkabdelrahman.github.io/posts/saga-epic/</link>
+      <link>http://localhost:1313/posts/saga-epic/</link>
       <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/saga-epic/</guid>
+      <guid>http://localhost:1313/posts/saga-epic/</guid>
       <description>When we transition to microservices, each service owns its data. Achieving transactions across multiple services isn&amp;rsquo;t as straightforward as with a single monolithic database.&#xA;One way to address this challenge is through sagas, which simulate distributed transactions using a series of local transactions. This approach was popularized by Chris Richardson and later analyzed by Mark Richards and Neal Ford in their book &amp;lsquo;Sotware Architecture: The Hard Parts&amp;rsquo;.&#xA;They examined how these factors affect saga characteristics:</description>
     </item>
     <item>
       <title>Microservices: Why Not a Shared Monolithic Database?</title>
-      <link>https://mkabdelrahman.github.io/posts/why-not-shared-db/</link>
+      <link>http://localhost:1313/posts/why-not-shared-db/</link>
       <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/why-not-shared-db/</guid>
+      <guid>http://localhost:1313/posts/why-not-shared-db/</guid>
       <description>In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.&#xA;Change Control Link to heading Managing changes in a shared monolithic database is a complex task. Any schema change necessitates coordination across all dependent services, which can be cumbersome and time-consuming. This coordination is required to ensure that all services are redeployed simultaneously to prevent schema mismatch errors, which can cause significant downtime and service disruption.</description>
     </item>
     <item>
       <title>Data Sharing Between Microservices Using Synchronized Embedded Caches</title>
-      <link>https://mkabdelrahman.github.io/posts/caching_data-shraing-embedded-cache/</link>
+      <link>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/caching_data-shraing-embedded-cache/</guid>
+      <guid>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</guid>
       <description>Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:&#xA;Menu Service: Manages the list of available dishes. Order Service: Allows customers to create and manage their orders. How It Works Link to heading Starting the Menu Service:&#xA;The menu service starts and loads a cache containing information about available dishes. This cache is distributed, enabling it to be shared across different services. Starting the Order Service:</description>
     </item>
     <item>
       <title> Microservices:  Communication Styles</title>
-      <link>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</link>
+      <link>http://localhost:1313/posts/microservices-synchronus-communication/</link>
       <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</guid>
+      <guid>http://localhost:1313/posts/microservices-synchronus-communication/</guid>
       <description>A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:&#xA;Synchronous communication Asynchronous communication Synchronus Communication Link to heading In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work.</description>
     </item>
   </channel>
