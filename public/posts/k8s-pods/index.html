@@ -15,6 +15,7 @@
 <meta name="author" content="Mohamed Kamal">
 <meta name="description" content="Explore the seamless deployment workflow for Node.js applications within Kubernetes clusters.">
 <meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
 
 
   <meta name="twitter:card" content="summary">
@@ -42,7 +43,9 @@
 <link rel="canonical" href="http://localhost:1313/posts/k8s-pods/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
@@ -96,7 +99,7 @@
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -104,27 +107,29 @@
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
       Mohamed Kamal
     </a>
     
+    
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Blog</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">Contact me</a>
+              <a class="navigation-link " href="/contact/">Contact me</a>
             </li>
           
         
@@ -150,28 +155,28 @@
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2023-10-27T00:00:00Z">
                 October 27, 2023
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
               4-minute read
             </span>
           </div>
           <div class="authors">
-  <i class="fa fa-user" aria-hidden="true"></i>
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
     <a href="/authors/mohamed-kamal/">Mohamed Kamal</a></div>
 
           <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
     <a href="/categories/application-deployment/">Application Deployment</a>
       <span class="separator">•</span>
     <a href="/categories/kubernetes-workflow/">Kubernetes Workflow</a></div>
 
           <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/kubernetes/">Kubernetes</a>
     </span>
@@ -200,7 +205,7 @@
         <h2 id="prerequisites">
   Prerequisites
   <a class="heading-link" href="#prerequisites">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -208,7 +213,7 @@
 <h3 id="software-and-tools">
   Software and Tools
   <a class="heading-link" href="#software-and-tools">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -226,7 +231,7 @@
 <h3 id="kubernetes-cluster">
   Kubernetes Cluster
   <a class="heading-link" href="#kubernetes-cluster">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -234,7 +239,7 @@
 <h2 id="app-deployment-workflow">
   App Deployment Workflow
   <a class="heading-link" href="#app-deployment-workflow">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -258,14 +263,14 @@
 <h2 id="dockerizing-a-nodejs-web-app">
   Dockerizing a Node.js Web App
   <a class="heading-link" href="#dockerizing-a-nodejs-web-app">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <h4 id="create-the-nodejs-app">
   Create the Node.js app
   <a class="heading-link" href="#create-the-nodejs-app">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -315,7 +320,7 @@
 <h4 id="create-a-dockerfile">
   Create a Dockerfile
   <a class="heading-link" href="#create-a-dockerfile">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -347,7 +352,7 @@
 <h4 id="build-docker-image-and-push-to-registry">
   Build Docker Image and Push to Registry
   <a class="heading-link" href="#build-docker-image-and-push-to-registry">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -372,7 +377,7 @@
 <h2 id="create-a-pod-manifest-yaml">
   Create a Pod Manifest (YAML)
   <a class="heading-link" href="#create-a-pod-manifest-yaml">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -397,7 +402,7 @@
 <h2 id="deploying-a-pod">
   Deploying a Pod
   <a class="heading-link" href="#deploying-a-pod">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -407,7 +412,7 @@
 <h4 id="verify-and-monitor-the-pod">
   Verify and Monitor the Pod
   <a class="heading-link" href="#verify-and-monitor-the-pod">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -426,7 +431,7 @@
 <h3 id="next-steps">
   Next Steps
   <a class="heading-link" href="#next-steps">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -457,6 +462,9 @@
         
         
         
+        
+        
+
         
         
       </footer>
@@ -497,9 +505,10 @@
 
 
   
+
   
 
-
+  
 
   
 

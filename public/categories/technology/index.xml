@@ -1,68 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Technology on Mohamed Kamal</title>
-    <link>http://localhost:1313/categories/technology/</link>
-    <description>Recent content in Technology on Mohamed Kamal</description>
+    <title>Technology on Mohamed Abdelrahman</title>
+    <link>https://mkabdelrahman.github.io/categories/technology/</link>
+    <description>Recent content in Technology on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/technology/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>A Short Note on Software Architecture Terminology</title>
-      <link>http://localhost:1313/posts/layered-and-modular-monolith-boundaries/</link>
-      <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/layered-and-modular-monolith-boundaries/</guid>
-      <description>Unlike other fields of science and engineering, software engineering is replete with terms that describe the same or very similar concepts. Often, these terms are created to distinguish themselves from other concepts, inadvertently obscuring their true nature and strong interrelations.&#xA;One of these terms is the &amp;ldquo;layered and modular monolith.&amp;rdquo;&#xA;Other similar concepts include Clean Architecture, Onion Architecture, Ports and Adapters, and Hexagonal Architecture&amp;hellip;&#xA;For someone new to software development, this can be very intimidating.</description>
-    </item>
+    <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Microkernel Architecture (Plug-in Architecture)</title>
-      <link>http://localhost:1313/posts/microkernel/</link>
+      <link>https://mkabdelrahman.github.io/posts/microkernel/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/microkernel/</guid>
-      <description>Microkernel architecture is an architecural style where a minimal core system (the microkernel) handles generic or stable domain tasks. Other functionalities are provided by pluggable modules and communicate with the core system through well-defined interfaces.&#xA;You might encounter it in familiar applications:&#xA;Web Browser Extensions: Many web browsers allow you to install extensions that add new functionality. These extensions act as plug-ins, extending the core features of the browser without modifying its core code.</description>
+      <guid>https://mkabdelrahman.github.io/posts/microkernel/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;layered architecture style&#34; src=&#34;https://mkabdelrahman.github.io/images/The-microkernel-architecture-pattern.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Microkernel architecture is an architecural style where a minimal core system (the microkernel) handles generic or stable domain tasks.  Other functionalities are provided by pluggable modules and communicate with the core system through well-defined interfaces.&lt;/p&gt;&#xA;&lt;p&gt;You might encounter it in familiar applications:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Web Browser Extensions:&lt;/strong&gt;  Many web browsers allow you to install extensions that add new functionality. These extensions act as plug-ins, extending the core features of the browser without modifying its core code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Layered Architecture Style</title>
-      <link>http://localhost:1313/posts/layered-architecture-style/</link>
+      <link>https://mkabdelrahman.github.io/posts/layered-architecture-style/</link>
       <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/layered-architecture-style/</guid>
-      <description>The layered architecture is a monolithic architectural style that organizes an application into horizontal layers, each focused on distinct technical concerns.&#xA;Understanding the Terms:&#xA;Monolithic application: The entire application is deployed as a single unit. Distributed application: Application components are split across different machines and communicate through a network. Technical partitioning: Application components are organized based on technical aspects like data access or user interface, rather than business domains. Layers in the Layered Architecture:</description>
+      <guid>https://mkabdelrahman.github.io/posts/layered-architecture-style/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;layered architecture style&#34; src=&#34;https://mkabdelrahman.github.io/images/layered-architecture-style.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The &lt;strong&gt;layered architecture&lt;/strong&gt; is a monolithic architectural style that organizes an application into &lt;strong&gt;horizontal layers&lt;/strong&gt;, each focused on &lt;strong&gt;distinct technical concerns&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Understanding the Terms:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Monolithic application:&lt;/strong&gt; The entire application is deployed as a single unit.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Distributed application:&lt;/strong&gt; Application components are split across different machines and communicate through a network.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Technical partitioning:&lt;/strong&gt; Application components are organized based on technical aspects like data access or user interface, rather than business domains.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Layers in the Layered Architecture:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title> Microservices: An Extreme Form of Decoupling for Large-Scale Systems</title>
-      <link>http://localhost:1313/posts/microservices-and-coupling/</link>
+      <link>https://mkabdelrahman.github.io/posts/microservices-and-coupling/</link>
       <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/microservices-and-coupling/</guid>
-      <description>Introduction Link to heading The microservices architecture style represents an extreme form of decoupling tailored for large-scale systems where hundreds of developers collaborate simultaneously. By embracing logical, spatial, temporal, and technology decoupling, teams can work autonomously and iterate rapidly. In this post, we delve into how microservices reduce coupling at various levels, enabling scalability, agility, and independent deployability.&#xA;Microservices: Decoupling at Scale Link to heading Microservices architecture represents a paradigm shift in software development, embodying the principles of extreme decoupling to address the challenges of building and maintaining large-scale applications.</description>
+      <guid>https://mkabdelrahman.github.io/posts/microservices-and-coupling/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The microservices architecture style represents an extreme form of decoupling tailored for large-scale systems where hundreds of developers collaborate simultaneously. By embracing logical, spatial, temporal, and technology decoupling, teams can work autonomously and iterate rapidly. In this post, we delve into how microservices reduce coupling at various levels, enabling scalability, agility, and independent deployability.&lt;/p&gt;&#xA;&lt;h3 id=&#34;microservices-decoupling-at-scale&#34;&gt;&#xA;  Microservices: Decoupling at Scale&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#microservices-decoupling-at-scale&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Microservices architecture represents a paradigm shift in software development, embodying the principles of extreme decoupling to address the challenges of building and maintaining large-scale applications. At its core, microservices architecture involves breaking down monolithic applications into smaller, self-contained services, each responsible for a specific business function or capability. These services, often referred to as microservices, operate independently of each other and communicate through well-defined APIs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Simplify Configuration Management in Go with the &#39;conf&#39; Package</title>
-      <link>http://localhost:1313/posts/go-conf-pkg/</link>
+      <link>https://mkabdelrahman.github.io/posts/go-conf-pkg/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/go-conf-pkg/</guid>
-      <description>The &amp;ldquo;conf&amp;rdquo; package is designed to make configuration management in Go straightforward and flexible. It allows you to define your application&amp;rsquo;s configuration as a struct and then parse it for both environment variables and command-line arguments. This approach makes it easy to handle different configuration sources, and the package provides a variety of customization options through struct tags.&#xA;First, you need to install the &amp;ldquo;conf&amp;rdquo; package:&#xA;go get github.com/ardanlabs/conf/v3 Define a struct that represents your application&amp;rsquo;s configuration.</description>
+      <guid>https://mkabdelrahman.github.io/posts/go-conf-pkg/</guid>
+      <description>&lt;p&gt;The &amp;ldquo;conf&amp;rdquo; package is designed to make configuration management in Go straightforward and flexible. It allows you to define your application&amp;rsquo;s configuration as a struct and then parse it for both environment variables and command-line arguments. This approach makes it easy to handle different configuration sources, and the package provides a variety of customization options through struct tags.&lt;/p&gt;&#xA;&lt;p&gt;First, you need to install the &amp;ldquo;conf&amp;rdquo; package:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get github.com/ardanlabs/conf/v3&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Define a struct that represents your application&amp;rsquo;s configuration. You can use struct tags to specify default values, environment variable names, and other options.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
-      <link>http://localhost:1313/posts/go-init-functions/</link>
+      <link>https://mkabdelrahman.github.io/posts/go-init-functions/</link>
       <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/go-init-functions/</guid>
-      <description>In Go, init functions play a crucial role in package initialization. They are used to set up the initial state of your application, and their behavior can be both powerful and tricky to manage. In this blog post, we&amp;rsquo;ll delve into the concept of init functions, their use cases, execution order, and common pitfalls.&#xA;What Are init Functions? Link to heading In Go, an init function is a special type of function used for package-level initialization.</description>
-    </item>
-    <item>
-      <title>Essential Docker Commands</title>
-      <link>http://localhost:1313/posts/docker-commands/</link>
-      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/docker-commands/</guid>
-      <description>Display Docker Version Information Link to heading docker version This command provides information about the Docker Engine version.&#xA;List All Docker Images Link to heading docker images This command lists all the Docker images available on your system.&#xA;Pull an Image from the Registry Link to heading docker pull &amp;lt;image_name&amp;gt; You can use this command to download a Docker image from a container registry, like Docker Hub.&#xA;Create and Run a New Ubuntu Container with Interactive Shell Link to heading docker run -it &amp;lt;image&amp;gt; /bin/bash This command starts a new Docker container based on the specified image and opens an interactive shell (in this case, /bin/bash) inside the container.</description>
-    </item>
-    <item>
-      <title>Getting Started with Docker for Go</title>
-      <link>http://localhost:1313/posts/docker-go/</link>
-      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/docker-go/</guid>
-      <description>What Is a Container? Link to heading Containers are like isolating an application so it thinks it&amp;rsquo;s running all by itself. It&amp;rsquo;s similar to a virtual machine (VM) but uses the host&amp;rsquo;s operating system instead of its own. To start a container, you begin with a container image that bundles up everything the application needs to run, making it easy to share and distribute.&#xA;The isolation that tricks a container into believing it has control over a whole Linux machine is achieved through the use of namespaces and control groups.</description>
+      <guid>https://mkabdelrahman.github.io/posts/go-init-functions/</guid>
+      <description>&lt;p&gt;In Go, &lt;code&gt;init&lt;/code&gt; functions play a crucial role in package initialization. They are used to set up the initial state of your application, and their behavior can be both powerful and tricky to manage. In this blog post, we&amp;rsquo;ll delve into the concept of &lt;code&gt;init&lt;/code&gt; functions, their use cases, execution order, and common pitfalls.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-init-functions&#34;&gt;&#xA;  What Are &lt;code&gt;init&lt;/code&gt; Functions?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-are-init-functions&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In Go, an &lt;code&gt;init&lt;/code&gt; function is a special type of function used for package-level initialization. When a package is imported, the constant and variable declarations within the package are evaluated. After that, the &lt;code&gt;init&lt;/code&gt; functions are executed. Here&amp;rsquo;s a simple example to illustrate:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

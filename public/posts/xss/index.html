@@ -13,18 +13,26 @@
 
 
 <meta name="author" content="Mohamed Kamal">
-<meta name="description" content="XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code.">
+<meta name="description" content="
+  XSS (Cross-Site Scripting)
+  
+    
+    Link to heading
+  
+
+XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code. This proactive measure helps thwart XSS attacks by guaranteeing that even if malicious code is injected, it will be displayed as plain text rather than executed by the browser.">
 <meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Understanding XSS Attacks and Contextual Encoding in Go">
-  <meta name="twitter:description" content="XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code.">
+  <meta name="twitter:description" content=" XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code. This proactive measure helps thwart XSS attacks by guaranteeing that even if malicious code is injected, it will be displayed as plain text rather than executed by the browser.">
 
 <meta property="og:url" content="http://localhost:1313/posts/xss/">
   <meta property="og:site_name" content="Mohamed Kamal">
   <meta property="og:title" content="Understanding XSS Attacks and Contextual Encoding in Go">
-  <meta property="og:description" content="XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code.">
+  <meta property="og:description" content=" XSS (Cross-Site Scripting) Link to heading XSS is a critical security vulnerability that arises when a web application allows an attacker to inject malicious scripts into web pages, which are then viewed by other users. Contextual encoding serves as a crucial defense mechanism against XSS attacks. When user input is presented on a web page, it must undergo proper encoding to ensure that any potential script content is treated as data rather than executable code. This proactive measure helps thwart XSS attacks by guaranteeing that even if malicious code is injected, it will be displayed as plain text rather than executed by the browser.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -42,7 +50,9 @@
 <link rel="canonical" href="http://localhost:1313/posts/xss/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
@@ -96,7 +106,7 @@
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -104,27 +114,29 @@
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
       Mohamed Kamal
     </a>
     
+    
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Blog</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">Contact me</a>
+              <a class="navigation-link " href="/contact/">Contact me</a>
             </li>
           
         
@@ -150,28 +162,28 @@
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2023-12-03T00:00:00Z">
                 December 3, 2023
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
               5-minute read
             </span>
           </div>
           <div class="authors">
-  <i class="fa fa-user" aria-hidden="true"></i>
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
     <a href="/authors/mohamed-kamal/">Mohamed Kamal</a></div>
 
           <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
     <a href="/categories/security/">Security</a>
       <span class="separator">•</span>
     <a href="/categories/go/">Go</a></div>
 
           <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/security/">Security</a>
     </span>
@@ -200,7 +212,7 @@
         <h2 id="xss-cross-site-scripting">
   XSS (Cross-Site Scripting)
   <a class="heading-link" href="#xss-cross-site-scripting">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -208,7 +220,7 @@
 <h2 id="contextual-encoding">
   Contextual Encoding
   <a class="heading-link" href="#contextual-encoding">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -217,7 +229,7 @@
 <h3 id="example">
   Example
   <a class="heading-link" href="#example">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -225,7 +237,7 @@
 <h2 id="trusting-users-with-templatehtml">
   Trusting Users with <code>template.HTML</code>
   <a class="heading-link" href="#trusting-users-with-templatehtml">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -233,7 +245,7 @@
 <h2 id="full-go-example">
   Full Go Example
   <a class="heading-link" href="#full-go-example">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -350,7 +362,7 @@
 </span></span></code></pre></div><h3 id="try-it-yourself-contextual-encoding-in-action">
   Try It Yourself: Contextual Encoding in Action
   <a class="heading-link" href="#try-it-yourself-contextual-encoding-in-action">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -364,7 +376,7 @@
 <h3 id="try-it-yourself-using-templatehtml">
   Try It Yourself: Using <code>template.HTML</code>
   <a class="heading-link" href="#try-it-yourself-using-templatehtml">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -391,7 +403,7 @@
 <h3 id="try-it-yourself-avoiding-the-template-package-entirely">
   Try It Yourself: Avoiding the Template Package Entirely
   <a class="heading-link" href="#try-it-yourself-avoiding-the-template-package-entirely">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -461,6 +473,9 @@
         
         
         
+
+        
+        
       </footer>
     </article>
 
@@ -499,9 +514,10 @@
 
 
   
+
   
 
-
+  
 
   
 

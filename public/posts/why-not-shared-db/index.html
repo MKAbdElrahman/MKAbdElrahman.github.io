@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>
-  Microservices: Why Not a Shared Monolithic Database? · Mohamed Kamal
+  Microservices: Why Not a Shared Monolithic Database? · Mohamed Abdelrahman
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,21 +12,32 @@
 
 
 
-<meta name="author" content="Mohamed Kamal">
-<meta name="description" content="In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.
-Change Control Link to heading Managing changes in a shared monolithic database is a complex task. Any schema change necessitates coordination across all dependent services, which can be cumbersome and time-consuming. This coordination is required to ensure that all services are redeployed simultaneously to prevent schema mismatch errors, which can cause significant downtime and service disruption.">
+<meta name="author" content="Mohamed Abdelrahman">
+<meta name="description" content="
+In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.
+
+  Change Control
+  
+    
+    Link to heading
+  
+
+Managing changes in a shared monolithic database is a complex task. Any schema change necessitates coordination across all dependent services, which can be cumbersome and time-consuming. This coordination is required to ensure that all services are redeployed simultaneously to prevent schema mismatch errors, which can cause significant downtime and service disruption.">
 <meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Microservices: Why Not a Shared Monolithic Database?">
-  <meta name="twitter:description" content="In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.
+  <meta name="twitter:description" content="
+In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.
 Change Control Link to heading Managing changes in a shared monolithic database is a complex task. Any schema change necessitates coordination across all dependent services, which can be cumbersome and time-consuming. This coordination is required to ensure that all services are redeployed simultaneously to prevent schema mismatch errors, which can cause significant downtime and service disruption.">
 
-<meta property="og:url" content="http://localhost:1313/posts/why-not-shared-db/">
-  <meta property="og:site_name" content="Mohamed Kamal">
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/why-not-shared-db/">
+  <meta property="og:site_name" content="Mohamed Abdelrahman">
   <meta property="og:title" content="Microservices: Why Not a Shared Monolithic Database?">
-  <meta property="og:description" content="In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.
+  <meta property="og:description" content="
+In microservices, the idea of using a shared monolithic database is always rejected. There are several reasons why this approach is not advisable. Below are the key considerations that highlight the drawbacks of a shared monolithic database.
 Change Control Link to heading Managing changes in a shared monolithic database is a complex task. Any schema change necessitates coordination across all dependent services, which can be cumbersome and time-consuming. This coordination is required to ensure that all services are redeployed simultaneously to prevent schema mismatch errors, which can cause significant downtime and service disruption.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -38,15 +49,17 @@ Change Control Link to heading Managing changes in a shared monolithic database 
 
 
 
-<link rel="canonical" href="http://localhost:1313/posts/why-not-shared-db/">
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/why-not-shared-db/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -56,7 +69,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -95,7 +108,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -103,27 +116,29 @@ Change Control Link to heading Managing changes in a shared monolithic database 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
-      Mohamed Kamal
+    
+    <a class="navigation-title" href="https://mkabdelrahman.github.io/">
+      Mohamed Abdelrahman
     </a>
+    
     
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Blog</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">Contact me</a>
+              <a class="navigation-link " href="/contact/">Contact me</a>
             </li>
           
         
@@ -141,7 +156,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://localhost:1313/posts/why-not-shared-db/">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/why-not-shared-db/">
               Microservices: Why Not a Shared Monolithic Database?
             </a>
           </h1>
@@ -149,25 +164,25 @@ Change Control Link to heading Managing changes in a shared monolithic database 
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2024-06-28T00:00:00Z">
                 June 28, 2024
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
               3-minute read
             </span>
           </div>
           
           <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
     <a href="/categories/software-architecture/">Software Architecture</a>
       <span class="separator">•</span>
     <a href="/categories/microservices/">Microservices</a></div>
 
           <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/software-architecture/">Software Architecture</a>
     </span></div>
@@ -182,7 +197,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
 <h3 id="change-control">
   Change Control
   <a class="heading-link" href="#change-control">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -190,7 +205,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
 <h3 id="database-connections">
   Database Connections
   <a class="heading-link" href="#database-connections">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -199,7 +214,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
 <h3 id="scalability">
   Scalability
   <a class="heading-link" href="#scalability">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -207,7 +222,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
 <h3 id="fault-tolerance">
   Fault Tolerance
   <a class="heading-link" href="#fault-tolerance">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -215,7 +230,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
 <h3 id="conclusion">
   Conclusion
   <a class="heading-link" href="#conclusion">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -233,6 +248,9 @@ Change Control Link to heading Managing changes in a shared monolithic database 
         
         
         
+
+        
+        
       </footer>
     </article>
 
@@ -248,7 +266,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
       2019 -
     
     2024
-     Mohamed Kamal 
+     Mohamed Abdelrahman 
     ·
     
     Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
@@ -262,7 +280,7 @@ Change Control Link to heading Managing changes in a shared monolithic database 
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
@@ -271,9 +289,10 @@ Change Control Link to heading Managing changes in a shared monolithic database 
 
 
   
+
   
 
-
+  
 
   
 

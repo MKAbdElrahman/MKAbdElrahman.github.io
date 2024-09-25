@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>
-  Observability: Introduction to OpenTelemetry · Mohamed Kamal
+  Observability: Introduction to OpenTelemetry · Mohamed Abdelrahman
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,22 +12,43 @@
 
 
 
-<meta name="author" content="Mohamed Kamal">
-<meta name="description" content="OpenTelemetry: A Standardized Approach to Observability Link to heading OpenTelemetry (OTel for short) simplifies how you gain insights into your applications&rsquo; health and performance. It&rsquo;s an observability framework that provides a consistent way to:
-Instrument your applications: Regardless of the programming language, OTel offers language-specific libraries and APIs to streamline this process. Generate telemetry data: This data comes in three forms: metrics (numerical data), logs (event messages), and traces (which track request journeys).">
+<meta name="author" content="Mohamed Abdelrahman">
+<meta name="description" content="
+  OpenTelemetry: A Standardized Approach to Observability
+  
+    
+    Link to heading
+  
+
+OpenTelemetry (OTel for short) simplifies how you gain insights into your applications&rsquo; health and performance. It&rsquo;s an observability framework that provides a consistent way to:
+
+Instrument your applications: Regardless of the programming language, OTel offers language-specific libraries and APIs to streamline this process.
+Generate telemetry data: This data comes in three forms: metrics (numerical data), logs (event messages), and traces (which track request journeys).
+Collect the data: OTel acts as a central hub for gathering telemetry data from your applications.
+Export the data: You can choose the observability backend (analysis platform) that best suits your needs, thanks to OTel&rsquo;s vendor neutrality.
+
+
+  Why Use OpenTelemetry?
+  
+    
+    Link to heading
+  
+
+Here&rsquo;s what makes OTel so powerful:">
 <meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Observability: Introduction to OpenTelemetry">
-  <meta name="twitter:description" content="OpenTelemetry: A Standardized Approach to Observability Link to heading OpenTelemetry (OTel for short) simplifies how you gain insights into your applications’ health and performance. It’s an observability framework that provides a consistent way to:
-Instrument your applications: Regardless of the programming language, OTel offers language-specific libraries and APIs to streamline this process. Generate telemetry data: This data comes in three forms: metrics (numerical data), logs (event messages), and traces (which track request journeys).">
+  <meta name="twitter:description" content=" OpenTelemetry: A Standardized Approach to Observability Link to heading OpenTelemetry (OTel for short) simplifies how you gain insights into your applications’ health and performance. It’s an observability framework that provides a consistent way to:
+Instrument your applications: Regardless of the programming language, OTel offers language-specific libraries and APIs to streamline this process. Generate telemetry data: This data comes in three forms: metrics (numerical data), logs (event messages), and traces (which track request journeys). Collect the data: OTel acts as a central hub for gathering telemetry data from your applications. Export the data: You can choose the observability backend (analysis platform) that best suits your needs, thanks to OTel’s vendor neutrality. Why Use OpenTelemetry? Link to heading Here’s what makes OTel so powerful:">
 
-<meta property="og:url" content="http://localhost:1313/posts/open-telemetry-part2/">
-  <meta property="og:site_name" content="Mohamed Kamal">
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/open-telemetry-part2/">
+  <meta property="og:site_name" content="Mohamed Abdelrahman">
   <meta property="og:title" content="Observability: Introduction to OpenTelemetry">
-  <meta property="og:description" content="OpenTelemetry: A Standardized Approach to Observability Link to heading OpenTelemetry (OTel for short) simplifies how you gain insights into your applications’ health and performance. It’s an observability framework that provides a consistent way to:
-Instrument your applications: Regardless of the programming language, OTel offers language-specific libraries and APIs to streamline this process. Generate telemetry data: This data comes in three forms: metrics (numerical data), logs (event messages), and traces (which track request journeys).">
+  <meta property="og:description" content=" OpenTelemetry: A Standardized Approach to Observability Link to heading OpenTelemetry (OTel for short) simplifies how you gain insights into your applications’ health and performance. It’s an observability framework that provides a consistent way to:
+Instrument your applications: Regardless of the programming language, OTel offers language-specific libraries and APIs to streamline this process. Generate telemetry data: This data comes in three forms: metrics (numerical data), logs (event messages), and traces (which track request journeys). Collect the data: OTel acts as a central hub for gathering telemetry data from your applications. Export the data: You can choose the observability backend (analysis platform) that best suits your needs, thanks to OTel’s vendor neutrality. Why Use OpenTelemetry? Link to heading Here’s what makes OTel so powerful:">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -37,15 +58,17 @@ Instrument your applications: Regardless of the programming language, OTel offer
 
 
 
-<link rel="canonical" href="http://localhost:1313/posts/open-telemetry-part2/">
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/open-telemetry-part2/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -55,7 +78,7 @@ Instrument your applications: Regardless of the programming language, OTel offer
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -94,7 +117,7 @@ Instrument your applications: Regardless of the programming language, OTel offer
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -102,27 +125,29 @@ Instrument your applications: Regardless of the programming language, OTel offer
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
-      Mohamed Kamal
+    
+    <a class="navigation-title" href="https://mkabdelrahman.github.io/">
+      Mohamed Abdelrahman
     </a>
+    
     
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Blog</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">Contact me</a>
+              <a class="navigation-link " href="/contact/">Contact me</a>
             </li>
           
         
@@ -140,7 +165,7 @@ Instrument your applications: Regardless of the programming language, OTel offer
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://localhost:1313/posts/open-telemetry-part2/">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/open-telemetry-part2/">
               Observability: Introduction to OpenTelemetry
             </a>
           </h1>
@@ -148,19 +173,19 @@ Instrument your applications: Regardless of the programming language, OTel offer
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2024-05-16T00:00:00Z">
                 May 16, 2024
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
               3-minute read
             </span>
           </div>
           
           <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
     <a href="/categories/observability/">Observability</a></div>
 
           
@@ -172,7 +197,7 @@ Instrument your applications: Regardless of the programming language, OTel offer
         <h2 id="opentelemetry-a-standardized-approach-to-observability">
   OpenTelemetry: A Standardized Approach to Observability
   <a class="heading-link" href="#opentelemetry-a-standardized-approach-to-observability">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -186,7 +211,7 @@ Instrument your applications: Regardless of the programming language, OTel offer
 <h2 id="why-use-opentelemetry">
   Why Use OpenTelemetry?
   <a class="heading-link" href="#why-use-opentelemetry">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -201,7 +226,7 @@ Instrument your applications: Regardless of the programming language, OTel offer
 <h2 id="deep-dive-into-opentelemetry-components">
   Deep Dive into OpenTelemetry Components
   <a class="heading-link" href="#deep-dive-into-opentelemetry-components">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -216,14 +241,14 @@ Instrument your applications: Regardless of the programming language, OTel offer
 <h2 id="opentelemetry-signals">
   OpenTelemetry Signals
   <a class="heading-link" href="#opentelemetry-signals">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <h2 id="heading">
   
   <a class="heading-link" href="#heading">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -238,6 +263,9 @@ Instrument your applications: Regardless of the programming language, OTel offer
         
         
         
+        
+        
+
         
         
       </footer>
@@ -255,7 +283,7 @@ Instrument your applications: Regardless of the programming language, OTel offer
       2019 -
     
     2024
-     Mohamed Kamal 
+     Mohamed Abdelrahman 
     ·
     
     Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
@@ -269,7 +297,7 @@ Instrument your applications: Regardless of the programming language, OTel offer
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
@@ -278,9 +306,10 @@ Instrument your applications: Regardless of the programming language, OTel offer
 
 
   
+
   
 
-
+  
 
   
 

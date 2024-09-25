@@ -15,6 +15,7 @@
 <meta name="author" content="Mohamed Kamal">
 <meta name="description" content="my first post">
 <meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
 
 
   <meta name="twitter:card" content="summary">
@@ -39,7 +40,9 @@
 <link rel="canonical" href="http://localhost:1313/posts/docker-go/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
@@ -93,7 +96,7 @@
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -101,27 +104,29 @@
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
       Mohamed Kamal
     </a>
     
+    
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Blog</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">Contact me</a>
+              <a class="navigation-link " href="/contact/">Contact me</a>
             </li>
           
         
@@ -147,23 +152,23 @@
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2023-09-21T00:00:00Z">
                 September 21, 2023
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
               8-minute read
             </span>
           </div>
           
           <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
     <a href="/categories/technology/">Technology</a></div>
 
           <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/docker/">Docker</a>
     </span>
@@ -180,7 +185,7 @@
         <h2 id="what-is-a-container">
   What Is a Container?
   <a class="heading-link" href="#what-is-a-container">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -210,7 +215,7 @@
 <h2 id="bundling-go-code-into-a-container-image">
   Bundling Go Code into a Container Image
   <a class="heading-link" href="#bundling-go-code-into-a-container-image">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -258,7 +263,7 @@
 <h2 id="creating-a-dockerfile">
   Creating a Dockerfile
   <a class="heading-link" href="#creating-a-dockerfile">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -285,7 +290,7 @@
 <h2 id="building-the-container-image">
   Building the Container Image
   <a class="heading-link" href="#building-the-container-image">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -310,7 +315,7 @@ hello                               1         6195aa4aad82   35 seconds ago   6.
 <h2 id="heading">
   
   <a class="heading-link" href="#heading">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -341,6 +346,9 @@ d5963ca57417        hello:1             &#34;/hello&#34;                 4 secon
         
         
         
+        
+        
+
         
         
       </footer>
@@ -381,9 +389,10 @@ d5963ca57417        hello:1             &#34;/hello&#34;                 4 secon
 
 
   
+
   
 
-
+  
 
   
 

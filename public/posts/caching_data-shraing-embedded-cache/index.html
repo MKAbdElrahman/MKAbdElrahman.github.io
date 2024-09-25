@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>
-  Data Sharing Between Microservices Using Synchronized Embedded Caches · Mohamed Kamal
+  Data Sharing Between Microservices Using Synchronized Embedded Caches · Mohamed Abdelrahman
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,23 +12,51 @@
 
 
 
-<meta name="author" content="Mohamed Kamal">
-<meta name="description" content="Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:
-Menu Service: Manages the list of available dishes. Order Service: Allows customers to create and manage their orders. How It Works Link to heading Starting the Menu Service:
-The menu service starts and loads a cache containing information about available dishes. This cache is distributed, enabling it to be shared across different services. Starting the Order Service:">
+<meta name="author" content="Mohamed Abdelrahman">
+<meta name="description" content="
+  Setting the Scene
+  
+    
+    Link to heading
+  
+
+
+Consider an online food delivery system with two essential microservices:
+
+Menu Service: Manages the list of available dishes.
+Order Service: Allows customers to create and manage their orders.
+
+
+  How It Works
+  
+    
+    Link to heading
+  
+
+
+
+Starting the Menu Service:
+
+The menu service starts and loads a cache containing information about available dishes.
+This cache is distributed, enabling it to be shared across different services.
+
+
+
+Starting the Order Service:">
 <meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Data Sharing Between Microservices Using Synchronized Embedded Caches">
-  <meta name="twitter:description" content="Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:
+  <meta name="twitter:description" content=" Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:
 Menu Service: Manages the list of available dishes. Order Service: Allows customers to create and manage their orders. How It Works Link to heading Starting the Menu Service:
 The menu service starts and loads a cache containing information about available dishes. This cache is distributed, enabling it to be shared across different services. Starting the Order Service:">
 
-<meta property="og:url" content="http://localhost:1313/posts/caching_data-shraing-embedded-cache/">
-  <meta property="og:site_name" content="Mohamed Kamal">
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/caching_data-shraing-embedded-cache/">
+  <meta property="og:site_name" content="Mohamed Abdelrahman">
   <meta property="og:title" content="Data Sharing Between Microservices Using Synchronized Embedded Caches">
-  <meta property="og:description" content="Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:
+  <meta property="og:description" content=" Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:
 Menu Service: Manages the list of available dishes. Order Service: Allows customers to create and manage their orders. How It Works Link to heading Starting the Menu Service:
 The menu service starts and loads a cache containing information about available dishes. This cache is distributed, enabling it to be shared across different services. Starting the Order Service:">
   <meta property="og:locale" content="en">
@@ -41,15 +69,17 @@ The menu service starts and loads a cache containing information about available
 
 
 
-<link rel="canonical" href="http://localhost:1313/posts/caching_data-shraing-embedded-cache/">
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/caching_data-shraing-embedded-cache/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -59,7 +89,7 @@ The menu service starts and loads a cache containing information about available
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -98,7 +128,7 @@ The menu service starts and loads a cache containing information about available
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -106,27 +136,29 @@ The menu service starts and loads a cache containing information about available
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
-      Mohamed Kamal
+    
+    <a class="navigation-title" href="https://mkabdelrahman.github.io/">
+      Mohamed Abdelrahman
     </a>
+    
     
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Blog</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">Contact me</a>
+              <a class="navigation-link " href="/contact/">Contact me</a>
             </li>
           
         
@@ -144,7 +176,7 @@ The menu service starts and loads a cache containing information about available
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://localhost:1313/posts/caching_data-shraing-embedded-cache/">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/caching_data-shraing-embedded-cache/">
               Data Sharing Between Microservices Using Synchronized Embedded Caches
             </a>
           </h1>
@@ -152,19 +184,19 @@ The menu service starts and loads a cache containing information about available
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2024-06-27T00:00:00Z">
                 June 27, 2024
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
               3-minute read
             </span>
           </div>
           
           <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
     <a href="/categories/software-architecture/">Software Architecture</a>
       <span class="separator">•</span>
     <a href="/categories/microservices/">Microservices</a>
@@ -172,7 +204,7 @@ The menu service starts and loads a cache containing information about available
     <a href="/categories/caching/">Caching</a></div>
 
           <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/software-architecture/">Software Architecture</a>
     </span></div>
@@ -185,7 +217,7 @@ The menu service starts and loads a cache containing information about available
         <h3 id="setting-the-scene">
   Setting the Scene
   <a class="heading-link" href="#setting-the-scene">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -198,7 +230,7 @@ The menu service starts and loads a cache containing information about available
 <h3 id="how-it-works">
   How It Works
   <a class="heading-link" href="#how-it-works">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -222,7 +254,7 @@ The menu service starts and loads a cache containing information about available
 <h3 id="demonstrating-synchronization">
   Demonstrating Synchronization
   <a class="heading-link" href="#demonstrating-synchronization">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -247,7 +279,7 @@ The menu service starts and loads a cache containing information about available
 <h3 id="handling-failures">
   Handling Failures
   <a class="heading-link" href="#handling-failures">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -272,7 +304,7 @@ The menu service starts and loads a cache containing information about available
 <h2 id="cache-as-a-contract">
   Cache as a Contract
   <a class="heading-link" href="#cache-as-a-contract">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -280,7 +312,7 @@ The menu service starts and loads a cache containing information about available
 <h2 id="eventual-consistency">
   Eventual Consistency
   <a class="heading-link" href="#eventual-consistency">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -288,7 +320,7 @@ The menu service starts and loads a cache containing information about available
 <h2 id="data-volume-and-limited-scalability">
   Data Volume and Limited Scalability
   <a class="heading-link" href="#data-volume-and-limited-scalability">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -308,6 +340,9 @@ The menu service starts and loads a cache containing information about available
         
         
         
+
+        
+        
       </footer>
     </article>
 
@@ -323,7 +358,7 @@ The menu service starts and loads a cache containing information about available
       2019 -
     
     2024
-     Mohamed Kamal 
+     Mohamed Abdelrahman 
     ·
     
     Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
@@ -337,7 +372,7 @@ The menu service starts and loads a cache containing information about available
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
@@ -346,9 +381,10 @@ The menu service starts and loads a cache containing information about available
 
 
   
+
   
 
-
+  
 
   
 

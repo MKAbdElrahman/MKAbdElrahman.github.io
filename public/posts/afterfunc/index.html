@@ -14,20 +14,68 @@
 
 <meta name="author" content="Mohamed Kamal">
 <meta name="description" content="The AfterFunc function in Go&rsquo;s context package provides a robust tool for scheduling the execution of a specified function after a given context concludes, be it due to cancellation or a timeout. This blog post delves into the practical application of AfterFunc through an illustrative example, shedding light on its functionality and potential use cases.
-The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (stop func() bool) ctx: The context that determines when the function f should be executed.">
+
+  The AfterFunc Signature
+  
+    
+    Link to heading
+  
+
+func AfterFunc(ctx Context, f func()) (stop func() bool)
+
+ctx: The context that determines when the function f should be executed.
+f: The function to be executed after the context is done.
+stop: A function that, when called, stops the association of the context with the function f. It returns true if it successfully prevents f from being run and false otherwise.
+
+
+  Basic Example
+  
+    
+    Link to heading
+  
+
+func main() {
+    // Creating a background context
+    ctx := context.Background()
+
+    // Setting a timeout of 2 seconds for the context
+    ctx, cancel := context.WithTimeout(ctx, 2*time.Second)
+    defer cancel()
+
+    // Creating a WaitGroup to ensure main doesn&#39;t exit before AfterFunc completes
+    var wg sync.WaitGroup
+    wg.Add(1)
+
+    // Registering an AfterFunc to be called after 2 seconds
+    stop := context.AfterFunc(ctx, func() {
+        // Simulating some work that takes 4 seconds
+        time.Sleep(4 * time.Second)
+
+        // Indicating that the AfterFunc work is done
+        wg.Done()
+    })
+    
+    // Ensuring that the stop function is called to clean up resources
+    defer stop()
+
+    // Waiting for the AfterFunc to complete its work before allowing main to exit
+    wg.Wait()
+}
+In this example, a background context is created, and a timeout of 2 seconds is set using context.WithTimeout.">
 <meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Go Context Package: AfterFunc">
   <meta name="twitter:description" content="The AfterFunc function in Go’s context package provides a robust tool for scheduling the execution of a specified function after a given context concludes, be it due to cancellation or a timeout. This blog post delves into the practical application of AfterFunc through an illustrative example, shedding light on its functionality and potential use cases.
-The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (stop func() bool) ctx: The context that determines when the function f should be executed.">
+The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (stop func() bool) ctx: The context that determines when the function f should be executed. f: The function to be executed after the context is done. stop: A function that, when called, stops the association of the context with the function f. It returns true if it successfully prevents f from being run and false otherwise. Basic Example Link to heading func main() { // Creating a background context ctx := context.Background() // Setting a timeout of 2 seconds for the context ctx, cancel := context.WithTimeout(ctx, 2*time.Second) defer cancel() // Creating a WaitGroup to ensure main doesn&#39;t exit before AfterFunc completes var wg sync.WaitGroup wg.Add(1) // Registering an AfterFunc to be called after 2 seconds stop := context.AfterFunc(ctx, func() { // Simulating some work that takes 4 seconds time.Sleep(4 * time.Second) // Indicating that the AfterFunc work is done wg.Done() }) // Ensuring that the stop function is called to clean up resources defer stop() // Waiting for the AfterFunc to complete its work before allowing main to exit wg.Wait() } In this example, a background context is created, and a timeout of 2 seconds is set using context.WithTimeout.">
 
 <meta property="og:url" content="http://localhost:1313/posts/afterfunc/">
   <meta property="og:site_name" content="Mohamed Kamal">
   <meta property="og:title" content="Go Context Package: AfterFunc">
   <meta property="og:description" content="The AfterFunc function in Go’s context package provides a robust tool for scheduling the execution of a specified function after a given context concludes, be it due to cancellation or a timeout. This blog post delves into the practical application of AfterFunc through an illustrative example, shedding light on its functionality and potential use cases.
-The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (stop func() bool) ctx: The context that determines when the function f should be executed.">
+The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (stop func() bool) ctx: The context that determines when the function f should be executed. f: The function to be executed after the context is done. stop: A function that, when called, stops the association of the context with the function f. It returns true if it successfully prevents f from being run and false otherwise. Basic Example Link to heading func main() { // Creating a background context ctx := context.Background() // Setting a timeout of 2 seconds for the context ctx, cancel := context.WithTimeout(ctx, 2*time.Second) defer cancel() // Creating a WaitGroup to ensure main doesn&#39;t exit before AfterFunc completes var wg sync.WaitGroup wg.Add(1) // Registering an AfterFunc to be called after 2 seconds stop := context.AfterFunc(ctx, func() { // Simulating some work that takes 4 seconds time.Sleep(4 * time.Second) // Indicating that the AfterFunc work is done wg.Done() }) // Ensuring that the stop function is called to clean up resources defer stop() // Waiting for the AfterFunc to complete its work before allowing main to exit wg.Wait() } In this example, a background context is created, and a timeout of 2 seconds is set using context.WithTimeout.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -44,7 +92,9 @@ The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (s
 <link rel="canonical" href="http://localhost:1313/posts/afterfunc/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
@@ -98,7 +148,7 @@ The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (s
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -106,27 +156,29 @@ The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (s
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
       Mohamed Kamal
     </a>
     
+    
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Blog</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">Contact me</a>
+              <a class="navigation-link " href="/contact/">Contact me</a>
             </li>
           
         
@@ -152,28 +204,28 @@ The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (s
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2023-11-20T00:00:00Z">
                 November 20, 2023
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
               3-minute read
             </span>
           </div>
           <div class="authors">
-  <i class="fa fa-user" aria-hidden="true"></i>
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
     <a href="/authors/mohamed-kamal/">Mohamed Kamal</a></div>
 
           <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
     <a href="/categories/go/">Go</a>
       <span class="separator">•</span>
     <a href="/categories/concurrency/">Concurrency</a></div>
 
           <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/go/">Go</a>
     </span>
@@ -195,7 +247,7 @@ The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (s
 <h4 id="the-afterfunc-signature">
   The <code>AfterFunc</code> Signature
   <a class="heading-link" href="#the-afterfunc-signature">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -208,7 +260,7 @@ The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (s
 <h3 id="basic-example">
   Basic Example
   <a class="heading-link" href="#basic-example">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
@@ -245,7 +297,7 @@ The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (s
 <h2 id="notes">
   Notes
   <a class="heading-link" href="#notes">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -364,6 +416,9 @@ The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (s
         
         
         
+
+        
+        
       </footer>
     </article>
 
@@ -402,9 +457,10 @@ The AfterFunc Signature Link to heading func AfterFunc(ctx Context, f func()) (s
 
 
   
+
   
 
-
+  
 
   
 

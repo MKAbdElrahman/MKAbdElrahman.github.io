@@ -1,9 +1,9 @@
 baseURL = "https://mkabdelrahman.github.io/"
-title = "Mohamed Kamal"
+title = "Mohamed Abdelrahman"
 theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
-paginate = 20
+pagination.pagerSize = 20
 enableEmoji = true
 # Enable Disqus comments
 # disqusShortname = "yourdiscussshortname"
@@ -12,11 +12,11 @@ enableEmoji = true
 noClasses = false
 
 [params]
-author = "Mohamed Kamal"
+author = "Mohamed Abdelrahman"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
-description = "Mohamed Kamal's personal website"
+description = "Mohamed Abdelrahman's personal website"
 keywords = "blog,developer,personal"
-info = ["Programmer"]
+info = ["Backend Developer"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
 dateFormat = "January 2, 2006"

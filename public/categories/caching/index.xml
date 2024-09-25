@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Caching on Mohamed Kamal</title>
-    <link>http://localhost:1313/categories/caching/</link>
-    <description>Recent content in Caching on Mohamed Kamal</description>
+    <title>Caching on Mohamed Abdelrahman</title>
+    <link>https://mkabdelrahman.github.io/categories/caching/</link>
+    <description>Recent content in Caching on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 27 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/caching/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mkabdelrahman.github.io/categories/caching/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Sharing Between Microservices Using Synchronized Embedded Caches</title>
-      <link>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</link>
+      <link>https://mkabdelrahman.github.io/posts/caching_data-shraing-embedded-cache/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/caching_data-shraing-embedded-cache/</guid>
-      <description>Setting the Scene Link to heading Consider an online food delivery system with two essential microservices:&#xA;Menu Service: Manages the list of available dishes. Order Service: Allows customers to create and manage their orders. How It Works Link to heading Starting the Menu Service:&#xA;The menu service starts and loads a cache containing information about available dishes. This cache is distributed, enabling it to be shared across different services. Starting the Order Service:</description>
+      <guid>https://mkabdelrahman.github.io/posts/caching_data-shraing-embedded-cache/</guid>
+      <description>&lt;h3 id=&#34;setting-the-scene&#34;&gt;&#xA;  Setting the Scene&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#setting-the-scene&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;https://mkabdelrahman.github.io/images/caching/data-sharing-embedded.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Consider an online food delivery system with two essential microservices:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Menu Service&lt;/strong&gt;: Manages the list of available dishes.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Order Service&lt;/strong&gt;: Allows customers to create and manage their orders.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;how-it-works&#34;&gt;&#xA;  How It Works&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#how-it-works&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Starting the Menu Service&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The menu service starts and loads a cache containing information about available dishes.&lt;/li&gt;&#xA;&lt;li&gt;This cache is distributed, enabling it to be shared across different services.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Starting the Order Service&lt;/strong&gt;:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Caching: Topologies and Patterns</title>
-      <link>http://localhost:1313/posts/caching_patterns/</link>
+      <link>https://mkabdelrahman.github.io/posts/caching_patterns/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/caching_patterns/</guid>
-      <description>What is a Cache? Link to heading A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:&#xA;Reducing network calls to the primary data store: Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.</description>
+      <guid>https://mkabdelrahman.github.io/posts/caching_patterns/</guid>
+      <description>&lt;h2 id=&#34;what-is-a-cache&#34;&gt;&#xA;  What is a Cache?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-is-a-cache&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A cache is a secondary data store that’s faster to read from than the data’s primary store. The purpose of a cache is to improve application performance by:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reducing network calls to the primary data store:&lt;/strong&gt; Instead of repeatedly querying the database, the cache handles data retrieval, offloading processing from the database. This reduces database connection consumption, often a limiting factor, and allows the database to perform faster.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Increasing performance:&lt;/strong&gt; Data in a cache is typically stored in random-access memory (RAM), providing quicker access than querying a database.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;In distributed databases, the performance enhancement might be marginal due to network call latency, but the increase in scalability can be significant.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

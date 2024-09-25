@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Saga on Mohamed Kamal</title>
-    <link>http://localhost:1313/categories/saga/</link>
-    <description>Recent content in Saga on Mohamed Kamal</description>
+    <title>Saga on Mohamed Abdelrahman</title>
+    <link>https://mkabdelrahman.github.io/categories/saga/</link>
+    <description>Recent content in Saga on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 09 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/saga/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mkabdelrahman.github.io/categories/saga/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sagas Quantatively: Fantasy Fiction</title>
-      <link>http://localhost:1313/posts/saga-fantasyfiction/</link>
+      <link>https://mkabdelrahman.github.io/posts/saga-fantasyfiction/</link>
       <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/saga-fantasyfiction/</guid>
-      <description>Last time, we discussed the first saga cataloged by Mark Richards and Neal Ford in their book, &amp;ldquo;Software Architecture: The Hard Parts&amp;rdquo;. We saw how the epic saga is exponentially sensitive to the availabilities of the orchestrator and the orchestrated services. We also noted how latency worsens with increasing availability due to the sequential blocking model. Today, we will discuss the second saga they called the fantasy fiction saga. In this saga, we switch from a blocking communication model to a non-blocking one while maintaining the atomicity constraint.</description>
+      <guid>https://mkabdelrahman.github.io/posts/saga-fantasyfiction/</guid>
+      <description>&lt;p&gt;Last time, we discussed the first saga cataloged by Mark Richards and Neal Ford in their book, &amp;ldquo;Software Architecture: The Hard Parts&amp;rdquo;. We saw how the epic saga is exponentially sensitive to the availabilities of the orchestrator and the orchestrated services. We also noted how latency worsens with increasing availability due to the sequential blocking model.  Today, we will discuss the second saga they called the fantasy fiction saga. In this saga, we switch from a blocking communication model to a non-blocking one while maintaining the atomicity constraint.  In a previous post, I discussed why we should avoid using the terms synchronous and asynchronous, and instead use more explicit terms like blocking request-reply, non-blocking request-reply, and event-driven. Let’s apply these concepts to the fantasy fiction saga.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sagas Quantatively: Epic Saga</title>
-      <link>http://localhost:1313/posts/saga-epic/</link>
+      <link>https://mkabdelrahman.github.io/posts/saga-epic/</link>
       <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/saga-epic/</guid>
-      <description>When we transition to microservices, each service owns its data. Achieving transactions across multiple services isn&amp;rsquo;t as straightforward as with a single monolithic database.&#xA;One way to address this challenge is through sagas, which simulate distributed transactions using a series of local transactions. This approach was popularized by Chris Richardson and later analyzed by Mark Richards and Neal Ford in their book &amp;lsquo;Sotware Architecture: The Hard Parts&amp;rsquo;.&#xA;They examined how these factors affect saga characteristics:</description>
+      <guid>https://mkabdelrahman.github.io/posts/saga-epic/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;https://mkabdelrahman.github.io/images/saga/epic-saga.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;When we transition to microservices, each service owns its data. Achieving transactions across multiple services isn&amp;rsquo;t as straightforward as with a single monolithic database.&lt;/p&gt;&#xA;&lt;p&gt;One way to address this challenge is through sagas, which simulate distributed transactions using a series of local transactions. This approach was popularized by Chris Richardson and later analyzed by Mark Richards and Neal Ford in their book &amp;lsquo;Sotware Architecture: The Hard Parts&amp;rsquo;.&lt;/p&gt;&#xA;&lt;p&gt;They examined how these factors affect saga characteristics:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

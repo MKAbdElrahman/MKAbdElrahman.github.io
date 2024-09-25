@@ -16,8 +16,9 @@
 <meta name="description" content="Unlike other fields of science and engineering, software engineering is replete with terms that describe the same or very similar concepts. Often, these terms are created to distinguish themselves from other concepts, inadvertently obscuring their true nature and strong interrelations.
 One of these terms is the &ldquo;layered and modular monolith.&rdquo;
 Other similar concepts include Clean Architecture, Onion Architecture, Ports and Adapters, and Hexagonal Architecture&hellip;
-For someone new to software development, this can be very intimidating.">
+For someone new to software development, this can be very intimidating. I felt the same way when I started.">
 <meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
 
 
   <meta name="twitter:card" content="summary">
@@ -25,7 +26,7 @@ For someone new to software development, this can be very intimidating.">
   <meta name="twitter:description" content="Unlike other fields of science and engineering, software engineering is replete with terms that describe the same or very similar concepts. Often, these terms are created to distinguish themselves from other concepts, inadvertently obscuring their true nature and strong interrelations.
 One of these terms is the “layered and modular monolith.”
 Other similar concepts include Clean Architecture, Onion Architecture, Ports and Adapters, and Hexagonal Architecture…
-For someone new to software development, this can be very intimidating.">
+For someone new to software development, this can be very intimidating. I felt the same way when I started.">
 
 <meta property="og:url" content="http://localhost:1313/posts/layered-and-modular-monolith-boundaries/">
   <meta property="og:site_name" content="Mohamed Kamal">
@@ -33,7 +34,7 @@ For someone new to software development, this can be very intimidating.">
   <meta property="og:description" content="Unlike other fields of science and engineering, software engineering is replete with terms that describe the same or very similar concepts. Often, these terms are created to distinguish themselves from other concepts, inadvertently obscuring their true nature and strong interrelations.
 One of these terms is the “layered and modular monolith.”
 Other similar concepts include Clean Architecture, Onion Architecture, Ports and Adapters, and Hexagonal Architecture…
-For someone new to software development, this can be very intimidating.">
+For someone new to software development, this can be very intimidating. I felt the same way when I started.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -47,7 +48,9 @@ For someone new to software development, this can be very intimidating.">
 <link rel="canonical" href="http://localhost:1313/posts/layered-and-modular-monolith-boundaries/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
@@ -101,7 +104,7 @@ For someone new to software development, this can be very intimidating.">
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -109,27 +112,29 @@ For someone new to software development, this can be very intimidating.">
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
       Mohamed Kamal
     </a>
     
+    
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Blog</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">Contact me</a>
+              <a class="navigation-link " href="/contact/">Contact me</a>
             </li>
           
         
@@ -155,23 +160,23 @@ For someone new to software development, this can be very intimidating.">
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2024-06-18T00:00:00Z">
                 June 18, 2024
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
               2-minute read
             </span>
           </div>
           
           <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
     <a href="/categories/technology/">Technology</a></div>
 
           <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/architecture-style/">Architecture Style</a>
     </span></div>
@@ -203,6 +208,9 @@ For someone new to software development, this can be very intimidating.">
         
         
         
+        
+        
+
         
         
       </footer>
@@ -243,9 +251,10 @@ For someone new to software development, this can be very intimidating.">
 
 
   
+
   
 
-
+  
 
   
 
