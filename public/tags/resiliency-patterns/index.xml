@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resiliency Patterns on Mohamed Abdelrahman</title>
+    <link>https://mkabdelrahman.github.io/tags/resiliency-patterns/</link>
+    <description>Recent content in Resiliency Patterns on Mohamed Abdelrahman</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 31 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/tags/resiliency-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Circuit Breaker Pattern in Go</title>
+      <link>https://mkabdelrahman.github.io/posts/circuit-breaker/</link>
+      <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/circuit-breaker/</guid>
+      <description>&lt;p&gt;The Circuit Breaker pattern helps protect services from cascading failures when they need to communicate over a network. Here’s how it works:&lt;/p&gt;&#xA;&lt;p&gt;Imagine &lt;strong&gt;Service A&lt;/strong&gt; needs to send requests to &lt;strong&gt;Service B&lt;/strong&gt;. If &lt;strong&gt;Service B&lt;/strong&gt; is down or not responding, continuing to send requests could make the issue worse. Service A might also be relied upon by other services (&lt;strong&gt;Service C, D, F&lt;/strong&gt;), so a failure in Service B could trigger a chain reaction of failures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

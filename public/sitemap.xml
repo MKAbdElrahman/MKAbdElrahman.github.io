@@ -2,16 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mkabdelrahman.github.io/tags/go/</loc>
+    <lastmod>2024-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/</loc>
+    <lastmod>2024-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/</loc>
+    <lastmod>2024-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/resiliency-patterns/</loc>
+    <lastmod>2024-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/tags/</loc>
+    <lastmod>2024-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mkabdelrahman.github.io/posts/circuit-breaker/</loc>
+    <lastmod>2024-10-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mkabdelrahman.github.io/categories/</loc>
     <lastmod>2024-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/categories/microservices/</loc>
-    <lastmod>2024-07-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/</loc>
-    <lastmod>2024-07-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/posts/</loc>
     <lastmod>2024-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/categories/saga/</loc>
@@ -24,9 +36,6 @@
     <lastmod>2024-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/categories/software-architecture/</loc>
-    <lastmod>2024-07-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/</loc>
     <lastmod>2024-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/posts/saga-epic/</loc>
@@ -147,9 +156,6 @@
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/tags/context/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mkabdelrahman.github.io/tags/go/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mkabdelrahman.github.io/series/go-context-package/</loc>
