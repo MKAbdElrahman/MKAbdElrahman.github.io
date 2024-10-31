@@ -26,7 +26,6 @@ Separating network concerns from business logic keeps your code simpler and more
 
 Let's walk through implementing a Circuit Breaker step-by-step in Go. Each step will introduce a new concept so we can build a fully functional Circuit Breaker incrementally.
 
----
 
 ### Step 1: Define the Basic Circuit Breaker Wrapper
 
@@ -73,7 +72,6 @@ func WrapWithBreaker(f RPCCaller, threshold int) RPCCaller {
 
 The `failures` variable will count consecutive failed attempts, and `lastAttempt` will record the timestamp of the most recent attempt. We’ll use these to decide when to "open" the circuit and prevent further calls if failures exceed the threshold.
 
----
 
 ### Step 3: Implement the Circuit Breaker Logic
 

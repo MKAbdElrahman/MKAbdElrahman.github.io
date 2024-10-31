@@ -201,7 +201,6 @@ Imagine Service A needs to send requests to Service B. If Service B is down or n
 <p>In Go, the Circuit Breaker fits well with the language’s philosophy of making network-related issues explicit and handling them in code rather than through hidden components.</p>
 <p>Separating network concerns from business logic keeps your code simpler and more reusable. We’ll wrap our RPC methods with Circuit Breaker logic so that concurrency and error-handling remain outside the business logic.</p>
 <p>Let&rsquo;s walk through implementing a Circuit Breaker step-by-step in Go. Each step will introduce a new concept so we can build a fully functional Circuit Breaker incrementally.</p>
-<hr>
 <h3 id="step-1-define-the-basic-circuit-breaker-wrapper">
   Step 1: Define the Basic Circuit Breaker Wrapper
   <a class="heading-link" href="#step-1-define-the-basic-circuit-breaker-wrapper">
@@ -244,7 +243,6 @@ Imagine Service A needs to send requests to Service B. If Service B is down or n
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>The <code>failures</code> variable will count consecutive failed attempts, and <code>lastAttempt</code> will record the timestamp of the most recent attempt. We’ll use these to decide when to &ldquo;open&rdquo; the circuit and prevent further calls if failures exceed the threshold.</p>
-<hr>
 <h3 id="step-3-implement-the-circuit-breaker-logic">
   Step 3: Implement the Circuit Breaker Logic
   <a class="heading-link" href="#step-3-implement-the-circuit-breaker-logic">
