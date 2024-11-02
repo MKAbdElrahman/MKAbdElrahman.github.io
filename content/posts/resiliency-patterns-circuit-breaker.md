@@ -1,5 +1,5 @@
 ---
-title: "The Circuit Breaker Pattern in Go"
+title: "Resiliency Patterns: Implementing The Circuit Breaker Pattern in Go"
 date: "2024-10-31"
 description: ""
 tags: [Go, Resiliency Patterns]
