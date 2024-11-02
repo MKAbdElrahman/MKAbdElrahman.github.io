@@ -2,45 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Mohamed Abdelrahman</title>
-    <link>https://mkabdelrahman.github.io/tags/go/</link>
+    <link>http://localhost:1313/tags/go/</link>
     <description>Recent content in Go on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Dependency Injection Framework is Against Go Philosophy</title>
+      <link>http://localhost:1313/posts/go-dependancy-injection/</link>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/go-dependancy-injection/</guid>
+      <description>&lt;p&gt;If you’re a Java or .NET developer, you’re probably used to dependency injection being a core idea in web frameworks. Let&amp;rsquo;s first clarify what dependency injection is: it’s simply the practice of passing dependencies as arguments. If an object requires services from another object, instead of hardwiring it, you inject it through a factory method, constructor, or even a setter method. In Go, we don’t have constructors, and setting dependencies through setters is generally discouraged in most cases. Typically, we’ll have something like this:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Resiliency Patterns: Implemeting The Retry Pattern in Go</title>
-      <link>https://mkabdelrahman.github.io/posts/resiliency-patterns-retry/</link>
+      <link>http://localhost:1313/posts/resiliency-patterns-retry/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/resiliency-patterns-retry/</guid>
+      <guid>http://localhost:1313/posts/resiliency-patterns-retry/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Suppose service A needs to send a request to service B.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;If service B is unavailable, or requests are timing out due to high load or congestion, or if there’s an issue with the network that caused the request to fail, retrying the request might make sense—provided the operation is idempotent (can be retried without changing the result).&lt;/p&gt;&#xA;&lt;p&gt;To implement a retry algorithm effectively, we need to consider:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;When to stop retrying?&lt;/li&gt;&#xA;&lt;li&gt;How long to wait between retries?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;When to Stop Retrying?&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Resiliency Patterns: Implementing The Circuit Breaker Pattern in Go</title>
-      <link>https://mkabdelrahman.github.io/posts/resiliency-patterns-circuit-breaker/</link>
+      <link>http://localhost:1313/posts/resiliency-patterns-circuit-breaker/</link>
       <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/resiliency-patterns-circuit-breaker/</guid>
+      <guid>http://localhost:1313/posts/resiliency-patterns-circuit-breaker/</guid>
       <description>&lt;p&gt;The Circuit Breaker pattern helps protect services from cascading failures when they need to communicate over a network. Here’s how it works:&lt;/p&gt;&#xA;&lt;p&gt;Imagine &lt;strong&gt;Service A&lt;/strong&gt; needs to send requests to &lt;strong&gt;Service B&lt;/strong&gt;. If &lt;strong&gt;Service B&lt;/strong&gt; is down or not responding, continuing to send requests could make the issue worse. Service A might also be relied upon by other services (&lt;strong&gt;Service C, D, F&lt;/strong&gt;), so a failure in Service B could trigger a chain reaction of failures.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Go Context Package: Cause-aware Context Cancellation</title>
-      <link>https://mkabdelrahman.github.io/posts/cause/</link>
+      <link>http://localhost:1313/posts/cause/</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/cause/</guid>
+      <guid>http://localhost:1313/posts/cause/</guid>
       <description>&lt;p&gt;The context package in Go has recently introduced  cause-aware context cancellation functions. This update includes the &lt;code&gt;WithCancelCause&lt;/code&gt;, &lt;code&gt;WithDeadlineCause&lt;/code&gt;, and &lt;code&gt;WithTimeoutCause&lt;/code&gt; functions, as well as the &lt;code&gt;Cause&lt;/code&gt; function for retrieving the cause of context cancellation.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;WithCancelCause&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;parent&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ctx&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;cancel&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CancelCauseFunc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function is analogous to &lt;code&gt;WithCancel&lt;/code&gt;, but it returns a &lt;code&gt;CancelCauseFunc&lt;/code&gt; that allows setting an error as the cause of cancellation.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;WithDeadlineCause&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;parent&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;cause&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CancelFunc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Combining features of &lt;code&gt;WithDeadline&lt;/code&gt; with the ability to provide a cause for context cancellation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Simplify Configuration Management in Go with the &#39;conf&#39; Package</title>
-      <link>https://mkabdelrahman.github.io/posts/go-conf-pkg/</link>
+      <link>http://localhost:1313/posts/go-conf-pkg/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/go-conf-pkg/</guid>
+      <guid>http://localhost:1313/posts/go-conf-pkg/</guid>
       <description>&lt;p&gt;The &amp;ldquo;conf&amp;rdquo; package is designed to make configuration management in Go straightforward and flexible. It allows you to define your application&amp;rsquo;s configuration as a struct and then parse it for both environment variables and command-line arguments. This approach makes it easy to handle different configuration sources, and the package provides a variety of customization options through struct tags.&lt;/p&gt;&#xA;&lt;p&gt;First, you need to install the &amp;ldquo;conf&amp;rdquo; package:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get github.com/ardanlabs/conf/v3&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Define a struct that represents your application&amp;rsquo;s configuration. You can use struct tags to specify default values, environment variable names, and other options.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding Go&#39;s init Functions: Best Practices and Common Misuses</title>
-      <link>https://mkabdelrahman.github.io/posts/go-init-functions/</link>
+      <link>http://localhost:1313/posts/go-init-functions/</link>
       <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/go-init-functions/</guid>
+      <guid>http://localhost:1313/posts/go-init-functions/</guid>
       <description>&lt;p&gt;In Go, &lt;code&gt;init&lt;/code&gt; functions play a crucial role in package initialization. They are used to set up the initial state of your application, and their behavior can be both powerful and tricky to manage. In this blog post, we&amp;rsquo;ll delve into the concept of &lt;code&gt;init&lt;/code&gt; functions, their use cases, execution order, and common pitfalls.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-init-functions&#34;&gt;&#xA;  What Are &lt;code&gt;init&lt;/code&gt; Functions?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-are-init-functions&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In Go, an &lt;code&gt;init&lt;/code&gt; function is a special type of function used for package-level initialization. When a package is imported, the constant and variable declarations within the package are evaluated. After that, the &lt;code&gt;init&lt;/code&gt; functions are executed. Here&amp;rsquo;s a simple example to illustrate:&lt;/p&gt;</description>
     </item>
   </channel>

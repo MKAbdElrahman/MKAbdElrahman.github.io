@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Observability on Mohamed Abdelrahman</title>
-    <link>https://mkabdelrahman.github.io/categories/observability/</link>
+    <link>http://localhost:1313/categories/observability/</link>
     <description>Recent content in Observability on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 16 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/categories/observability/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/observability/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Observability: Introduction</title>
-      <link>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</link>
+      <link>http://localhost:1313/posts/opentelemetry-part-1/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/opentelemetry-part-1/</guid>
+      <guid>http://localhost:1313/posts/opentelemetry-part-1/</guid>
       <description>&lt;p&gt;Observability is the ability to understand the internal workings of a system by examining the signals it emits externally. This means you can gain insights into the system&amp;rsquo;s health and performance without needing to directly access its internal components.&lt;/p&gt;&#xA;&lt;p&gt;There are several reasons why observability is important. It allows you to troubleshoot problems more effectively by providing you with the data you need to identify the root cause of issues. It also enables you to answer questions about how your system is behaving and to proactively identify potential problems before they occur. This allows you to perform preventative maintenance and avoid outages.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Observability: Introduction to OpenTelemetry</title>
-      <link>https://mkabdelrahman.github.io/posts/open-telemetry-part2/</link>
+      <link>http://localhost:1313/posts/open-telemetry-part2/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/open-telemetry-part2/</guid>
+      <guid>http://localhost:1313/posts/open-telemetry-part2/</guid>
       <description>&lt;h2 id=&#34;opentelemetry-a-standardized-approach-to-observability&#34;&gt;&#xA;  OpenTelemetry: A Standardized Approach to Observability&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#opentelemetry-a-standardized-approach-to-observability&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;OpenTelemetry (OTel for short) simplifies how you gain insights into your applications&amp;rsquo; health and performance. It&amp;rsquo;s an observability framework that provides a consistent way to:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Instrument your applications:&lt;/strong&gt; Regardless of the programming language, OTel offers language-specific libraries and APIs to streamline this process.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Generate telemetry data:&lt;/strong&gt; This data comes in three forms: metrics (numerical data), logs (event messages), and traces (which track request journeys).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Collect the data:&lt;/strong&gt; OTel acts as a central hub for gathering telemetry data from your applications.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Export the data:&lt;/strong&gt; You can choose the observability backend (analysis platform) that best suits your needs, thanks to OTel&amp;rsquo;s vendor neutrality.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;why-use-opentelemetry&#34;&gt;&#xA;  Why Use OpenTelemetry?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why-use-opentelemetry&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s what makes OTel so powerful:&lt;/p&gt;</description>
     </item>
   </channel>
