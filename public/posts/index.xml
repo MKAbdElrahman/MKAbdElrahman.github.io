@@ -10,9 +10,9 @@
     <atom:link href="https://mkabdelrahman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Resiliency Patterns: Implemeting The Retry Pattern in Go</title>
-      <link>https://mkabdelrahman.github.io/posts/reseilieny-patterns-retry/</link>
+      <link>https://mkabdelrahman.github.io/posts/resiliency-patterns-retry/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/reseilieny-patterns-retry/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/resiliency-patterns-retry/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Suppose service A needs to send a request to service B.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;If service B is unavailable, or requests are timing out due to high load or congestion, or if there’s an issue with the network that caused the request to fail, retrying the request might make sense—provided the operation is idempotent (can be retried without changing the result).&lt;/p&gt;&#xA;&lt;p&gt;To implement a retry algorithm effectively, we need to consider:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;When to stop retrying?&lt;/li&gt;&#xA;&lt;li&gt;How long to wait between retries?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;When to Stop Retrying?&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
