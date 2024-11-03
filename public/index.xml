@@ -6,8 +6,15 @@
     <description>Recent content on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resiliency Patterns: Implemeting The Load Shedding Pattern in Go</title>
+      <link>http://localhost:1313/posts/resiliency-patterns-load-shedding/</link>
+      <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/resiliency-patterns-load-shedding/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Suppose your web service is experiencing a surge in traffic.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;When the load increases beyond what your service can handle, it can lead to slow responses, timeouts, and ultimately crashes. Load shedding allows your service to selectively drop requests when the load is too high. A targeted approach can also be used, where only low-priority requests are dropped, preserving capacity for critical requests.&lt;/p&gt;&#xA;&lt;p&gt;To effectively implement load shedding, you need to establish a mechanism to continuously monitor relevant control signals. Common control signals include:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>A Dependency Injection Framework is Against Go Philosophy</title>
       <link>http://localhost:1313/posts/go-dependancy-injection/</link>

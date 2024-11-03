@@ -16,6 +16,13 @@
       <description>&lt;p&gt;If you’re a Java or .NET developer, you’re probably used to dependency injection being a core idea in web frameworks. Let&amp;rsquo;s first clarify what dependency injection is: it’s simply the practice of passing dependencies as arguments. If an object requires services from another object, instead of hardwiring it, you inject it through a factory method, constructor, or even a setter method. In Go, we don’t have constructors, and setting dependencies through setters is generally discouraged in most cases. Typically, we’ll have something like this:&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Resiliency Patterns: Implemeting The Load Shedding Pattern in Go</title>
+      <link>http://localhost:1313/posts/resiliency-patterns-load-shedding/</link>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/resiliency-patterns-load-shedding/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Suppose your web service is experiencing a surge in traffic.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;When the load increases beyond what your service can handle, it can lead to slow responses, timeouts, and ultimately crashes. Load shedding allows your service to selectively drop requests when the load is too high. A targeted approach can also be used, where only low-priority requests are dropped, preserving capacity for critical requests.&lt;/p&gt;&#xA;&lt;p&gt;To effectively implement load shedding, you need to establish a mechanism to continuously monitor relevant control signals. Common control signals include:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Resiliency Patterns: Implemeting The Retry Pattern in Go</title>
       <link>http://localhost:1313/posts/resiliency-patterns-retry/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
