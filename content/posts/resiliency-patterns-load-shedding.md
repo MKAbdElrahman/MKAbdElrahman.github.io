@@ -1,6 +1,6 @@
 
 ---
-title: "Resiliency Patterns: Implemeting The Load Shedding Pattern in Go"
+title: "Resiliency Patterns: Implementing The Load Shedding Pattern in Go"
 date: "2024-11-03"
 description: ""
 tags: [Go, Resiliency Patterns]
