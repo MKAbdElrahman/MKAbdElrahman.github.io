@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mohamed Abdelrahman</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://mkabdelrahman.github.io/tags/</link>
     <description>Recent content in Tags on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Architecture</title>
-      <link>http://localhost:1313/tags/architecture/</link>
-      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/architecture/</guid>
+      <link>https://mkabdelrahman.github.io/tags/architecture/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>http://localhost:1313/tags/go/</link>
-      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/go/</guid>
+      <link>https://mkabdelrahman.github.io/tags/go/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/tags/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Resiliency Patterns</title>
-      <link>http://localhost:1313/tags/resiliency-patterns/</link>
-      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/resiliency-patterns/</guid>
+      <link>https://mkabdelrahman.github.io/tags/resiliency-patterns/</link>
+      <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/tags/resiliency-patterns/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Architecture</title>
-      <link>http://localhost:1313/tags/software-architecture/</link>
+      <link>https://mkabdelrahman.github.io/tags/software-architecture/</link>
       <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/software-architecture/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/software-architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Event-Driven Architecture</title>
-      <link>http://localhost:1313/tags/event-driven-architecture/</link>
+      <link>https://mkabdelrahman.github.io/tags/event-driven-architecture/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/event-driven-architecture/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/event-driven-architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Distrubuted Systems</title>
-      <link>http://localhost:1313/tags/distrubuted-systems/</link>
+      <link>https://mkabdelrahman.github.io/tags/distrubuted-systems/</link>
       <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/distrubuted-systems/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/distrubuted-systems/</guid>
       <description></description>
     </item>
     <item>
       <title>Architecture Style</title>
-      <link>http://localhost:1313/tags/architecture-style/</link>
+      <link>https://mkabdelrahman.github.io/tags/architecture-style/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/architecture-style/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/architecture-style/</guid>
       <description></description>
     </item>
     <item>
       <title>Microservices</title>
-      <link>http://localhost:1313/tags/microservices/</link>
+      <link>https://mkabdelrahman.github.io/tags/microservices/</link>
       <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/microservices/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/microservices/</guid>
       <description></description>
     </item>
     <item>
       <title>Concurrecny</title>
-      <link>http://localhost:1313/tags/concurrecny/</link>
+      <link>https://mkabdelrahman.github.io/tags/concurrecny/</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/concurrecny/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/concurrecny/</guid>
       <description></description>
     </item>
     <item>
       <title>Context</title>
-      <link>http://localhost:1313/tags/context/</link>
+      <link>https://mkabdelrahman.github.io/tags/context/</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/context/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/context/</guid>
       <description></description>
     </item>
     <item>
       <title>Conf</title>
-      <link>http://localhost:1313/tags/conf/</link>
+      <link>https://mkabdelrahman.github.io/tags/conf/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/conf/</guid>
+      <guid>https://mkabdelrahman.github.io/tags/conf/</guid>
       <description></description>
     </item>
   </channel>

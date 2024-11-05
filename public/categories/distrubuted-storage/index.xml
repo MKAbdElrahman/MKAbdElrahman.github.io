@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Distrubuted Storage on Mohamed Abdelrahman</title>
-    <link>http://localhost:1313/categories/distrubuted-storage/</link>
+    <link>https://mkabdelrahman.github.io/categories/distrubuted-storage/</link>
     <description>Recent content in Distrubuted Storage on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/distrubuted-storage/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mkabdelrahman.github.io/categories/distrubuted-storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Quorums Ensure Agreement in Distributed Systems</title>
-      <link>http://localhost:1313/posts/majority-quorum/</link>
+      <link>https://mkabdelrahman.github.io/posts/majority-quorum/</link>
       <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/majority-quorum/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/majority-quorum/</guid>
       <description>&lt;p&gt;In distributed systems, where tasks are spread across multiple interconnected machines, quorums provide a fundamental mechanism for ensuring data consistency and system-wide agreement. In essence, a quorum is a minimum number of nodes (machines) that must agree on an operation for it to be valid.  Think of it like a voting threshold. An update to a database or the election of a leader in a cluster – these actions only happen if a designated group (the quorum) participates and reaches a consensus.  The size of this quorum is strategically chosen, often as a majority of the available nodes. This is represented by the formula:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sharding: A Coffee Shop Analogy</title>
-      <link>http://localhost:1313/posts/sharding/</link>
+      <link>https://mkabdelrahman.github.io/posts/sharding/</link>
       <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sharding/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/sharding/</guid>
       <description>&lt;p&gt;Remember our last blog post where we tamed the rush of order requests with a team of baristas dedicated to just reading orders? Well, get ready for another challenge! Our beloved coffee shop is brewing with excitement thanks to new customers and delicious new drinks. This means a flood of updates and sign-ups, and our trusty &amp;ldquo;master barista&amp;rdquo; who handles all these changes is feeling the pressure.&lt;/p&gt;&#xA;&lt;p&gt;Just like throwing more baristas at a long line wouldn&amp;rsquo;t be the smartest idea, we need a well-thought-out plan to tackle this avalanche of updates. In this post, we&amp;rsquo;ll explore two main ways to improve our service – making our master barista stronger and spreading the work around. We&amp;rsquo;ll explain everything using the fun example of our coffee shop.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Replication Topologies for Scaling: A Coffee Shop Analogy</title>
-      <link>http://localhost:1313/posts/replication-toplogies/</link>
+      <link>https://mkabdelrahman.github.io/posts/replication-toplogies/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/replication-toplogies/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/replication-toplogies/</guid>
       <description>&lt;p&gt;Following the coffe shop analogy in the previous blog post, the coffee shop is booming, and you need to expand your team to handle the growing customer base. But simply adding more baristas isn&amp;rsquo;t enough. You need a well-organized system to ensure smooth operations, quick recovery from unexpected situations, and efficient storage of customer preferences. This is where replication topologies come in – different ways to structure your team of baristas and order pads (replicas) to achieve specific goals.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Replication and Sharding: A Coffee Shop Analogy</title>
-      <link>http://localhost:1313/posts/replication-and-sharding/</link>
+      <link>https://mkabdelrahman.github.io/posts/replication-and-sharding/</link>
       <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/replication-and-sharding/</guid>
-      <description>&lt;h2 id=&#34;setting-the-stage-for-distributed-storage&#34;&gt;&#xA;  Setting the Stage for Distributed Storage&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#setting-the-stage-for-distributed-storage&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;single master database&#34; src=&#34;http://localhost:1313/images/2-single-master-db.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Non-distributed Storage (Single-Master System):&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Imagine your favorite local coffee shop. Keeping track of customer preferences on a simple notepad (single-server database) is a breeze. New entries are readily added, and the system is clear-cut. However, as the shop&amp;rsquo;s popularity explodes, the notepad becomes a bottleneck.&lt;/p&gt;&#xA;&lt;h2 id=&#34;read-replication&#34;&gt;&#xA;  Read Replication&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#read-replication&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;read replication&#34; src=&#34;http://localhost:1313/images/read-replication.png&#34;&gt;&#xA;&lt;strong&gt;Read Replication:&lt;/strong&gt;&lt;/p&gt;</description>
+      <guid>https://mkabdelrahman.github.io/posts/replication-and-sharding/</guid>
+      <description>&lt;h2 id=&#34;setting-the-stage-for-distributed-storage&#34;&gt;&#xA;  Setting the Stage for Distributed Storage&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#setting-the-stage-for-distributed-storage&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;single master database&#34; src=&#34;https://mkabdelrahman.github.io/images/2-single-master-db.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Non-distributed Storage (Single-Master System):&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Imagine your favorite local coffee shop. Keeping track of customer preferences on a simple notepad (single-server database) is a breeze. New entries are readily added, and the system is clear-cut. However, as the shop&amp;rsquo;s popularity explodes, the notepad becomes a bottleneck.&lt;/p&gt;&#xA;&lt;h2 id=&#34;read-replication&#34;&gt;&#xA;  Read Replication&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#read-replication&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;read replication&#34; src=&#34;https://mkabdelrahman.github.io/images/read-replication.png&#34;&gt;&#xA;&lt;strong&gt;Read Replication:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

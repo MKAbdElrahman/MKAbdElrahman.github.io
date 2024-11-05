@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kafka on Mohamed Abdelrahman</title>
-    <link>http://localhost:1313/categories/kafka/</link>
+    <link>https://mkabdelrahman.github.io/categories/kafka/</link>
     <description>Recent content in Kafka on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/kafka/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mkabdelrahman.github.io/categories/kafka/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kafka Fundamentals: APIs, Topics and Partitions</title>
-      <link>http://localhost:1313/posts/kafka-fundamentals-part1/</link>
+      <link>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kafka-fundamentals-part1/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</guid>
       <description>&lt;p&gt;Kafka is an event streaming platform designed to handle massive volumes of real-time data efficiently. At its core lies a distributed storage system built for scalability, ensuring it can seamlessly accommodate ever-growing data demands.&lt;/p&gt;&#xA;&lt;p&gt;This distributed nature allows Kafka to function as a cluster of machines, each playing a role in storing the data stream. This approach offers significant advantages:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scalability:&lt;/strong&gt; As data volumes increase, additional nodes can be added to the cluster, effectively distributing the storage burden and ensuring smooth operation.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fault Tolerance:&lt;/strong&gt; If a node fails, the data remains accessible because it&amp;rsquo;s replicated across multiple nodes. This redundancy guarantees high availability and protects against data loss.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Data flows through Kafka using a publish-subscribe model centered around two key APIs:&lt;/p&gt;</description>
     </item>
   </channel>

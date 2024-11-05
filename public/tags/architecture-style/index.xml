@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture Style on Mohamed Abdelrahman</title>
-    <link>http://localhost:1313/tags/architecture-style/</link>
+    <link>https://mkabdelrahman.github.io/tags/architecture-style/</link>
     <description>Recent content in Architecture Style on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/architecture-style/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mkabdelrahman.github.io/tags/architecture-style/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kafka Fundamentals: APIs, Topics and Partitions</title>
-      <link>http://localhost:1313/posts/kafka-fundamentals-part1/</link>
+      <link>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kafka-fundamentals-part1/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/kafka-fundamentals-part1/</guid>
       <description>&lt;p&gt;Kafka is an event streaming platform designed to handle massive volumes of real-time data efficiently. At its core lies a distributed storage system built for scalability, ensuring it can seamlessly accommodate ever-growing data demands.&lt;/p&gt;&#xA;&lt;p&gt;This distributed nature allows Kafka to function as a cluster of machines, each playing a role in storing the data stream. This approach offers significant advantages:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scalability:&lt;/strong&gt; As data volumes increase, additional nodes can be added to the cluster, effectively distributing the storage burden and ensuring smooth operation.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fault Tolerance:&lt;/strong&gt; If a node fails, the data remains accessible because it&amp;rsquo;s replicated across multiple nodes. This redundancy guarantees high availability and protects against data loss.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Data flows through Kafka using a publish-subscribe model centered around two key APIs:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Microkernel Architecture (Plug-in Architecture)</title>
-      <link>http://localhost:1313/posts/microkernel/</link>
+      <link>https://mkabdelrahman.github.io/posts/microkernel/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/microkernel/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;layered architecture style&#34; src=&#34;http://localhost:1313/images/The-microkernel-architecture-pattern.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Microkernel architecture is an architecural style where a minimal core system (the microkernel) handles generic or stable domain tasks.  Other functionalities are provided by pluggable modules and communicate with the core system through well-defined interfaces.&lt;/p&gt;&#xA;&lt;p&gt;You might encounter it in familiar applications:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Web Browser Extensions:&lt;/strong&gt;  Many web browsers allow you to install extensions that add new functionality. These extensions act as plug-ins, extending the core features of the browser without modifying its core code.&lt;/p&gt;</description>
+      <guid>https://mkabdelrahman.github.io/posts/microkernel/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;layered architecture style&#34; src=&#34;https://mkabdelrahman.github.io/images/The-microkernel-architecture-pattern.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Microkernel architecture is an architecural style where a minimal core system (the microkernel) handles generic or stable domain tasks.  Other functionalities are provided by pluggable modules and communicate with the core system through well-defined interfaces.&lt;/p&gt;&#xA;&lt;p&gt;You might encounter it in familiar applications:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Web Browser Extensions:&lt;/strong&gt;  Many web browsers allow you to install extensions that add new functionality. These extensions act as plug-ins, extending the core features of the browser without modifying its core code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Layered Architecture Style</title>
-      <link>http://localhost:1313/posts/layered-architecture-style/</link>
+      <link>https://mkabdelrahman.github.io/posts/layered-architecture-style/</link>
       <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/layered-architecture-style/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;layered architecture style&#34; src=&#34;http://localhost:1313/images/layered-architecture-style.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The &lt;strong&gt;layered architecture&lt;/strong&gt; is a monolithic architectural style that organizes an application into &lt;strong&gt;horizontal layers&lt;/strong&gt;, each focused on &lt;strong&gt;distinct technical concerns&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Understanding the Terms:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Monolithic application:&lt;/strong&gt; The entire application is deployed as a single unit.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Distributed application:&lt;/strong&gt; Application components are split across different machines and communicate through a network.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Technical partitioning:&lt;/strong&gt; Application components are organized based on technical aspects like data access or user interface, rather than business domains.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Layers in the Layered Architecture:&lt;/strong&gt;&lt;/p&gt;</description>
+      <guid>https://mkabdelrahman.github.io/posts/layered-architecture-style/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;layered architecture style&#34; src=&#34;https://mkabdelrahman.github.io/images/layered-architecture-style.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The &lt;strong&gt;layered architecture&lt;/strong&gt; is a monolithic architectural style that organizes an application into &lt;strong&gt;horizontal layers&lt;/strong&gt;, each focused on &lt;strong&gt;distinct technical concerns&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Understanding the Terms:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Monolithic application:&lt;/strong&gt; The entire application is deployed as a single unit.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Distributed application:&lt;/strong&gt; Application components are split across different machines and communicate through a network.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Technical partitioning:&lt;/strong&gt; Application components are organized based on technical aspects like data access or user interface, rather than business domains.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Layers in the Layered Architecture:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title> Microservices:  Communication Styles</title>
-      <link>http://localhost:1313/posts/microservices-synchronus-communication/</link>
+      <link>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</link>
       <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/microservices-synchronus-communication/</guid>
-      <description>&lt;p&gt;A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Synchronous communication&lt;/li&gt;&#xA;&lt;li&gt;Asynchronous communication&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;synchronus-communication&#34;&gt;&#xA;  Synchronus Communication&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#synchronus-communication&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;synchronus-communication&#34; src=&#34;http://localhost:1313/images/synchronus-communication.png&#34;&gt;&#xA;In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work.&lt;/p&gt;</description>
+      <guid>https://mkabdelrahman.github.io/posts/microservices-synchronus-communication/</guid>
+      <description>&lt;p&gt;A communication style refers to the way microservices interact with each other to exchange information and complete tasks. There are two main communication styles:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Synchronous communication&lt;/li&gt;&#xA;&lt;li&gt;Asynchronous communication&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;synchronus-communication&#34;&gt;&#xA;  Synchronus Communication&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#synchronus-communication&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;synchronus-communication&#34; src=&#34;https://mkabdelrahman.github.io/images/synchronus-communication.png&#34;&gt;&#xA;In microservices architecture, synchronous communication is a method for services to interact with each other directly. It follows a request-response pattern, where one service sends a request to another and waits for a response before continuing. This is similar to how traditional client-server applications work.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

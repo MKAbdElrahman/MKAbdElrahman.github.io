@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture on Mohamed Abdelrahman</title>
-    <link>http://localhost:1313/tags/architecture/</link>
+    <link>https://mkabdelrahman.github.io/tags/architecture/</link>
     <description>Recent content in Architecture on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Organize Your Codebase in Go (No MVCs, Onions, or Hexagons...)</title>
+      <link>https://mkabdelrahman.github.io/posts/code-organization-go/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/code-organization-go/</guid>
+      <description>&lt;p&gt;Organizing code is all about how you break down your application logic into components, which typically translates to packages in Go. Early in my career, I was always searching for the “ideal” structure — where to put services, handlers, etc. There are countless articles out there recommending specific ways to organize code, each with its own approach.&lt;/p&gt;&#xA;&lt;p&gt;Deciding on a code structure is important, but it’s often done poorly. Developers can fall into the trap of overusing patterns encouraged by frameworks, applying them in contexts that may not be suitable. For instance, someone might choose Model-View-Controller (MVC) or Ports and Adapters, then feel pressured to arrange their code to fit that pattern just to satisfy the framework. This approach skips over the real challenge: decomposing your application logic into a set of cohesive, interacting components.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>A Dependency Injection Framework is Against Go Philosophy</title>
-      <link>http://localhost:1313/posts/go-dependancy-injection/</link>
+      <link>https://mkabdelrahman.github.io/posts/go-dependancy-injection/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/go-dependancy-injection/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/go-dependancy-injection/</guid>
       <description>&lt;p&gt;If you’re a Java or .NET developer, you’re probably used to dependency injection being a core idea in web frameworks. Let&amp;rsquo;s first clarify what dependency injection is: it’s simply the practice of passing dependencies as arguments. If an object requires services from another object, instead of hardwiring it, you inject it through a factory method, constructor, or even a setter method. In Go, we don’t have constructors, and setting dependencies through setters is generally discouraged in most cases. Typically, we’ll have something like this:&lt;/p&gt;</description>
     </item>
   </channel>
