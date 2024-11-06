@@ -1,11 +1,9 @@
-
 ---
-title: "Resiliency Patterns: Implementing The Load Shedding Pattern in Go"
-date: "2024-11-03"
-description: ""
-tags: [Go, Resiliency Patterns]
+title: "Resiliency Patterns: Implementing The Load Shedding Pattern in Go"  
+date: "2024-11-03"  
+description: ""  
+tags: [Go, Resiliency Patterns]  
 ---
-
 
 **Suppose your web service is experiencing a surge in traffic.**
 
@@ -14,18 +12,23 @@ When the load increases beyond what your service can handle, it can lead to slow
 To effectively implement load shedding, you need to establish a mechanism to continuously monitor relevant control signals. Common control signals include:
 
 - **Active Connections**: The current number of connections being handled by your server.
-- **CPU Usage**: The percentage of CPU resources being utilized.
-- **Memory Usage**: The amount of memory currently in use.
-- **Average Request Latency**: The time taken to process requests on average.
+- **Server Resources**: The percentage of CPU resources being utilized or the memory in use.
+
+Monitoring the number of active connections is simple, but the problem is that not all requests allocate the same amount of resources. It makes sense to monitor the load in production and determine a threshold, provided the load profile is expected to remain stable in the short term.
+
+Dynamic monitoring of server resources is useful when requests of unequal loads have similar probabilities of being triggered.
+
+**More on Prioritization**
+
+The criteria for dropping requests can differ. Sometimes, users with premium access should have their requests prioritized in critical situations, such as during high load. If all users are equal, we can prioritize some requests that require fewer resources but have higher strategic value.
 
 ## Implementation
 
-Load shedding is usually implemented as middleware, allowing you to intercept incoming requests and either accept or reject them.
+Load shedding is typically implemented as middleware, allowing you to intercept incoming requests and either accept or reject them.
 
 The `LoadSheddingMiddleware` function creates a middleware that drops requests based on active connection thresholds.
 
 ```go
-
 import (
 	"fmt"
 	"net/http"
@@ -45,15 +48,12 @@ func LoadSheddingMiddleware(maxActiveConnections int64) func(http.Handler) http.
 
 			// Increment active connections
 			atomic.AddInt64(&activeConnections, 1)
-			defer atomic.AddInt64(&activeConnections, -1) 
+			defer atomic.AddInt64(&activeConnections, -1)
 
-			next.ServeHTTP(w, r) 
+			next.ServeHTTP(w, r)
 		})
 	}
 }
 ```
 
-Thresholds like `maxActiveConnections` can be derived empirically from load testing. Other metrics, such as CPU utilization, can be used dynamically to avoid hard-coded server-specific thresholds. I've also seen more softer implementations where the fraction of dropped requests increases from 0 to 1 (complete drop) under extreme load. The observed metrics and drop-off strategy should ideally be based on monitoring server behavior in production rather than relying on pre-implemented algorithms that may not work effectively. 
-
-I hope I’ve touched on the key ideas so you can go ahead and implement your own load shedding solution!
-
+Instead of rejecting the request entirely, we could suggest to the user to retry later, or provide a partial result rather than a full response. This falls under the umbrella of graceful degradation, which we will discuss another time.

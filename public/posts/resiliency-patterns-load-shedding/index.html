@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   Resiliency Patterns: Implementing The Load Shedding Pattern in Go · Mohamed Abdelrahman
 </title>
@@ -26,7 +26,7 @@ To effectively implement load shedding, you need to establish a mechanism to con
 When the load increases beyond what your service can handle, it can lead to slow responses, timeouts, and ultimately crashes. Load shedding allows your service to selectively drop requests when the load is too high. A targeted approach can also be used, where only low-priority requests are dropped, preserving capacity for critical requests.
 To effectively implement load shedding, you need to establish a mechanism to continuously monitor relevant control signals. Common control signals include:">
 
-<meta property="og:url" content="https://mkabdelrahman.github.io/posts/resiliency-patterns-load-shedding/">
+<meta property="og:url" content="http://localhost:1313/posts/resiliency-patterns-load-shedding/">
   <meta property="og:site_name" content="Mohamed Abdelrahman">
   <meta property="og:title" content="Resiliency Patterns: Implementing The Load Shedding Pattern in Go">
   <meta property="og:description" content="Suppose your web service is experiencing a surge in traffic.
@@ -43,7 +43,7 @@ To effectively implement load shedding, you need to establish a mechanism to con
 
 
 
-<link rel="canonical" href="https://mkabdelrahman.github.io/posts/resiliency-patterns-load-shedding/">
+<link rel="canonical" href="http://localhost:1313/posts/resiliency-patterns-load-shedding/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -53,7 +53,7 @@ To effectively implement load shedding, you need to establish a mechanism to con
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
@@ -63,7 +63,7 @@ To effectively implement load shedding, you need to establish a mechanism to con
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
 
@@ -111,7 +111,7 @@ To effectively implement load shedding, you need to establish a mechanism to con
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://mkabdelrahman.github.io/">
+    <a class="navigation-title" href="http://localhost:1313/">
       Mohamed Abdelrahman
     </a>
     
@@ -150,7 +150,7 @@ To effectively implement load shedding, you need to establish a mechanism to con
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://mkabdelrahman.github.io/posts/resiliency-patterns-load-shedding/">
+            <a class="title-link" href="http://localhost:1313/posts/resiliency-patterns-load-shedding/">
               Resiliency Patterns: Implementing The Load Shedding Pattern in Go
             </a>
           </h1>
@@ -190,10 +190,12 @@ To effectively implement load shedding, you need to establish a mechanism to con
 <p>To effectively implement load shedding, you need to establish a mechanism to continuously monitor relevant control signals. Common control signals include:</p>
 <ul>
 <li><strong>Active Connections</strong>: The current number of connections being handled by your server.</li>
-<li><strong>CPU Usage</strong>: The percentage of CPU resources being utilized.</li>
-<li><strong>Memory Usage</strong>: The amount of memory currently in use.</li>
-<li><strong>Average Request Latency</strong>: The time taken to process requests on average.</li>
+<li><strong>Server Resources</strong>: The percentage of CPU resources being utilized or the memory in use.</li>
 </ul>
+<p>Monitoring the number of active connections is simple, but the problem is that not all requests allocate the same amount of resources. It makes sense to monitor the load in production and determine a threshold, provided the load profile is expected to remain stable in the short term.</p>
+<p>Dynamic monitoring of server resources is useful when requests of unequal loads have similar probabilities of being triggered.</p>
+<p><strong>More on Prioritization</strong></p>
+<p>The criteria for dropping requests can differ. Sometimes, users with premium access should have their requests prioritized in critical situations, such as during high load. If all users are equal, we can prioritize some requests that require fewer resources but have higher strategic value.</p>
 <h2 id="implementation">
   Implementation
   <a class="heading-link" href="#implementation">
@@ -201,10 +203,9 @@ To effectively implement load shedding, you need to establish a mechanism to con
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>Load shedding is usually implemented as middleware, allowing you to intercept incoming requests and either accept or reject them.</p>
+<p>Load shedding is typically implemented as middleware, allowing you to intercept incoming requests and either accept or reject them.</p>
 <p>The <code>LoadSheddingMiddleware</code> function creates a middleware that drops requests based on active connection thresholds.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">	<span class="s">&#34;fmt&#34;</span>
 </span></span><span class="line"><span class="cl">	<span class="s">&#34;net/http&#34;</span>
 </span></span><span class="line"><span class="cl">	<span class="s">&#34;sync/atomic&#34;</span>
@@ -223,14 +224,13 @@ To effectively implement load shedding, you need to establish a mechanism to con
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">			<span class="c1">// Increment active connections
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nx">atomic</span><span class="p">.</span><span class="nf">AddInt64</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">activeConnections</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">			<span class="k">defer</span> <span class="nx">atomic</span><span class="p">.</span><span class="nf">AddInt64</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">activeConnections</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">			<span class="k">defer</span> <span class="nx">atomic</span><span class="p">.</span><span class="nf">AddInt64</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">activeConnections</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">			<span class="nx">next</span><span class="p">.</span><span class="nf">ServeHTTP</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">r</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">			<span class="nx">next</span><span class="p">.</span><span class="nf">ServeHTTP</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">r</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="p">})</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Thresholds like <code>maxActiveConnections</code> can be derived empirically from load testing. Other metrics, such as CPU utilization, can be used dynamically to avoid hard-coded server-specific thresholds. I&rsquo;ve also seen more softer implementations where the fraction of dropped requests increases from 0 to 1 (complete drop) under extreme load. The observed metrics and drop-off strategy should ideally be based on monitoring server behavior in production rather than relying on pre-implemented algorithms that may not work effectively.</p>
-<p>I hope I’ve touched on the key ideas so you can go ahead and implement your own load shedding solution!</p>
+</span></span></code></pre></div><p>Instead of rejecting the request entirely, we could suggest to the user to retry later, or provide a partial result rather than a full response. This falls under the umbrella of graceful degradation, which we will discuss another time.</p>
 
       </div>
 
@@ -276,7 +276,7 @@ To effectively implement load shedding, you need to establish a mechanism to con
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   
