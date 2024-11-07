@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resiliency Patterns on Mohamed Abdelrahman</title>
-    <link>http://localhost:1313/tags/resiliency-patterns/</link>
+    <link>https://mkabdelrahman.github.io/tags/resiliency-patterns/</link>
     <description>Recent content in Resiliency Patterns on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/resiliency-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mkabdelrahman.github.io/tags/resiliency-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resiliency Patterns: Retry and Circuit Breaker, Intuition Behind Them and How they Work Together</title>
+      <link>https://mkabdelrahman.github.io/posts/resiliency-patterns-retry-circuit-breaker/</link>
+      <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mkabdelrahman.github.io/posts/resiliency-patterns-retry-circuit-breaker/</guid>
+      <description>&lt;p&gt;The purpose of this blog post to understand intituvely the retry and circuit breaker reseliency patterns. They are ofen involved to work around the unreliabilty of the network. Both are used to  handle error but differ in their  timescale. Mainly retrys are used to handle short term errors, those are errors that happen because of a netwrok glithch, the cause of the problem is expected to to be fixed in few seconds or less. Circuit Beakers is a smarter retry pattern. Here  the issue is expected to last for a long period of time, instead of hammering the server continously, we use smart strategy to probe its health instead of making the problem worse. May be the server is under high load and retrying only worsens the problem.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Resiliency Patterns: Implementing The Load Shedding Pattern in Go</title>
-      <link>http://localhost:1313/posts/resiliency-patterns-load-shedding/</link>
+      <link>https://mkabdelrahman.github.io/posts/resiliency-patterns-load-shedding/</link>
       <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/resiliency-patterns-load-shedding/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/resiliency-patterns-load-shedding/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Suppose your web service is experiencing a surge in traffic.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;When the load increases beyond what your service can handle, it can lead to slow responses, timeouts, and ultimately crashes. Load shedding allows your service to selectively drop requests when the load is too high. A targeted approach can also be used, where only low-priority requests are dropped, preserving capacity for critical requests.&lt;/p&gt;&#xA;&lt;p&gt;To effectively implement load shedding, you need to establish a mechanism to continuously monitor relevant control signals. Common control signals include:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Resiliency Patterns: Implemeting The Retry Pattern in Go</title>
-      <link>http://localhost:1313/posts/resiliency-patterns-retry/</link>
+      <link>https://mkabdelrahman.github.io/posts/resiliency-patterns-retry/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/resiliency-patterns-retry/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/resiliency-patterns-retry/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Suppose service A needs to send a request to service B.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;If service B is unavailable, or requests are timing out due to high load or congestion, or if there’s an issue with the network that caused the request to fail, retrying the request might make sense—provided the operation is idempotent (can be retried without changing the result).&lt;/p&gt;&#xA;&lt;p&gt;To implement a retry algorithm effectively, we need to consider:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;When to stop retrying?&lt;/li&gt;&#xA;&lt;li&gt;How long to wait between retries?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;When to Stop Retrying?&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Resiliency Patterns: Implementing The Circuit Breaker Pattern in Go</title>
-      <link>http://localhost:1313/posts/resiliency-patterns-circuit-breaker/</link>
+      <link>https://mkabdelrahman.github.io/posts/resiliency-patterns-circuit-breaker/</link>
       <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/resiliency-patterns-circuit-breaker/</guid>
+      <guid>https://mkabdelrahman.github.io/posts/resiliency-patterns-circuit-breaker/</guid>
       <description>&lt;p&gt;The Circuit Breaker pattern helps protect services from cascading failures when they need to communicate over a network. Here’s how it works:&lt;/p&gt;&#xA;&lt;p&gt;Imagine &lt;strong&gt;Service A&lt;/strong&gt; needs to send requests to &lt;strong&gt;Service B&lt;/strong&gt;. If &lt;strong&gt;Service B&lt;/strong&gt; is down or not responding, continuing to send requests could make the issue worse. Service A might also be relied upon by other services (&lt;strong&gt;Service C, D, F&lt;/strong&gt;), so a failure in Service B could trigger a chain reaction of failures.&lt;/p&gt;</description>
     </item>
   </channel>

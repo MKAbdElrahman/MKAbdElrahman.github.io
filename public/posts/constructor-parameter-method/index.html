@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>
   Coding Best Practices: The Constructor Parameter Method · Mohamed Abdelrahman
 </title>
@@ -66,7 +66,7 @@ This time, the focus is on passing parameters to the constructor to initialize t
 Here’s the first point:
 Directly assigning the parameters to the object isn’t safe. func NewPoint(x int, y int) Point{ return Point{ x: x, y: y, } } Creating a specific setter for each parameter might lead to code duplication across setters. func NewPoint(x int, y int) (*Point, error){ p := &amp;Point{ } err := p.setX(x) if err != nil { // handle error } } func (p *Point) setX(x int) error{ // validation - return error if validation fails p.x = x return nil } func (p *Point) setY(y int) error{ // validation - return error if validation fails p.y = y return nil } Here, the same validation logic is repeated in both setters.">
 
-<meta property="og:url" content="http://localhost:1313/posts/constructor-parameter-method/">
+<meta property="og:url" content="https://mkabdelrahman.github.io/posts/constructor-parameter-method/">
   <meta property="og:site_name" content="Mohamed Abdelrahman">
   <meta property="og:title" content="Coding Best Practices: The Constructor Parameter Method">
   <meta property="og:description" content="This is the third pattern discussed in the Smalltalk Patterns book. I found it difficult to understand Kent’s intention at first, but here’s my interpretation.
@@ -83,7 +83,7 @@ Directly assigning the parameters to the object isn’t safe. func NewPoint(x in
 
 
 
-<link rel="canonical" href="http://localhost:1313/posts/constructor-parameter-method/">
+<link rel="canonical" href="https://mkabdelrahman.github.io/posts/constructor-parameter-method/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -93,7 +93,7 @@ Directly assigning the parameters to the object isn’t safe. func NewPoint(x in
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -103,7 +103,7 @@ Directly assigning the parameters to the object isn’t safe. func NewPoint(x in
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -151,7 +151,7 @@ Directly assigning the parameters to the object isn’t safe. func NewPoint(x in
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://localhost:1313/">
+    <a class="navigation-title" href="https://mkabdelrahman.github.io/">
       Mohamed Abdelrahman
     </a>
     
@@ -190,7 +190,7 @@ Directly assigning the parameters to the object isn’t safe. func NewPoint(x in
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://localhost:1313/posts/constructor-parameter-method/">
+            <a class="title-link" href="https://mkabdelrahman.github.io/posts/constructor-parameter-method/">
               Coding Best Practices: The Constructor Parameter Method
             </a>
           </h1>
@@ -338,7 +338,7 @@ Directly assigning the parameters to the object isn’t safe. func NewPoint(x in
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
