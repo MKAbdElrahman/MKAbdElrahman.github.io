@@ -20,7 +20,16 @@ To implement a retry algorithm effectively, we need to consider:
 When to stop retrying?
 How long to wait between retries?
 
-When to Stop Retrying?">
+
+  When to Stop Retrying?
+  
+    
+    Link to heading
+  
+
+
+
+If the client times out the RPC call: In Go, the context object is used to propagate cancellation signals. We need to listen to the done channel and stop retrying if the request was cancelled.">
 <meta name="keywords" content="blog,developer,personal">
 <meta name="fediverse:creator" content="" />
 
@@ -30,7 +39,7 @@ When to Stop Retrying?">
   <meta name="twitter:description" content="Suppose service A needs to send a request to service B.
 If service B is unavailable, or requests are timing out due to high load or congestion, or if there’s an issue with the network that caused the request to fail, retrying the request might make sense—provided the operation is idempotent (can be retried without changing the result).
 To implement a retry algorithm effectively, we need to consider:
-When to stop retrying? How long to wait between retries? When to Stop Retrying?">
+When to stop retrying? How long to wait between retries? When to Stop Retrying? Link to heading If the client times out the RPC call: In Go, the context object is used to propagate cancellation signals. We need to listen to the done channel and stop retrying if the request was cancelled.">
 
 <meta property="og:url" content="https://mkabdelrahman.github.io/posts/resiliency-patterns-retry/">
   <meta property="og:site_name" content="Mohamed Abdelrahman">
@@ -38,7 +47,7 @@ When to stop retrying? How long to wait between retries? When to Stop Retrying?"
   <meta property="og:description" content="Suppose service A needs to send a request to service B.
 If service B is unavailable, or requests are timing out due to high load or congestion, or if there’s an issue with the network that caused the request to fail, retrying the request might make sense—provided the operation is idempotent (can be retried without changing the result).
 To implement a retry algorithm effectively, we need to consider:
-When to stop retrying? How long to wait between retries? When to Stop Retrying?">
+When to stop retrying? How long to wait between retries? When to Stop Retrying? Link to heading If the client times out the RPC call: In Go, the context object is used to propagate cancellation signals. We need to listen to the done channel and stop retrying if the request was cancelled.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -172,7 +181,7 @@ When to stop retrying? How long to wait between retries? When to Stop Retrying?"
             </span>
             <span class="reading-time">
               <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              5-minute read
+              6-minute read
             </span>
           </div>
           
@@ -199,9 +208,31 @@ When to stop retrying? How long to wait between retries? When to Stop Retrying?"
 <li>When to stop retrying?</li>
 <li>How long to wait between retries?</li>
 </ul>
-<p><strong>When to Stop Retrying?</strong></p>
-<p>Infinite retries aren’t practical, as they could overwhelm the server once it’s back online. A fixed number of retries is reasonable, but this &ldquo;magic&rdquo; number should be determined based on how long the client can afford to wait for a response. In Go, we can skip setting an arbitrary retry count by stopping retries when the request context is canceled.</p>
-<p><strong>How Long to Wait Between Retries?</strong></p>
+<h3 id="when-to-stop-retrying">
+  When to Stop Retrying?
+  <a class="heading-link" href="#when-to-stop-retrying">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>If the client times out the RPC call</strong>: In Go, the context object is used to propagate cancellation signals. We need to listen to the done channel and stop retrying if the request was cancelled.</p>
+</li>
+<li>
+<p><strong>Not all errors need a retry</strong>: Some errors are terminal and should not trigger a retry, such as &ldquo;resource not found&rdquo; errors. In such cases, we should return the error immediately, as retrying would not resolve the issue.</p>
+</li>
+<li>
+<p><strong>Infinite retries aren’t practical</strong>: They could overwhelm the server once it’s back online. A fixed number of retries is reasonable.</p>
+</li>
+</ul>
+<h3 id="how-long-to-wait-between-retries">
+  How Long to Wait Between Retries?
+  <a class="heading-link" href="#how-long-to-wait-between-retries">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
 <p>There are multiple strategies for setting retry intervals. A fixed delay between retries is simple, but exponential backoff (doubling the wait time after each retry) can allow more recovery time. However, for systems with significant load, fixed backoff intervals can create synchronized waves of requests, adding strain to the server. A solution is to add random delays, or “jitter,” to help balance the server load.</p>
 <h3 id="implementing-retry-logic-in-go">
   Implementing Retry Logic in Go
@@ -425,7 +456,22 @@ When to stop retrying? How long to wait between retries? When to Stop Retrying?"
 </span></span><span class="line"><span class="cl">	<span class="nx">err</span> <span class="p">=</span> <span class="nf">reliableRPC</span><span class="p">(</span><span class="nx">ctx</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Result with jittered backoff:&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><h2 id="todo">
+  ToDO
+  <a class="heading-link" href="#todo">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>
+<p>Pass a function to filter the kind of errors that could trigger a retry.</p>
+</li>
+<li>
+<p>Pass a function to be called after each retry attempt.  This could be useful for logging, monitoring,&hellip;</p>
+</li>
+</ul>
+
       </div>
 
 

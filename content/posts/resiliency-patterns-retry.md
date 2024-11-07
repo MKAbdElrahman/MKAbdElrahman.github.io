@@ -14,11 +14,15 @@ To implement a retry algorithm effectively, we need to consider:
 - When to stop retrying?
 - How long to wait between retries?
 
-**When to Stop Retrying?**
+### When to Stop Retrying?
 
-Infinite retries aren’t practical, as they could overwhelm the server once it’s back online. A fixed number of retries is reasonable, but this "magic" number should be determined based on how long the client can afford to wait for a response. In Go, we can skip setting an arbitrary retry count by stopping retries when the request context is canceled.
+- **If the client times out the RPC call**: In Go, the context object is used to propagate cancellation signals. We need to listen to the done channel and stop retrying if the request was cancelled.
 
-**How Long to Wait Between Retries?**
+- **Not all errors need a retry**: Some errors are terminal and should not trigger a retry, such as "resource not found" errors. In such cases, we should return the error immediately, as retrying would not resolve the issue.
+
+- **Infinite retries aren’t practical**: They could overwhelm the server once it’s back online. A fixed number of retries is reasonable.
+
+### How Long to Wait Between Retries?
 
 There are multiple strategies for setting retry intervals. A fixed delay between retries is simple, but exponential backoff (doubling the wait time after each retry) can allow more recovery time. However, for systems with significant load, fixed backoff intervals can create synchronized waves of requests, adding strain to the server. A solution is to add random delays, or “jitter,” to help balance the server load.
 
@@ -241,3 +245,9 @@ func main() {
 }
 
 ```
+
+## ToDO
+
+- Pass a function to filter the kind of errors that could trigger a retry.
+
+- Pass a function to be called after each retry attempt.  This could be useful for logging, monitoring,...
