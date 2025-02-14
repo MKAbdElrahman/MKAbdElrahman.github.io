@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Event-Driven Architecture on Mohamed Abdelrahman</title>
-    <link>https://mkabdelrahman.github.io/tags/event-driven-architecture/</link>
+    <link>http://localhost:1313/tags/event-driven-architecture/</link>
     <description>Recent content in Event-Driven Architecture on Mohamed Abdelrahman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 02 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mkabdelrahman.github.io/tags/event-driven-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/event-driven-architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>EDA Patterns: Thin and Thick Events</title>
-      <link>https://mkabdelrahman.github.io/posts/eda-patterns-thin-thick-events/</link>
+      <link>http://localhost:1313/posts/eda-patterns-thin-thick-events/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/eda-patterns-thin-thick-events/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;thin and thick events&#34; src=&#34;https://mkabdelrahman.github.io/images/thin-thick-event.svg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Event-driven systems (EDS) rely on exchanging events for communication. Other services &lt;strong&gt;subscribe&lt;/strong&gt; to these events and react accordingly. This loose coupling keeps services unaware of each other, with the only connection being the event&amp;rsquo;s data format. Since events act as contracts, careful design and consideration for future changes are crucial.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Scenario:&lt;/strong&gt; Imagine an e-commerce application. When a customer submits an order, the order service emits an &amp;ldquo;order-requested&amp;rdquo; event. Both the payment service and inventory service are interested in this event. The question is, what format should this event take?&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/eda-patterns-thin-thick-events/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/thin-thick-event.svg&#34; alt=&#34;thin and thick events&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Event-driven systems (EDS) rely on exchanging events for communication. Other services &lt;strong&gt;subscribe&lt;/strong&gt; to these events and react accordingly. This loose coupling keeps services unaware of each other, with the only connection being the event&amp;rsquo;s data format. Since events act as contracts, careful design and consideration for future changes are crucial.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Scenario:&lt;/strong&gt; Imagine an e-commerce application. When a customer submits an order, the order service emits an &amp;ldquo;order-requested&amp;rdquo; event. Both the payment service and inventory service are interested in this event. The question is, what format should this event take?&lt;/p&gt;</description>
     </item>
     <item>
       <title>EDA Patterns: The Single Writer Principle</title>
-      <link>https://mkabdelrahman.github.io/posts/eda-single-write-principle/</link>
+      <link>http://localhost:1313/posts/eda-single-write-principle/</link>
       <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/eda-single-write-principle/</guid>
+      <guid>http://localhost:1313/posts/eda-single-write-principle/</guid>
       <description>&lt;p&gt;The Single Writer Principle states that only one service should be responsible for making changes to a specific type of data or event.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s consider an e-commerce system with separate services for Orders, Payments, and Shipments. In this scenario, the Order service serves as the single writer for all order-related data. Here&amp;rsquo;s how it works:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;When a customer clicks &amp;ldquo;buy,&amp;rdquo; the Basket service triggers an &amp;ldquo;Order Requested&amp;rdquo; event.&lt;/li&gt;&#xA;&lt;li&gt;The Order service receives this event, validates the order details, and publishes an &amp;ldquo;Order Confirmed&amp;rdquo; event if successful.&lt;/li&gt;&#xA;&lt;li&gt;Other services, such as Payments and Shipments, subscribe to relevant events and take necessary actions upon receiving them (e.g., processing payment or preparing shipment).&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The Order service orchestrates these actions, ensuring that all changes to order data are coordinated and consistent.&lt;/p&gt;</description>
     </item>
     <item>
       <title>EDA Patterns: Event sourcing &amp; CQRS</title>
-      <link>https://mkabdelrahman.github.io/posts/cqrs/</link>
+      <link>http://localhost:1313/posts/cqrs/</link>
       <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/cqrs/</guid>
+      <guid>http://localhost:1313/posts/cqrs/</guid>
       <description>&lt;p&gt;Event sourcing is a data management approach that centers around events, recognizing them as the core building blocks of any system. These events, representing state changes, are stored in an immutable append-only log, preserving the order they occurred in. This approach offers a comprehensive audit trail of the system&amp;rsquo;s activity and allows replaying the event log to reconstruct the current system state.&lt;/p&gt;&#xA;&lt;p&gt;CQRS, or Command Query Responsibility Segregation, complements event sourcing by advocating for the separation of write operations (commands) and read operations (queries). This decoupling brings several advantages. Firstly, it allows for independent optimization of the write model, which might prioritize high throughput like Kafka, and the read model, which might focus on fast queries like a traditional database. Secondly, CQRS facilitates independent scaling of the read and write models based on their specific needs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>EDA Patterns: Idempotent Integration with a Third-Party REST API</title>
-      <link>https://mkabdelrahman.github.io/posts/idempotentintegrationwithathird-partyrestapi/</link>
+      <link>http://localhost:1313/posts/idempotentintegrationwithathird-partyrestapi/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mkabdelrahman.github.io/posts/idempotentintegrationwithathird-partyrestapi/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;IdempotentIntegrationwithaThird-PartyRESTAPI&#34; src=&#34;https://mkabdelrahman.github.io/images/idempotent-integration.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Scenario:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;You have an event-driven application that needs to integrate with a third-party REST API (Service B) without modifying it. To ensure reliable message processing, you want to introduce Service A as a mediator that consumes events and interacts with Service B in an idempotent manner.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Idempotency Requirement:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Service A:&lt;/strong&gt;  Service A must be idempotent to prevent duplicate event processing. This means if the same event is received multiple times, Service A should only process it once.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Service B:&lt;/strong&gt; Ideally, the calls from Service A to Service B should also be idempotent. This ensures that even if a request is retried due to network issues, it won&amp;rsquo;t cause unintended side effects on Service B.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/idempotentintegrationwithathird-partyrestapi/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/idempotent-integration.png&#34; alt=&#34;IdempotentIntegrationwithaThird-PartyRESTAPI&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Scenario:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;You have an event-driven application that needs to integrate with a third-party REST API (Service B) without modifying it. To ensure reliable message processing, you want to introduce Service A as a mediator that consumes events and interacts with Service B in an idempotent manner.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Idempotency Requirement:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Service A:&lt;/strong&gt;  Service A must be idempotent to prevent duplicate event processing. This means if the same event is received multiple times, Service A should only process it once.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Service B:&lt;/strong&gt; Ideally, the calls from Service A to Service B should also be idempotent. This ensures that even if a request is retried due to network issues, it won&amp;rsquo;t cause unintended side effects on Service B.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
